@@ -221,6 +221,7 @@ brew install autossh
 brew install ssh-copy-id
 brew cask install Caskroom/cask/ssh-tunnel-manager
 brew install openssl
+brew install keybase
 
 echo "Installing GPG & associated libraries and utilities..."
 brew cask install Caskroom/cask/gpgtools 					# Requires Password but also installs all gpg apps
