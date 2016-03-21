@@ -257,8 +257,17 @@ brew cask install Caskroom/cask/firefox
 echo "Installing Security Utilities..."
 brew cask install Caskroom/cask/integrity
 brew cask install Caskroom/cask/scrutiny
-# brew cask install Caskroom/cask/reactivity			# Not currently available via Homebrew or Cask
+# brew cask install Caskroom/cask/reactivity			# Not currently available via Homebrew or eask
+brew install dependency-check					# OWASP Dependency Checker Utility
+brew cask install Caskroom/cask/1password
 
+echo "Installing Mac OS X System Utilities..."
+brew cask install Caskroom/cask/onyx
+brew cask install Caskroom/cask/maintenance
+brew cask install Caskroom/cask/deeper
+brew cask install Caskroom/cask/the-unarchiver
+brew cask install Caskroom/cask/daisydisk
+brew cask install Caskroom/cask/divvy
 
 echo "Installing Messaging Apps"
 brew cask install Caskroom/cask/slack
@@ -349,6 +358,9 @@ brew install mackup
 echo "Restoring Application Settings from last mackup backup stored in Dropbox..."
 mackup restore
 
+# Cleanup files downloaded for installations....
+brew cleanup
+brew cask cleanup
 
 # Apps which cannot be installed via Homebrew - needs AppStore installation
 # Apple Apps
