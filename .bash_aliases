@@ -7,13 +7,13 @@
 #
 #
 
-## Colorize the ls output ##
+## Colorize the ls output, show normal & hidden files and folders and sort alphabetically by default ##
 alias ls="ls -GaFlh"
  
-## Use a long listing format ##
+## Use a long listing format for display ##
 alias ll="ls -la"
  
-## Show hidden files ##
+## Show ONLY hidden files & Directories ##
 alias l.="ls -d .*"
 
 ## Colorize the grep command output for ease of use (good for log files)##
