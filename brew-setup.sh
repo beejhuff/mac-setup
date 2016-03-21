@@ -31,6 +31,8 @@
 #	http://www.darkoperator.com/blog/2011/7/24/my-basic-setup-on-osx-lion.html
 #  - Installing Metasploit Framework on OS X El Capitan
 #	http://hackerforhire.com.au/installing-metasploit-framework-on-os-x-el-capitan/
+#  - How to fix permission issues on Homebrew in OS X El Capitan?
+#	http://digitizor.com/fix-homebrew-permissions-osx-el-capitan/
 #
 #
 
@@ -39,6 +41,9 @@ echo "******************************************************"
 # Change to the current user's home directory, a few of the commands require it and nothing prohibits it...
 echo "Switching to your home directory..."
 cd ~
+
+echo "Ensuring permissions are set correctly on /usr/local and sub-directories..."
+sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
 
 # You need to have installed Xcode via the AppStore for this script to run
 echo "Xcode Command Line Tools is required for this setup script."
