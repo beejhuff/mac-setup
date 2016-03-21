@@ -1,5 +1,9 @@
 #!/bin/bash
 #
+# Mac OS X Automated Installer Script
+#
+# Copyright 2016 - Bryan R. Hoffpauir, Jr.
+#
 # References : 
 #  - My macosx app setup list using brew and cask
 #       http://javapapo.blogspot.com/2015/08/my-macosx-app-setup-list-using-brew-and.html
@@ -142,7 +146,7 @@ brew install htop
 brew install archey
 brew install autoconf
 brew install pkg-config
-brew install cdiff
+brew install colordiff
 
 
 # Programming Languages & Related Utilities
@@ -165,6 +169,7 @@ export NODE_PATH="/usr/local/lib/node_modules"
 echo "Updating, Installing and configuring all ruby versions & rbenv..."
 brew install ruby-build 
 brew install rbenv
+rbenv init
 
 # Go
 echo "Installing and configuring Go language..."
@@ -210,12 +215,16 @@ brew install js-test-driver
 
 # Install Browsers, Communications Clients and DevOps Toolkits
 
-echo "Installing Chrome Browser & Related Apps / Extensions"
+echo "Installing Chrome Browser & Related Apps / Extensions..."
 brew cask install Caskroom/cask/google-chrome
 brew cask install Caskroom/cask/chrome-remote-desktop-host	# NOTE: Will be prompted for Admin PWD & Reboot required
 brew install chromedriver
 brew cask install Caskroom/cask/chrome-devtools			# Run Chrome DevTools as a stand-alone app
 brew install chrome-cli						# Cool CLI Automation for Chrome, see https://github.com/prasmussen/chrome-cli
+
+echo "Installing Firefox Browser and Related Apps / Extensions..."
+brew cask install Caskroom/cask/firefox
+
 
 echo "Installing Security Utilities..."
 brew cask install Caskroom/cask/integrity
