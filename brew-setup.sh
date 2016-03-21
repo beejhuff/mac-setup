@@ -100,14 +100,17 @@ brew install tmux							# tmux requires openssl & libevent which will be install
 echo "Installing git & git utility apps..."
 brew install git
 brew install hub
-
 alias git=hub								# Recommended per https://hub.github.com/
-
 brew install git-flow
 # brew install bash-git-prompt 						# Disabling until configuration can be customized
 brew cask install Caskroom/cask/github-desktop
 brew cask install Caskroom/cask/gitkraken
 brew cask install Caskroom/cask/sourcetree
+
+# Configure Git's Global Settings in my Home Directory
+echo "Copying global git ignore& config files to home directory..."
+cp mac-setup/global.gitignore ~/.gitignore
+cp mac-setup/global.gitconfig ~/.gitconfig
 
 # Install Cloud Storage Clients to grab shared configurations before proceeding
 
@@ -265,8 +268,32 @@ brew cask install Caskroom/cask/adobe-reader
 brew cask install Caskroom/cask/dash 
 
 echo "Installing Image Processing Libraries & Utilies..."
-brew install zimg imagemagick
 brew cask install Caskroom/cask/imageoptim
+
+# Cloud / Virtualization / Container Stacks & Provisioning System
+
+echo "Installing VirtualBox..."
+brew cask install Caskroom/cask/virtualbox
+brew cask install Caskroom/cask/virtualbox-extension-pack
+
+echo "Installing VMWare Fusion 8..."
+
+echo "Installing Docker & Supporting Utilities..."
+# Docker + Kitematic + Boot2Docker ???
+
+# Vagrant & HashiCorp Apps
+# TODO - See if we can automate the installation of the Fusion Provider & associated license
+echo "Installing Vagrant and other HashiCorp applications /  utilities..."
+brew install vagrant
+
+brew install vassh						# Vagrant Host-Guest SSH Command Wrapper/Proxy/Forwarder
+								#   https://github.com/x-team/vassh
+
+# Other HashiCorp Stuff ?
+
+# Otto
+
+# Packer
 
 # Install all of the available AWS CLI Tools
 
@@ -274,27 +301,6 @@ echo "Installing all available Amazon Web Services CLI Utilities..."
 brew install aws-apigateway-importer aws-as aws-cfn-tools aws-cloudsearch \
         aws-elasticache aws-elasticbeanstalk aws-keychain aws-mon aws-shell \
         aws-sns-cli awscli awsebcli
-
-
-
-# Virtualization / Container Stacks & Provisioning System
-
-echo "Installing VirtualBox..."
-brew cask install Caskroom/cask/virtualbox
-brew cask install Caskroom/cask/virtualbox-extension-pack
-
-# Vagrant
-
-brew install vassh						# Vagrant Host-Guest SSH Command Wrapper/Proxy/Forwarder
-								#   https://github.com/x-team/vassh
-
-# Other HashiCorp Stuff ?
-
-# Docker
-
-# Otto
-
-# Packer
 
 
 # Install Local DataStores
@@ -339,6 +345,10 @@ mackup restore
 
 
 # Apps which cannot be installed via Homebrew - needs AppStore installation
+# Apple Apps
+# - Final Cut Pro 
+# - Garage
+# Buffer by Buffer
 # Proxy by WebSecurify
 # WebReaver by WebSecurify
 # Voila by Global Delight Technologies
