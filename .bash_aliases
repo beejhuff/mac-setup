@@ -1,3 +1,12 @@
+#!/bin/bash
+#
+# Mac OS X Automated Installer Bash Aliases Configuration
+#
+# Copyright 2016 - Bryan R. Hoffpauir, Jr.
+#
+#
+#
+
 ## Colorize the ls output ##
 alias ls="ls -GaFlh"
  
@@ -33,4 +42,6 @@ alias wget="wget -c"
 # visual tree
 alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'" 
 
+# use hub instead of standard git
+alias git="hub"
 

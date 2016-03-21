@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Mac OS X Automated Installer Bash Profile Configuration
 # 
