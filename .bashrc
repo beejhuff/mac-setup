@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Mac OS X Automated Installer Bash Profile Configuration
+# Mac OS X Standard Bash .bashrc Configuration
 #
 # Copyright 2016 - Bryan R. Hoffpauir, Jr.
 #

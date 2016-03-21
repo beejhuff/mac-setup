@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Mac OS X Automated Installer Bash Aliases Configuration
+# Mac OS X Standard Bash Aliases Configuration
 #
 # Copyright 2016 - Bryan R. Hoffpauir, Jr.
 #
