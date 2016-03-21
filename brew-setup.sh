@@ -36,6 +36,10 @@
 
 echo "******************************************************"
 
+# Change to the current user's home directory, a few of the commands require it and nothing prohibits it...
+echo "Switching to your home directory..."
+cd ~
+
 # You need to have installed Xcode via the AppStore for this script to run
 echo "Xcode Command Line Tools is required for this setup script."
 
@@ -164,6 +168,13 @@ source /usr/local/bin/virtualenvwrapper_lazy.sh
 echo "Installing Node.js & npm..."
 brew install node npm
 export NODE_PATH="/usr/local/lib/node_modules"
+
+# Install npm packages
+npm install -g grunt
+npm install -g gulp
+
+# Install Gulp-App
+brew cask install Caskroom/cask/gulp
 
 # Ruby
 echo "Updating, Installing and configuring all ruby versions & rbenv..."
