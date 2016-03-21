@@ -161,6 +161,8 @@ brew install autoconf
 brew install pkg-config
 brew install colordiff
 
+# Install top-utilities
+brew install iftop dnstop 
 
 # Programming Languages & Related Utilities
 
@@ -204,6 +206,7 @@ export PATH=$LOCALBIN:$PATH:$GOPATH/bin
 echo "Installing and configuring all Java versions & jenv..."
 brew install jenv
 brew cask install Caskroom/cask/java
+brew install jvmtop
 
 # TODO - re-work path logic using jenv
 export PATH=$JAVA_HOME/bin:$PATH
@@ -277,6 +280,7 @@ brew cask install Caskroom/cask/virtualbox
 brew cask install Caskroom/cask/virtualbox-extension-pack
 
 echo "Installing VMWare Fusion 8..."
+brew cask install Caskroom/cask/vmware-fusion
 
 echo "Installing Docker & Supporting Utilities..."
 # Docker + Kitematic + Boot2Docker ???
@@ -312,6 +316,8 @@ brew install aws-apigateway-importer aws-as aws-cfn-tools aws-cloudsearch \
 #
 # Redis, Memcache, MySQL (or MariaDB, Percona)?
 
+# Make sure to add the various top-utils that don't conflict
+brew install innotop pg_top memcache-top
 
 # Install UI Enhancements and Client Apps
 
