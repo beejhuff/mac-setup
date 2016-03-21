@@ -33,7 +33,8 @@
 #	http://hackerforhire.com.au/installing-metasploit-framework-on-os-x-el-capitan/
 #  - How to fix permission issues on Homebrew in OS X El Capitan?
 #	http://digitizor.com/fix-homebrew-permissions-osx-el-capitan/
-#
+#  - Use Homebrew zsh Instead of the OSX Default
+#	http://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/
 #
 
 echo "******************************************************"
@@ -204,22 +205,25 @@ brew cask install Caskroom/cask/java
 # TODO - re-work path logic using jenv
 export PATH=$JAVA_HOME/bin:$PATH
 
+
 # PHP ????
 
 
+# Encryption Utilities and Libraries
 echo "Installing SSH / SSL / Encryption Utilities..."
 brew install autossh
 brew install ssh-copy-id
 brew cask install Caskroom/cask/ssh-tunnel-manager
-brew install openssl 
+brew install openssl
 
+echo "Installing GPG & associated libraries and utilities..."
+brew cask install Caskroom/cask/gpgtools 					# Requires Password but also installs all gpg apps
+
+# Holding off on these until additional research can be completed.
 # TODO - Investigate Massively Parallel SSH : https://github.com/ndenev/mpssh
 # brew install mpssh
-
 # TODO - Investigate Advanced SSH : https://github.com/moul/advanced-ssh-config
 # brew install assh
-
-
 
 
 # Install Test Automation Tools
@@ -234,7 +238,9 @@ brew install js-test-driver
 echo "Installing Chrome Browser & Related Apps / Extensions..."
 brew cask install Caskroom/cask/google-chrome
 brew cask install Caskroom/cask/chrome-remote-desktop-host	# NOTE: Will be prompted for Admin PWD & Reboot required
-brew install chromedriver
+brew install chromedriver					# Launcing requires either 
+	# Launch at Startup : ln -sfv /usr/local/opt/chromedriver/*.plist ~/Library/LaunchAgents
+	# Launch on demand : launchctl load ~/Library/LaunchAgents/homebrew.mxcl.chromedriver.plist
 brew cask install Caskroom/cask/chrome-devtools			# Run Chrome DevTools as a stand-alone app
 brew install chrome-cli						# Cool CLI Automation for Chrome, see https://github.com/prasmussen/chrome-cli
 
