@@ -23,7 +23,13 @@
 #       http://codewithintent.com/how-to-setup-os-x-el-capitan-environment-variables-create-read-update-delete/
 #  - Eight Terminal Utilities Every OS X Command Line User Should Know
 #       http://www.mitchchn.me/2014/os-x-terminal/
+#  - My basic setup for OS X Lion
+#	http://www.darkoperator.com/blog/2011/7/24/my-basic-setup-on-osx-lion.html
+#  - Installing Metasploit Framework on OS X El Capitan
+#	http://hackerforhire.com.au/installing-metasploit-framework-on-os-x-el-capitan/
 #
+#
+
 echo "******************************************************"
 
 # You need to have installed Xcode via the AppStore for this script to run
@@ -37,9 +43,10 @@ else
   echo "Please accept the confirmation when prompted to complete the install to continue...";
 fi
 
+# TODO - NEED TO REVIEW IF THIS IS BEST ROUTE FOR KEY MANAGEMENT
 echo "Copying Secrets File & setting permissions...."
-cp .not_public ../.not_public
-chmod 600 ~/.not_public
+cp .api_keys ../.api_keys
+chmod 600 ~/.api_keys
 
 echo "******************************************************"
 echo
@@ -48,18 +55,14 @@ echo "Installing Homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "Installing Homebrew Cask"
-brew install caskroom/cask/brew-cask
+brew install Caskroom/cask/brew-cask
 
 # currently only really using it for the beta of iTerm2 v3
-echo "Enabling alternate version tap for Cask"
+echo "Tapping versions Caskroom for installing alternate versions of Casks..."
 brew tap caskroom/versions
 
 echo "Tapping php Caskroom for developer tools..."
 brew tap homebrew/php
-
-echo "Installing iTerm2 v3 (beta)..."
-brew cask install Caskroom/versions/iterm2-beta
-brew install tmux
 
 echo "Running brew doctor - halt the script & investigate if you see any errors."
 brew doctor
@@ -69,18 +72,28 @@ brew update
 brew cask update
 brew upgrade -all
 
-
-echo "Updating bash to latest v4..."
+echo "Updating bash to latest version & installing related utilities..."
 brew install bash
 brew install bash-completion
+brew cask install Caskroom/cask/go2shell
+
+echo "Installing iTerm2 v3 (beta) & tmux..."
+brew cask install Caskroom/versions/iterm2-beta
+brew install tmux							# tmux requires openssl & libevent which will be installed also
 
 # Install git & close the config repo - note will need to enter credentials for the initial clone
-brew install git
-brew install git-flow
-brew cask install github-desktop
-brew cask install gitkraken
-brew install bash-git-prompt
 
+echo "Installing git & git utility apps..."
+brew install git
+brew install hub
+
+alias git=hub								# Recommended per https://hub.github.com/
+
+brew install git-flow
+# brew install bash-git-prompt 						# Disabling until configuration can be customized
+brew cask install Caskroom/cask/github-desktop
+brew cask install Caskroom/cask/gitkraken
+brew cask install Caskroom/cask/sourcetree
 
 # Install Cloud Storage Clients to grab shared configurations before proceeding
 
@@ -89,12 +102,14 @@ brew cask install Caskroom/cask/google-drive
 
 # Can we configure drive from the CLI? We can start it....
 
-echo "Installing Amazon Cloud Drive..."
-brew cask install Caskroom/cask/amazon-cloud-drive
+echo "Installing Amazon Cloud Drive, may prompt for password..."
+# brew cask install Caskroom/cask/amazon-cloud-drive
+
+# Signed up for free trial for unlimited storage, need to figure out strategy before enabling fully
 
 # Can we configure drive from the CLI? We can start it....
 
-echo "Installing Box Synce..."
+echo "Installing Box Sync..."
 brew cask install Caskroom/cask/box-sync
 
 # Can we configure drive from the CLI? We can start it....
@@ -110,21 +125,6 @@ brew cask install Caskroom/cask/transmission
 # Can we configure drive from the CLI? We can start it....
 
 
-# Install Virtualenv
-echo "Installing pip, pre-req for virtualenv, enter your password if promptedv..."
-sudo easy_install pip
-
-echo "Installing virtualenv & virtualenvwrapper..." 
-sudo -H pip install virtualenv --upgrade
-sudo -H pip install virtualenvwrapper --upgrade --ignore-installed six
-source /usr/local/bin/virtualenvwrapper_lazy.sh
-
-echo "Installing Node.js & npm..."
-brew install node npm
-export NODE_PATH="/usr/local/lib/node_modules"
-
-
-
 # Startup Storage Client of your choice and sync to copy down config files & scripts
 #
 # Launch sync utility and provide credentials & kick off sync 
@@ -132,50 +132,73 @@ export NODE_PATH="/usr/local/lib/node_modules"
 # Execute script to symlink cloud storage directory to HOME when sync is complete
 #
 
+# Install Common Libraries needed for development and for dependencies in other apps & build scripts
+brew install libyaml
 
 # Install common applications via Homebrew
 brew install ack 
-brew install autojump 
-brew install automake 
-brew install colordiff 
-brew install curl 
 brew install wget
-brew install hub 
-brew install icoutils 
-brew install ossp-uuid 
-brew install qt
-brew install coreutils 
-brew install readline 
-brew install libxml2 
-brew install htop 
-brew install archie
+brew install htop
+brew install archey
+brew install autoconf
+brew install pkg-config
+brew install cdiff
 
+
+# Programming Languages & Related Utilities
+
+# Python...
+echo "Installing pip, pre-req for virtualenv, enter your password if promptedv..."
+sudo easy_install pip
+
+echo "Installing virtualenv & virtualenvwrapper..."
+sudo -H pip install virtualenv --upgrade
+sudo -H pip install virtualenvwrapper --upgrade --ignore-installed six
+source /usr/local/bin/virtualenvwrapper_lazy.sh
+
+# JavaScript...
+echo "Installing Node.js & npm..."
+brew install node npm
+export NODE_PATH="/usr/local/lib/node_modules"
+
+# Ruby
 echo "Updating, Installing and configuring all ruby versions & rbenv..."
-brew install 
+brew install ruby-build 
+brew install rbenv
 
-
-echo "Installing SSH / SSL / Encryption Utilities..."
-brew install keybase
-brew install ssh-copy-id
-brew install openssl 
-
-
-
-# Setup Programming Languages for Development
-
-echo "Installing ruby & rbenv..."
-brew install rbenv ruby-build
-
-
+# Go
 echo "Installing and configuring Go language..."
 brew install go
 mkdir $HOME/work
+export GOPATH=$HOME/work
+export PATH=$LOCALBIN:$PATH:$GOPATH/bin
 
+# Java
+# TODO - Verify if JENV can be installed before the latest java cask
+# TODO - Verify installation proceedures for alternate versions of Java (if needed)
 echo "Installing and configuring all Java versions & jenv..."
+brew install jenv
 brew cask install Caskroom/cask/java
 
-# re-work path logic using jenv
+# TODO - re-work path logic using jenv
 export PATH=$JAVA_HOME/bin:$PATH
+
+# PHP ????
+
+
+echo "Installing SSH / SSL / Encryption Utilities..."
+brew install autossh
+brew install ssh-copy-id
+brew cask install Caskroom/cask/ssh-tunnel-manager
+brew install openssl 
+
+# TODO - Investigate Massively Parallel SSH : https://github.com/ndenev/mpssh
+# brew install mpssh
+
+# TODO - Investigate Advanced SSH : https://github.com/moul/advanced-ssh-config
+# brew install assh
+
+
 
 
 # Install Test Automation Tools
@@ -189,10 +212,16 @@ brew install js-test-driver
 
 echo "Installing Chrome Browser & Related Apps / Extensions"
 brew cask install Caskroom/cask/google-chrome
-brew cask install Caskroom/cask/chrome-remote-desktop-host
+brew cask install Caskroom/cask/chrome-remote-desktop-host	# NOTE: Will be prompted for Admin PWD & Reboot required
 brew install chromedriver
 brew cask install Caskroom/cask/chrome-devtools			# Run Chrome DevTools as a stand-alone app
 brew install chrome-cli						# Cool CLI Automation for Chrome, see https://github.com/prasmussen/chrome-cli
+
+echo "Installing Security Utilities..."
+brew cask install Caskroom/cask/integrity
+brew cask install Caskroom/cask/scrutiny
+# brew cask install Caskroom/cask/reactivity			# Not currently available via Homebrew or Cask
+
 
 echo "Installing Messaging Apps"
 brew cask install Caskroom/cask/slack
@@ -206,12 +235,12 @@ brew cask install Caskroom/cask/dash
 
 echo "Installing Image Processing Libraries & Utilies..."
 brew install zimg imagemagick
-brew cask install imageoptim
+brew cask install Caskroom/cask/imageoptim
 
 # Install all of the available AWS CLI Tools
 
 echo "Installing all available Amazon Web Services CLI Utilities..."
-brew options aws-apigateway-importer aws-as aws-cfn-tools aws-cloudsearch \
+brew install aws-apigateway-importer aws-as aws-cfn-tools aws-cloudsearch \
         aws-elasticache aws-elasticbeanstalk aws-keychain aws-mon aws-shell \
         aws-sns-cli awscli awsebcli
 
@@ -219,11 +248,14 @@ brew options aws-apigateway-importer aws-as aws-cfn-tools aws-cloudsearch \
 
 # Virtualization / Container Stacks & Provisioning System
 
-echo "Installing Additional DevOps Tools via Casks..."
+echo "Installing VirtualBox..."
 brew cask install Caskroom/cask/virtualbox
 brew cask install Caskroom/cask/virtualbox-extension-pack
 
 # Vagrant
+
+brew install vassh						# Vagrant Host-Guest SSH Command Wrapper/Proxy/Forwarder
+								#   https://github.com/x-team/vassh
 
 # Other HashiCorp Stuff ?
 
@@ -266,3 +298,21 @@ brew cask install Caskroom/vlc/vlc				# Video Lan Client
 
 
 
+
+# Install mackup and restore Application Settings
+echo "Installing mackup Application Settings Backup Program..."
+brew install mackup
+
+echo "Restoring Application Settings from last mackup backup stored in Dropbox..."
+mackup restore
+
+
+# Apps which cannot be installed via Homebrew - needs AppStore installation
+# Proxy by WebSecurify
+# WebReaver by WebSecurify
+# Voila by Global Delight Technologies
+# Sunrise Calendar by Microsoft
+# SmartConverter by Systemic Pty Ltd / Shedworx
+# Sitemap Plus by Chris Brown
+# Screeny by Daeo Corp. Software
+# IP Scanner Pro by 10base-t Interactive
