@@ -254,6 +254,8 @@ brew install chrome-cli						# Cool CLI Automation for Chrome, see https://githu
 echo "Installing Firefox Browser and Related Apps / Extensions..."
 brew cask install Caskroom/cask/firefox
 
+echo "Installing Remote Access Utilities..."
+brew cask install Caskroom/cask/teamviewer
 
 echo "Installing Security Utilities..."
 brew cask install Caskroom/cask/integrity
