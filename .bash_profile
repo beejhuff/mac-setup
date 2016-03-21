@@ -70,7 +70,7 @@ test -f ~/mac-setup/.api_keys && source ~/mac-setup/.api_keys
 
 # Configure PATH
 # Ensure user-installed binaries take precedence over anything else in the path
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
 
 # Load .bashrc if it exists
 test -f ~/.bashrc && source ~/.bashrc
