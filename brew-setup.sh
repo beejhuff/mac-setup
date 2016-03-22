@@ -160,6 +160,7 @@ brew install archey
 brew install autoconf
 brew install pkg-config
 brew install colordiff
+brew cask install etrecheck
 
 # Install top-utilities
 brew install iftop dnstop 
