@@ -281,6 +281,7 @@ echo "Installing Document Readers"
 brew cask install Caskroom/cask/kindle
 brew cask install Caskroom/cask/adobe-reader
 brew cask install Caskroom/cask/dash 
+brew cask install Caskroom/cask/calibre
 
 echo "Installing Image Processing Libraries & Utilies..."
 brew cask install Caskroom/cask/imageoptim
