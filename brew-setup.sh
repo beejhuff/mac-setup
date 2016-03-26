@@ -95,7 +95,14 @@ echo "Installing iTerm2 v3 (beta) & tmux..."
 brew cask install Caskroom/versions/iterm2-beta
 brew install tmux							# tmux requires openssl & libevent which will be installed also
 
-# Install git & close the config repo - note will need to enter credentials for the initial clone
+# Configure Shell Integration for iTerm2
+curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
+
+
+# Install git & clone the config repo - note will need to enter credentials for the initial clone
+# ASSUMING we want to use this method of managing config vs. mackup method
+# OR we come up with a way to merge the two methods to make everything managed cleanly
+
 
 echo "Installing git & git utility apps..."
 brew install git

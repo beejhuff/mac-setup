@@ -60,6 +60,10 @@ eval "$(rbenv init -)"
 # If configured, activate bash auto-completion
 test -f $(brew --prefix)/etc/bash_completion && source $(brew --prefix)/etc/bash_completion
 
+# If configured, activate iTerm2 Shell Integration
+test -f ~/.iterm2_shell_integration.`basename $SHELL` && source ~/.iterm2_shell_integration.`basename $SHELL`
+
+
 # If configured, activate the bash-git-prompt add-in
 # Need to determine how to customize so we don't lose PS1 details set above
 # test -f $(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh &&  source $(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh
