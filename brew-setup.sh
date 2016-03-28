@@ -172,6 +172,9 @@ brew cask install etrecheck
 # Install top-utilities
 brew install iftop dnstop 
 
+# Install DNS Utilities
+brew install djbdns dnsmap dnstracer launchdns dnstwist validns
+
 # Programming Languages & Related Utilities
 
 # Python...
