@@ -340,6 +340,9 @@ brew install aws-apigateway-importer aws-as aws-cfn-tools aws-cloudsearch \
 # Make sure to add the various top-utils that don't conflict
 brew install innotop pg_top memcache-top
 
+echo "Installing MySQL & PostgreSQL Clients..."
+brew cask install Caskroom/cask/sequel-pro Caskroom/cask/psequel
+
 # Install UI Enhancements and Client Apps
 
 echo "Installing Client Apps and configuring UI Enhancements..."
