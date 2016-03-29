@@ -7,3 +7,9 @@
 	excludesfile = /Users/beejhuff/.gitignore
 [commit]
 	gpgsign = true
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %C(magenta)%G?%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit
