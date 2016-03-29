@@ -274,6 +274,7 @@ brew cask install Caskroom/cask/scrutiny
 # brew cask install Caskroom/cask/reactivity			# Not currently available via Homebrew or eask
 brew install dependency-check					# OWASP Dependency Checker Utility
 brew cask install Caskroom/cask/1password
+brew cask install Caskroom/cask/malwarebytes-anti-malware
 
 echo "Installing Mac OS X System Utilities..."
 brew cask install Caskroom/cask/onyx
@@ -312,7 +313,7 @@ echo "Installing Docker & Supporting Utilities..."
 # Vagrant & HashiCorp Apps
 # TODO - See if we can automate the installation of the Fusion Provider & associated license
 echo "Installing Vagrant and other HashiCorp applications /  utilities..."
-brew install vagrant
+brew install vagrant packer serf consul vault terraform vault nomad otto
 
 brew install vassh						# Vagrant Host-Guest SSH Command Wrapper/Proxy/Forwarder
 								#   https://github.com/x-team/vassh
@@ -322,6 +323,10 @@ brew install vassh						# Vagrant Host-Guest SSH Command Wrapper/Proxy/Forwarder
 # Otto
 
 # Packer
+
+# Ansible Utilities
+echo "Installing Ansible & Ansible CMDB Utilities..."
+brew install ansible ansible-cmdb
 
 # Install all of the available AWS CLI Tools
 
