@@ -59,7 +59,7 @@ fi
 
 # TODO - NEED TO REVIEW IF THIS IS BEST ROUTE FOR KEY MANAGEMENT
 echo "Copying Secrets File & setting permissions...."
-cp .api_keys ../.api_keys
+cp .api_keys ~/.api_keys
 chmod 600 ~/.api_keys
 
 echo "******************************************************"
@@ -122,7 +122,7 @@ cp mac-setup/global.gitconfig ~/.gitconfig
 # Install Cloud Storage Clients to grab shared configurations before proceeding
 
 echo "Installing and configuring Google Drive..."
-brew cask install Caskroom/cask/google-drive
+brew cask install Caskroom/cask/google-drive google-photos-backup/google-photos-backup
 
 # Can we configure drive from the CLI? We can start it....
 
@@ -254,8 +254,9 @@ brew install js-test-driver
 # Install Browsers, Communications Clients and DevOps Toolkits
 
 echo "Installing Chrome Browser & Related Apps / Extensions..."
-brew cask install Caskroom/cask/google-chrome
-brew cask install Caskroom/cask/chrome-remote-desktop-host	# NOTE: Will be prompted for Admin PWD & Reboot required
+brew cask install Caskroom/cask/google-chrome Caskroom/cask/google-hangouts Caskroom/cask/google-adwords-editor
+
+
 brew install chromedriver					# Launcing requires either 
 	# Launch at Startup : ln -sfv /usr/local/opt/chromedriver/*.plist ~/Library/LaunchAgents
 	# Launch on demand : launchctl load ~/Library/LaunchAgents/homebrew.mxcl.chromedriver.plist
@@ -309,31 +310,35 @@ brew cask install Caskroom/cask/vmware-fusion
 
 echo "Installing Docker & Supporting Utilities..."
 # Docker + Kitematic + Boot2Docker ???
+echo "Installing Docker & Container Managment Utilities..."
+brew cask install Caskroom/cask/dockertoolbox
+brew install docker-cloud docker-gen docker-swarm 
+brew install docker-completion docker-compose-completion docker-machine-completion
 
 # Vagrant & HashiCorp Apps
 # TODO - See if we can automate the installation of the Fusion Provider & associated license
 echo "Installing Vagrant and other HashiCorp applications /  utilities..."
 brew install vagrant packer serf consul vault terraform vault nomad otto
-
 brew install vassh						# Vagrant Host-Guest SSH Command Wrapper/Proxy/Forwarder
 								#   https://github.com/x-team/vassh
-
-# Other HashiCorp Stuff ?
-
-# Otto
-
-# Packer
+# Install Vagrant VMWare Fusion Provider & Activate  License key from Google Drive Archive
+GOOGLE_DRIVE=~/Google\ Drive
+vagrant plugin install vagrant-vmware-fusion
+vagrant plugin license vagrant-vmware-fusion "$GOOGLE_DRIVE/Software/Vagrant/license.lic"
 
 # Ansible Utilities
 echo "Installing Ansible & Ansible CMDB Utilities..."
 brew install ansible ansible-cmdb
 
 # Install all of the available AWS CLI Tools
-
 echo "Installing all available Amazon Web Services CLI Utilities..."
-brew install aws-apigateway-importer aws-as aws-cfn-tools aws-cloudsearch \
+brew install aws-apigateway-importer ec2-api-tools aws-as aws-cfn-tools aws-cloudsearch \
         aws-elasticache aws-elasticbeanstalk aws-keychain aws-mon aws-shell \
         aws-sns-cli awscli awsebcli
+
+echo "Installing all available Google Compute Engine / Google Cloud Utilities..."
+brew cask install Caskroom/cask/google-cloud-sdk Caskroom/cask/googleappengine 
+brew install google-sql-tool
 
 
 # Install Local DataStores
@@ -352,12 +357,10 @@ echo "Installing MySQL & PostgreSQL Clients..."
 brew cask install Caskroom/cask/sequel-pro Caskroom/cask/psequel
 
 # Install UI Enhancements and Client Apps
-
 echo "Installing Client Apps and configuring UI Enhancements..."
-brew cask install Caskroom/cask/bartender
 
-
-# Installing vim Enhancements & Light-Weight IDE Atom
+# Installing vim Enhancements & Light-Weight IDE etom
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 
 # Install Zend Stack : Zend Server, Z-Ray, Zend Studio
