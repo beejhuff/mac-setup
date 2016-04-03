@@ -70,7 +70,11 @@ test -f ~/.iterm2_shell_integration.`basename $SHELL` && source ~/.iterm2_shell_
 
 
 # If they exist, load secret credentials files (GIT ACCESS TOKEN / AWS CREDS, etc...)
-test -f ~/mac-setup/.api_keys && source ~/mac-setup/.api_keys
+test -f ~/.api_keys && source ~/.api_keys
+
+# Configure Google Cloud SDK Path & Auto-Completion (if they exist...)
+test -f '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc' && source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
+test -f '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc' && source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
 
 # Configure PATH
 # Ensure user-installed binaries take precedence over anything else in the path
