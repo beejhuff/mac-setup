@@ -44,7 +44,7 @@ alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 
 
 # use hub instead of standard git
 alias git="hub"
-alias gl="git log --show-signature"
+alias gl="git lg"
 alias gs="git status"
 
 
