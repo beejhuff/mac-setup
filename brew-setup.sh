@@ -332,9 +332,10 @@ brew install ansible ansible-cmdb
 
 # Install all of the available AWS CLI Tools
 echo "Installing all available Amazon Web Services CLI Utilities..."
-brew install aws-apigateway-importer ec2-api-tools aws-as aws-cfn-tools aws-cloudsearch \
+brew install awscli ec2-ami-tools  ec2-api-tools aws-as aws-cfn-tools \
         aws-elasticache aws-elasticbeanstalk aws-keychain aws-mon aws-shell \
-        aws-sns-cli awscli awsebcli
+        aws-sns-cli awsebcli rds-command-line-tools elb-tools s3cmd \
+	aws-cloudsearch amazon-ecs-cli aws-apigateway-importer s3sync
 
 echo "Installing all available Google Compute Engine / Google Cloud Utilities..."
 brew cask install Caskroom/cask/google-cloud-sdk Caskroom/cask/googleappengine 
@@ -349,12 +350,14 @@ brew install google-sql-tool
 # client and server are on different hosts.
 #
 # Redis, Memcache, MySQL (or MariaDB, Percona)?
+brew install redis memcached mariadb postgresql percona-toolkit
 
 # Make sure to add the various top-utils that don't conflict
 brew install innotop pg_top memcache-top
 
 echo "Installing MySQL & PostgreSQL Clients..."
 brew cask install Caskroom/cask/sequel-pro Caskroom/cask/psequel
+
 
 # Install UI Enhancements and Client Apps
 echo "Installing Client Apps and configuring UI Enhancements..."
@@ -388,6 +391,8 @@ mackup restore
 brew cleanup
 brew cask cleanup
 
+brew cask cleanup
+
 # Apps which cannot be installed via Homebrew - needs AppStore installation
 # Apple Apps
 # - Final Cut Pro 
@@ -399,5 +404,3 @@ brew cask cleanup
 # Sunrise Calendar by Microsoft
 # SmartConverter by Systemic Pty Ltd / Shedworx
 # Sitemap Plus by Chris Brown
-# Screeny by Daeo Corp. Software
-# IP Scanner Pro by 10base-t Interactive
