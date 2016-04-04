@@ -143,6 +143,10 @@ brew cask install Caskroom/cask/dropbox
 
 # Can we configure drive from the CLI? We can start it....
 
+# Install and Configure CloudUp
+echo "Installing CloudUp Storage Client..."
+brew cask install Caskroom/cask/cloudup
+
 echo "Installing Transmission..."
 brew cask install Caskroom/cask/transmission
 
@@ -335,8 +339,11 @@ echo "Installing all available Amazon Web Services CLI Utilities..."
 brew install awscli ec2-ami-tools  ec2-api-tools aws-as aws-cfn-tools \
         aws-elasticache aws-elasticbeanstalk aws-keychain aws-mon aws-shell \
         aws-sns-cli awsebcli rds-command-line-tools elb-tools s3cmd \
-	aws-cloudsearch amazon-ecs-cli aws-apigateway-importer s3sync
+	aws-cloudsearch aws-sns-cli amazon-ecs-cli aws-apigateway-importer \ 
+	s3sync
+brew cask install Caskroom/cask/elasticwolf
 
+# Install Google Compute and Cloud SDK & Utilities
 echo "Installing all available Google Compute Engine / Google Cloud Utilities..."
 brew cask install Caskroom/cask/google-cloud-sdk Caskroom/cask/googleappengine 
 brew install google-sql-tool
@@ -353,11 +360,11 @@ brew install google-sql-tool
 brew install redis memcached mariadb postgresql percona-toolkit
 
 # Make sure to add the various top-utils that don't conflict
-brew install innotop pg_top memcache-top
+# brew install pg_top innotop		# These were generating errors
+brew install memcache-top
 
 echo "Installing MySQL & PostgreSQL Clients..."
 brew cask install Caskroom/cask/sequel-pro Caskroom/cask/psequel
-
 
 # Install UI Enhancements and Client Apps
 echo "Installing Client Apps and configuring UI Enhancements..."
@@ -391,7 +398,6 @@ mackup restore
 brew cleanup
 brew cask cleanup
 
-brew cask cleanup
 
 # Apps which cannot be installed via Homebrew - needs AppStore installation
 # Apple Apps
@@ -401,6 +407,3 @@ brew cask cleanup
 # Proxy by WebSecurify
 # WebReaver by WebSecurify
 # Voila by Global Delight Technologies
-# Sunrise Calendar by Microsoft
-# SmartConverter by Systemic Pty Ltd / Shedworx
-# Sitemap Plus by Chris Brown
