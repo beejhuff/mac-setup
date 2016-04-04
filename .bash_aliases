@@ -47,5 +47,7 @@ alias git="hub"
 alias gl="git lg"
 alias gs="git status"
 
-
+# homebrew aliases to speed up researching packages
+alias bci="brew cask info "
+alias bi="brew info "
 
