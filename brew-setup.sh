@@ -35,7 +35,8 @@
 #	http://digitizor.com/fix-homebrew-permissions-osx-el-capitan/
 #  - Use Homebrew zsh Instead of the OSX Default
 #	http://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/
-#
+#  - Immutable Infrastructure with AWS and Ansible – Part 1 – Setup
+#	http://vcdxpert.com/?p=105
 
 echo "******************************************************"
 
@@ -172,6 +173,15 @@ brew install autoconf
 brew install pkg-config
 brew install colordiff
 brew cask install etrecheck
+brew install automake autoconf curl pcre re2c mhash libtool icu4c \
+	gettext jpeg libxml2 mcrypt gmp libevent
+brew link icu4c
+
+
+# Install Alternative Shells
+echo "Installing zsh (Z Shell) and supporting utilities..."
+brew install zsh zsh-autosuggestions zsh-completions zsh-history-substring-search \
+	zsh-lovers zsh-syntax-highlighting zshdb zssh zsync zurl
 
 # Install top-utilities
 brew install iftop dnstop 
@@ -226,17 +236,30 @@ brew install jvmtop
 # TODO - re-work path logic using jenv
 export PATH=$JAVA_HOME/bin:$PATH
 
+#
+# PHP - NOTE - If we're going to run NGINX / Zend Server on VM's or Docker Containers
+#
+#  The the actual requirements for the local system in terms of PHP and post-config required
+#  can be relatively light. I'm currently focusing on essential development tools, utilities,
+#  and core language runtimes needed for my IDE & Editors to function properly
+#  I am SPECIFICALLY not installing NGINX or Apache via homebrew but rather just the PHP 
+#  languages and if needed the php modules.  Will test to verify if I can remove any of 
+#  stuff I'm installing once I have Docker and VM's up and running.
+# 
 
-# PHP ????
-
+echo "Installing PHP Development Language and Supporting Tools & Utilities..."
+brew install phpbrew behat box brew-php-switcher codeception composer pdepend \
+	php-code-sniffer php-cs-fixer php-version phpcpd phpbrew phpdocumentor \
+	phpdox phpenv phplint phpmd phpmetrics phpsh phpunit phpunit-skeleton-generator \ 
+	pickle puli sqlformat virtphp phpab mondrian pharcc phan \
+        php-plantumlwriter php-session-nginx-module climb envoy igbinary
+	
+brew cask install Caskroom/cask/phpstorm
 
 # Encryption Utilities and Libraries
 echo "Installing SSH / SSL / Encryption Utilities..."
-brew install autossh
-brew install ssh-copy-id
+brew install autossh ssh-copy-id openssl keybase 
 brew cask install Caskroom/cask/ssh-tunnel-manager
-brew install openssl
-brew install keybase
 
 echo "Installing GPG & associated libraries and utilities..."
 brew cask install Caskroom/cask/gpgtools 					# Requires Password but also installs all gpg apps
@@ -280,6 +303,7 @@ brew cask install Caskroom/cask/scrutiny
 brew install dependency-check					# OWASP Dependency Checker Utility
 brew cask install Caskroom/cask/1password
 brew cask install Caskroom/cask/malwarebytes-anti-malware
+brew install exploitdb flawfinder letsencrypt nmap ncrack wirouter_keyrec wireshark wifi-password zzuf
 
 echo "Installing Mac OS X System Utilities..."
 brew cask install Caskroom/cask/onyx
@@ -320,9 +344,8 @@ brew install docker-cloud docker-gen docker-swarm
 brew install docker-completion docker-compose-completion docker-machine-completion
 
 # Vagrant & HashiCorp Apps
-# TODO - See if we can automate the installation of the Fusion Provider & associated license
 echo "Installing Vagrant and other HashiCorp applications /  utilities..."
-brew install vagrant packer serf consul vault terraform vault nomad otto
+brew install vagrant packer serf consul consul-template vault terraform terraform-inventory vault nomad otto
 brew install vassh						# Vagrant Host-Guest SSH Command Wrapper/Proxy/Forwarder
 								#   https://github.com/x-team/vassh
 # Install Vagrant VMWare Fusion Provider & Activate  License key from Google Drive Archive
@@ -334,13 +357,16 @@ vagrant plugin license vagrant-vmware-fusion "$GOOGLE_DRIVE/Software/Vagrant/lic
 echo "Installing Ansible & Ansible CMDB Utilities..."
 brew install ansible ansible-cmdb
 
+echo "Installing the yaegashi.blockinfile Ansible role from Ansible galaxy..."
+sudo ansible-galaxy install yaegashi.blockinfile
+
 # Install all of the available AWS CLI Tools
 echo "Installing all available Amazon Web Services CLI Utilities..."
 brew install awscli ec2-ami-tools  ec2-api-tools aws-as aws-cfn-tools \
         aws-elasticache aws-elasticbeanstalk aws-keychain aws-mon aws-shell \
         aws-sns-cli awsebcli rds-command-line-tools elb-tools s3cmd \
 	aws-cloudsearch aws-sns-cli amazon-ecs-cli aws-apigateway-importer \ 
-	s3sync
+	s3sync auto-scaling
 brew cask install Caskroom/cask/elasticwolf
 
 # Install Google Compute and Cloud SDK & Utilities
@@ -369,7 +395,7 @@ brew cask install Caskroom/cask/sequel-pro Caskroom/cask/psequel
 # Install UI Enhancements and Client Apps
 echo "Installing Client Apps and configuring UI Enhancements..."
 
-# Installing vim Enhancements & Light-Weight IDE etom
+# Installing vim Enhancements & Light-Weight IDE atom
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 
