@@ -14,6 +14,12 @@
 #	You may wish to add the GOROOT-based install location to your PATH:
 #	  export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
+PHPBREW_SET_PROMPT=0
+# If configured, activate phpbrew to manage multiple versions of installed PHP
+test -f ~/.phpbrew/bashrc && source ~/.phpbrew/bashrc
+
+echo $PHPBREW_PHPVER
+
 # Set USER's local bin directory path
 export LOCALBIN="$HOME/bin"
 
@@ -21,12 +27,11 @@ export LOCALBIN="$HOME/bin"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom/"
 
 # Customize Prompt
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\] $PHPBREW_PHPVER \$ "
 
 # Enable Pretty Shell Color Output
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
-export PHPBREW_SET_PROMPT=1
 
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
@@ -63,9 +68,6 @@ test -f $(brew --prefix)/etc/bash_completion && source $(brew --prefix)/etc/bash
 
 # If configured, activate iTerm2 Shell Integration
 test -f ~/.iterm2_shell_integration.`basename $SHELL` && source ~/.iterm2_shell_integration.`basename $SHELL`
-
-# If configured, activate phpbrew to manage multiple versions of installed PHP
-test -f ~/.phpbrew/bashrc && source ~/.phpbrew/bashrc
 
 # If configured, activate the bash-git-prompt add-in
 # Need to determine how to customize so we don't lose PS1 details set above

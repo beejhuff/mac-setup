@@ -114,6 +114,7 @@ brew install git-flow
 brew cask install Caskroom/cask/github-desktop
 brew cask install Caskroom/cask/gitkraken
 brew cask install Caskroom/cask/sourcetree
+brew cask install gitup
 
 # Configure Git's Global Settings in my Home Directory
 echo "Copying global git ignore& config files to home directory..."
@@ -176,6 +177,7 @@ brew cask install etrecheck
 brew install automake autoconf curl pcre re2c mhash libtool icu4c \
 	gettext jpeg libxml2 mcrypt gmp libevent
 brew link icu4c
+brew install timedog
 
 
 # Install Alternative Shells
@@ -189,7 +191,7 @@ brew install iftop dnstop
 # Install DNS Utilities
 brew install djbdns dnsmap dnstracer launchdns dnstwist validns
 
-# Programming Languages & Related Utilities
+# Development Languages, Environments, & Related Utilities
 
 # Python...
 echo "Installing pip, pre-req for virtualenv, enter your password if promptedv..."
@@ -236,6 +238,12 @@ brew install jvmtop
 # TODO - re-work path logic using jenv
 export PATH=$JAVA_HOME/bin:$PATH
 
+
+# Slack Development Utilities, Toolkits, Bot SDKs
+brew install slackcat
+
+
+
 #
 # PHP - NOTE - If we're going to run NGINX / Zend Server on VM's or Docker Containers
 #
@@ -248,6 +256,17 @@ export PATH=$JAVA_HOME/bin:$PATH
 # 
 
 echo "Installing PHP Development Language and Supporting Tools & Utilities..."
+brew install phpbrew --ignore-dependencies
+phpbrew init
+[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+
+phpbrew lookup-prefix homebrew
+
+phpbrew update
+
+phpbrew -d install -j --test 5.5.0 +all  
+phpbrew -d ext install -j +all
+
 brew install phpbrew behat box brew-php-switcher codeception composer pdepend \
 	php-code-sniffer php-cs-fixer php-version phpcpd phpbrew phpdocumentor \
 	phpdox phpenv phplint phpmd phpmetrics phpsh phpunit phpunit-skeleton-generator \ 
@@ -302,7 +321,7 @@ brew cask install Caskroom/cask/scrutiny
 # brew cask install Caskroom/cask/reactivity			# Not currently available via Homebrew or eask
 brew install dependency-check					# OWASP Dependency Checker Utility
 brew cask install Caskroom/cask/1password
-brew cask install Caskroom/cask/malwarebytes-anti-malware
+brew cask install Caskroom/cask/malwarebytes-anti-malware Caskroom/cask/virustotaluploader
 brew install exploitdb flawfinder letsencrypt nmap ncrack wirouter_keyrec wireshark wifi-password zzuf
 
 echo "Installing Mac OS X System Utilities..."
@@ -323,9 +342,13 @@ brew cask install Caskroom/cask/kindle
 brew cask install Caskroom/cask/adobe-reader
 brew cask install Caskroom/cask/dash 
 brew cask install Caskroom/cask/calibre
+brew cask install Caskroom/cask/kindlepreviewer
 
 echo "Installing Image Processing Libraries & Utilies..."
-brew cask install Caskroom/cask/imageoptim
+brew cask install Caskroom/cask/imageoptim 
+brew install djvulibre djvu2pdf djview4
+brew cask install Caskroom/cask/invisionsync
+brew cask install Caskroom/cask/xnconvert Caskroom/cask/xnviewmp Caskroom/cask/xnconvert
 
 # Cloud / Virtualization / Container Stacks & Provisioning System
 
@@ -340,7 +363,7 @@ echo "Installing Docker & Supporting Utilities..."
 # Docker + Kitematic + Boot2Docker ???
 echo "Installing Docker & Container Managment Utilities..."
 brew cask install Caskroom/cask/dockertoolbox
-brew install docker-cloud docker-gen docker-swarm 
+brew install docker-cloud docker-gen docker-swarm dockviz 
 brew install docker-completion docker-compose-completion docker-machine-completion
 
 # Vagrant & HashiCorp Apps
@@ -390,28 +413,36 @@ brew install redis memcached mariadb postgresql percona-toolkit
 brew install memcache-top
 
 echo "Installing MySQL & PostgreSQL Clients..."
-brew cask install Caskroom/cask/sequel-pro Caskroom/cask/psequel
+brew cask install Caskroom/cask/sequel-pro Caskroom/cask/psequel Caskroom/cask/dbvisualizer
 
 # Install UI Enhancements and Client Apps
 echo "Installing Client Apps and configuring UI Enhancements..."
 
 # Installing vim Enhancements & Light-Weight IDE atom
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.eim
+brew cask install Caskroom/cask/vimr
 
 # Install Zend Stack : Zend Server, Z-Ray, Zend Studio
 # http://justinhileman.info/article/reinstalling-php-on-mac-os-x/
+brew cask install Caskroom/cask/zend-studio
 
-
+brew install anvil
+brew cask install Caskroom/cask/rcenvironment
 
 # Install Video Clients
 
 echo "Installing Local and Online Video Clients..."
-brew cask install 4k-video-downloader				# YouTube video downloader
-brew cask install Caskroom/vlc/vlc				# Video Lan Client
+brew cask install 4k-video-downloader					# YouTube video downloader
+brew cask install Caskroom/vlc/vlc					# Video Lan Client
 
 
-
+echo "Install other stuff..."
+brew cask install retro-virtual-machine virtual-ii virtualc64		# Emulate old platforms
+brew install pipe-viewer 
+brew cask install vimediamanager
+brew cask install Caskroom/cask/vienna
+brew cask install blueservice calcservice wordservice easyfind
+brew cask install activity-audit
 
 # Install mackup and restore Application Settings
 echo "Installing mackup Application Settings Backup Program..."

@@ -42,7 +42,7 @@ alias wget="wget -c"
 # visual tree
 alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'" 
 
-# use hub instead of standard git
+# use hub instead of standard git and add shortcuts for quick git listings and status output
 alias git="hub"
 alias gl="git lg"
 alias gs="git status"
