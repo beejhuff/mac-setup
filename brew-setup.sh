@@ -112,7 +112,6 @@ alias git=hub								# Recommended per https://hub.github.com/
 brew install git-flow
 # brew install bash-git-prompt 						# Disabling until configuration can be customized
 brew cask install Caskroom/cask/github-desktop
-brew cask install Caskroom/cask/gitkraken
 brew cask install Caskroom/cask/sourcetree
 brew cask install gitup
 
@@ -256,6 +255,14 @@ brew install slackcat
 # 
 
 echo "Installing PHP Development Language and Supporting Tools & Utilities..."
+brew cask install Caskroom/cask/phpstorm
+
+# Fix File System Case-Sensitivity Warning on PHPStorm Startup
+cp work/mac-setup/idea.properties  ~/Library/Preferences/PhpStorm2016.1/
+
+# Install local versions of PHP needed for development & testing
+# Some of the following cause issues with my customized .bash_profile - need to troubleshoot
+
 brew install phpbrew --ignore-dependencies
 phpbrew init
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
@@ -264,16 +271,15 @@ phpbrew lookup-prefix homebrew
 
 phpbrew update
 
-phpbrew -d install -j --test 5.5.0 +all  
+phpbrew -d install -j --test 5.5.0 +all
 phpbrew -d ext install -j +all
 
 brew install phpbrew behat box brew-php-switcher codeception composer pdepend \
 	php-code-sniffer php-cs-fixer php-version phpcpd phpbrew phpdocumentor \
-	phpdox phpenv phplint phpmd phpmetrics phpsh phpunit phpunit-skeleton-generator \ 
+	phpdox phpenv phplint phpmd phpmetrics phpsh phpunit phpunit-skeleton-generator \
 	pickle puli sqlformat virtphp phpab mondrian pharcc phan \
         php-plantumlwriter php-session-nginx-module climb envoy igbinary
-	
-brew cask install Caskroom/cask/phpstorm
+
 
 # Encryption Utilities and Libraries
 echo "Installing SSH / SSL / Encryption Utilities..."
@@ -418,9 +424,13 @@ brew cask install Caskroom/cask/sequel-pro Caskroom/cask/psequel Caskroom/cask/d
 # Install UI Enhancements and Client Apps
 echo "Installing Client Apps and configuring UI Enhancements..."
 
-# Installing vim Enhancements & Light-Weight IDE atom
+# Installing vim Enhancements
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.eim
 brew cask install Caskroom/cask/vimr
+
+# Installing Visual Studio for Mac OS X
+brew cask install Caskroom/cask/visual-studio-code
+
 
 # Install Zend Stack : Zend Server, Z-Ray, Zend Studio
 # http://justinhileman.info/article/reinstalling-php-on-mac-os-x/

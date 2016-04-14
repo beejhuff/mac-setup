@@ -2,7 +2,7 @@
 [user]
 	name = Bryan 'BJ' Hoffpauir
 	email = bjh438-git@yahoo.com
-	signingkey = 1BEF1880
+	signingkey = 2659F331
 [core]
 	excludesfile = /Users/beejhuff/.gitignore
 [commit]
