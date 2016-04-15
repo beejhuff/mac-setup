@@ -106,7 +106,7 @@ curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
 
 
 echo "Installing git & git utility apps..."
-brew install git
+brew install git git-lfs
 brew install hub
 alias git=hub								# Recommended per https://hub.github.com/
 brew install git-flow
