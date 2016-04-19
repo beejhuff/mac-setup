@@ -327,7 +327,7 @@ brew cask install Caskroom/cask/scrutiny
 # brew cask install Caskroom/cask/reactivity			# Not currently available via Homebrew or eask
 brew install dependency-check					# OWASP Dependency Checker Utility
 brew cask install Caskroom/cask/1password
-brew cask install Caskroom/cask/malwarebytes-anti-malware Caskroom/cask/virustotaluploader
+brew cask install Caskroom/cask/malwarebytes-anti-malware Caskroom/cask/virustotaluploader Caskroom/cask/clamxav
 brew install exploitdb flawfinder letsencrypt nmap ncrack wirouter_keyrec wireshark wifi-password zzuf
 
 echo "Installing Mac OS X System Utilities..."

@@ -3,7 +3,8 @@
   <component name="SensioLabsInsightAnalysisStorage">
     <option name="analysesList">
       <list>
-        <InsightAnalysis duration="-1" href="https://insight.sensiolabs.com/api/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/1" number="1" reference="49119dc9fd73987dfc2e16ced9f42b7227887dec" remediationCostForNextGrade="-1" status="running" />
+        <InsightAnalysis duration="4" href="https://insight.sensiolabs.com/api/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2" nbViolations="22" nextGrade="GOLD" number="2" reference="af0d62ff7295a2fd8660d8ec5a987e5dd873a5cc" remediationCostForNextGrade="-1" status="finished" />
+        <InsightAnalysis duration="17" href="https://insight.sensiolabs.com/api/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/1" nbViolations="20" nextGrade="GOLD" number="1" reference="49119dc9fd73987dfc2e16ced9f42b7227887dec" remediationCostForNextGrade="-1" status="finished" />
       </list>
     </option>
   </component>

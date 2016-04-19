@@ -1,10 +1,10 @@
 #!/bin/bash
 #
 # Mac OS X Standard Bash Profile Configuration
-# 
+#
 # Copyright 2016 - Bryan R. Hoffpauir, Jr.
 #
-# TODO - Review all commands setting a PATH and make sure there's no conflicts and that 
+# TODO - Review all commands setting a PATH and make sure there's no conflicts and that
 #	the implementation is idempotent.
 #
 # TODO - Review Go configuration per messages from homebrew install:
@@ -14,12 +14,6 @@
 #	You may wish to add the GOROOT-based install location to your PATH:
 #	  export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
-PHPBREW_SET_PROMPT=0
-# If configured, activate phpbrew to manage multiple versions of installed PHP
-test -f ~/.phpbrew/bashrc && source ~/.phpbrew/bashrc
-
-echo $PHPBREW_PHPVER
-
 # Set USER's local bin directory path
 export LOCALBIN="$HOME/bin"
 
@@ -27,8 +21,7 @@ export LOCALBIN="$HOME/bin"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom/"
 
 # Customize Prompt
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\] $PHPBREW_PHPVER \$ "
-
+export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\] \$ "
 # Enable Pretty Shell Color Output
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
@@ -38,8 +31,7 @@ export ARCHFLAGS="-arch x86_64"
 
 
 # WHAT IS THIS FOR???
-# export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:~/bin/pear/bin:~/bin:$(brew --prefix coreutils)/libexec/gnubin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$(brew --prefix homebrew/php/php55)/bin:$PATH
-
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:~/bin/pear/bin:~/bin:$(brew --prefix coreutils)/libexec/gnubin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$PATH
 
 # Initialize Settings for various programming languages
 

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysis>
+  <link href="https://insight.sensiolabs.com/api/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2" rel="self" type="application/vnd.com.sensiolabs.insight+xml"/>
+  <link href="https://insight.sensiolabs.com/api/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2/status" rel="status" type="application/vnd.com.sensiolabs.insight+xml"/>
+  <link href="https://insight.sensiolabs.com/api/projects/330bb3c9-4d56-4917-bd01-b515aab17715" rel="project" type="application/vnd.com.sensiolabs.insight+xml"/>
+  <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2" rel="self" type="text/html"/>
+  <status><![CDATA[finished]]></status>
+  <violations>
+    <violation severity="minor" category="codestyle">
+      <line>2</line>
+      <resource><![CDATA[.gitignore]]></resource>
+      <title>User specific files should not appear in .gitignore</title>
+      <message><![CDATA[.DS_Store is user-specific and should not appear in a project .gitignore. Consider adding it to the user global .gitignore instead.]]></message>
+      <context start-line="1" end-line="7"><![CDATA[# Ignore OS Generated Meta Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289170" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="codestyle">
+      <line>7</line>
+      <resource><![CDATA[.gitignore]]></resource>
+      <title>User specific files should not appear in .gitignore</title>
+      <message><![CDATA[ehthumbs.db is user-specific and should not appear in a project .gitignore. Consider adding it to the user global .gitignore instead.]]></message>
+      <context start-line="2" end-line="12"><![CDATA[.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Ignore file containing API Keys
+.api_keys
+**/license.lic]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289161" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="codestyle">
+      <line>8</line>
+      <resource><![CDATA[.gitignore]]></resource>
+      <title>User specific files should not appear in .gitignore</title>
+      <message><![CDATA[Thumbs.db is user-specific and should not appear in a project .gitignore. Consider adding it to the user global .gitignore instead.]]></message>
+      <context start-line="3" end-line="13"><![CDATA[.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Ignore file containing API Keys
+.api_keys
+**/license.lic
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289176" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>9</line>
+      <resource><![CDATA[.idea/composerJson.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="4" end-line="9"><![CDATA[    <unboundedVersionInspectionSettings>
+      <excludedPackages />
+    </unboundedVersionInspectionSettings>
+    <customRepositories />
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289174" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>3</line>
+      <resource><![CDATA[.idea/copyright/profiles_settings.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="1" end-line="3"><![CDATA[<component name="CopyrightManager">
+  <settings default="" />
+</component>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289164" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>8</line>
+      <resource><![CDATA[.idea/cssxfire.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="3" end-line="8"><![CDATA[  <component name="CssXFireSettings">
+    <general autoClear="false" autoExpand="false" />
+    <strategy useRoutes="false" mediaReduce="false" fileReduce="false" currentDocumentsReduce="false" resolveVariables="true" resolveMixins="true" />
+    <routes />
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289155" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>450</line>
+      <resource><![CDATA[.idea/dbnavigator.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="445" end-line="450"><![CDATA[    </general-settings>
+  </component>
+  <component name="DBNavigator.Project.StatementExecutionManager">
+    <execution-variables />
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289156" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>8</line>
+      <resource><![CDATA[.idea/magicento.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="3" end-line="8"><![CDATA[  <component name="MagicentoSettings">
+    <option name="pathToMage" value="$PROJECT_DIR$/app/Mage.php" />
+    <option name="enabled" value="false" />
+    <option name="projectClosedCorrectly" value="false" />
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289168" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>8</line>
+      <resource><![CDATA[.idea/modules.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="3" end-line="8"><![CDATA[  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/mac-setup.iml" filepath="$PROJECT_DIR$/.idea/mac-setup.iml" />
+    </modules>
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289173" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>10</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-analysis-storage.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="5" end-line="10"><![CDATA[      <list>
+        <InsightAnalysis duration="-1" href="https://insight.sensiolabs.com/api/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/1" number="1" reference="49119dc9fd73987dfc2e16ced9f42b7227887dec" remediationCostForNextGrade="-1" status="running" />
+      </list>
+    </option>
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=new#397289159" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>7</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-settings.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="2" end-line="7"><![CDATA[<project version="4">
+  <component name="SensioLabsInsightSettings">
+    <option name="projectUuid" value="330bb3c9-4d56-4917-bd01-b515aab17715" />
+    <option name="projectName" value="mac-setup" />
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=new#397289167" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>6</line>
+      <resource><![CDATA[.idea/vcs.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="1" end-line="6"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289175" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>7</line>
+      <resource><![CDATA[.bash_profile]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="2" end-line="12"><![CDATA[#
+# Mac OS X Standard Bash Profile Configuration
+# 
+# Copyright 2016 - Bryan R. Hoffpauir, Jr.
+#
+# TODO - Review all commands setting a PATH and make sure there's no conflicts and that 
+#	the implementation is idempotent.
+#
+# TODO - Review Go configuration per messages from homebrew install:
+#	As of go 1.2, a valid GOPATH is required to use the `go get` command:
+#	  https://golang.org/doc/code.html#GOPATH]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289172" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>10</line>
+      <resource><![CDATA[.bash_profile]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="5" end-line="15"><![CDATA[# Copyright 2016 - Bryan R. Hoffpauir, Jr.
+#
+# TODO - Review all commands setting a PATH and make sure there's no conflicts and that 
+#	the implementation is idempotent.
+#
+# TODO - Review Go configuration per messages from homebrew install:
+#	As of go 1.2, a valid GOPATH is required to use the `go get` command:
+#	  https://golang.org/doc/code.html#GOPATH
+#
+#	You may wish to add the GOROOT-based install location to your PATH:
+#	  export PATH=$PATH:/usr/local/opt/go/libexec/bin]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289169" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>61</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="56" end-line="66"><![CDATA[else
+  echo "Xcode Command Line Tools is not currently installed."
+  echo "Please accept the confirmation when prompted to complete the install to continue...";
+fi
+
+# TODO - NEED TO REVIEW IF THIS IS BEST ROUTE FOR KEY MANAGEMENT
+echo "Copying Secrets File & setting permissions...."
+cp .api_keys ~/.api_keys
+chmod 600 ~/.api_keys
+
+echo "******************************************************"]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289157" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>230</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="225" end-line="235"><![CDATA[mkdir $HOME/work
+export GOPATH=$HOME/work
+export PATH=$LOCALBIN:$PATH:$GOPATH/bin
+
+# Java
+# TODO - Verify if JENV can be installed before the latest java cask
+# TODO - Verify installation proceedures for alternate versions of Java (if needed)
+echo "Installing and configuring all Java versions & jenv..."
+brew install jenv
+brew cask install Caskroom/cask/java
+brew install jvmtop]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289158" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>231</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="226" end-line="236"><![CDATA[export GOPATH=$HOME/work
+export PATH=$LOCALBIN:$PATH:$GOPATH/bin
+
+# Java
+# TODO - Verify if JENV can be installed before the latest java cask
+# TODO - Verify installation proceedures for alternate versions of Java (if needed)
+echo "Installing and configuring all Java versions & jenv..."
+brew install jenv
+brew cask install Caskroom/cask/java
+brew install jvmtop
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289165" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>237</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="232" end-line="242"><![CDATA[echo "Installing and configuring all Java versions & jenv..."
+brew install jenv
+brew cask install Caskroom/cask/java
+brew install jvmtop
+
+# TODO - re-work path logic using jenv
+export PATH=$JAVA_HOME/bin:$PATH
+
+
+# Slack Development Utilities, Toolkits, Bot SDKs
+brew install slackcat]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289166" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>293</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="288" end-line="298"><![CDATA[
+echo "Installing GPG & associated libraries and utilities..."
+brew cask install Caskroom/cask/gpgtools 					# Requires Password but also installs all gpg apps
+
+# Holding off on these until additional research can be completed.
+# TODO - Investigate Massively Parallel SSH : https://github.com/ndenev/mpssh
+# brew install mpssh
+# TODO - Investigate Advanced SSH : https://github.com/moul/advanced-ssh-config
+# brew install assh
+
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289160" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>295</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="290" end-line="300"><![CDATA[brew cask install Caskroom/cask/gpgtools 					# Requires Password but also installs all gpg apps
+
+# Holding off on these until additional research can be completed.
+# TODO - Investigate Massively Parallel SSH : https://github.com/ndenev/mpssh
+# brew install mpssh
+# TODO - Investigate Advanced SSH : https://github.com/moul/advanced-ssh-config
+# brew install assh
+
+
+# Install Test Automation Tools
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289162" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>54</line>
+      <resource><![CDATA[macbook-settings.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="49" end-line="59"><![CDATA[DISPLAY_SLEEP_TIMEOUT=60	# Default time before Display auto-sleeps (in minutes)
+WAKE_ON_LAN=true		# Default to enabling Wake On Lan
+DESTROY_FV_KEYS=true		# Default to destroying File Vault Keys if entering Standby Mode
+DISABLE_METADATA_CREATE=true	# Default to disabling creation of Metadata files where possible
+				# NOTE: The reference article only provided examples for disabling creation on USB & Network volumes
+				# TODO : Determine if it can be disabled on local volumes and what command is required...
+DEFAULT_SEND_DIAGS=false	# Default to disabling the sending of diagnostic information to Apple
+DEFAULT_EXT_ACCOUNTS=false	# Default to disabling accounts stored on drives other than the boot drive
+DEFAULT_ICLOUD_SAVE=false	# Default to forcing applications to save to disk instead of iCloud by default
+DEFAULT_SAVE_STATE=false	# Default to NOT saving window state on user logout
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289163" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>106</line>
+      <resource><![CDATA[macbook-settings.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="101" end-line="111"><![CDATA[if $SHOW_ALL_FILES ; then defaults write com.apple.finder AppleShowAllFiles YES ; else defaults write com.apple.finder AppleShowAllFiles NO ; fi
+
+echo "Configuring Enable / Disable Cut in Finder"
+if $ENABLE_CUT ; then defaults write com.apple.finder AllowCutForItems YES ; else defaults write com.apple.finder AllowCutForItems NO ; fi
+
+# TODO : These are failing, need to research reason and update to correct failures
+
+# Set Shutdown and Logoff timers to 1 second (No Delay)
+#echo "Configuring Shutdown and Logoff Timers to 1 second (No Delay)..."
+#defaults write /System/Library/LaunchDaemons/com.apple.coreservices.appleevents ExitTimeOut -int 1
+#defaults write /System/Library/LaunchDaemons/com.apple.securityd ExitTimeOut -int 1]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289171" rel="self" type="text/html"/>
+    </violation>
+  </violations>
+  <grades>
+    <entry><![CDATA[none]]></entry>
+    <entry><![CDATA[bronze]]></entry>
+    <entry><![CDATA[silver]]></entry>
+    <entry><![CDATA[gold]]></entry>
+    <entry><![CDATA[platinum]]></entry>
+  </grades>
+  <failed>false</failed>
+  <grade><![CDATA[silver]]></grade>
+  <next-grade><![CDATA[gold]]></next-grade>
+  <begin-at><![CDATA[2016-04-15T02:24:55+0200]]></begin-at>
+  <end-at><![CDATA[2016-04-15T02:25:16+0200]]></end-at>
+  <duration>4</duration>
+  <number>2</number>
+  <altered>false</altered>
+  <remediation-cost>43</remediation-cost>
+  <nb-violations>22</nb-violations>
+  <reference><![CDATA[af0d62ff7295a2fd8660d8ec5a987e5dd873a5cc]]></reference>
+  <configuration>
+    <ignored-branches>
+      <branch><![CDATA[gh-pages]]></branch>
+    </ignored-branches>
+    <pre-composer-script/>
+    <post-composer-script/>
+    <working-directory/>
+    <php-version/>
+    <php-ini/>
+    <global-excluded-dirs>
+      <dir><![CDATA[vendor]]></dir>
+      <dir><![CDATA[vendors]]></dir>
+      <dir><![CDATA[test]]></dir>
+      <dir><![CDATA[tests]]></dir>
+      <dir><![CDATA[Tests]]></dir>
+      <dir><![CDATA[spec]]></dir>
+      <dir><![CDATA[features]]></dir>
+      <dir><![CDATA[Fixtures]]></dir>
+      <dir><![CDATA[DataFixtures]]></dir>
+      <dir><![CDATA[var]]></dir>
+    </global-excluded-dirs>
+    <excluded-patterns>
+      <pattern><![CDATA[app/check.php]]></pattern>
+      <pattern><![CDATA[app/SymfonyRequirements.php]]></pattern>
+      <pattern><![CDATA[web/config.php]]></pattern>
+      <pattern><![CDATA[web/app_*.php]]></pattern>
+    </excluded-patterns>
+    <patterns>
+      <file>
+        <pattern><![CDATA[*.php]]></pattern>
+        <pattern><![CDATA[*.twig]]></pattern>
+        <pattern><![CDATA[*.xml]]></pattern>
+        <pattern><![CDATA[*.yml]]></pattern>
+        <pattern><![CDATA[*.yaml]]></pattern>
+        <pattern><![CDATA[*.ini]]></pattern>
+        <pattern><![CDATA[*.dist]]></pattern>
+        <pattern><![CDATA[*.sql]]></pattern>
+        <pattern><![CDATA[composer.*]]></pattern>
+        <pattern><![CDATA[.gitignore]]></pattern>
+        <pattern><![CDATA[license]]></pattern>
+        <pattern><![CDATA[LICENSE]]></pattern>
+        <pattern><![CDATA[readme]]></pattern>
+        <pattern><![CDATA[README]]></pattern>
+        <pattern><![CDATA[makefile]]></pattern>
+        <pattern><![CDATA[Makefile]]></pattern>
+        <pattern><![CDATA[.htaccess]]></pattern>
+      </file>
+      <php>
+        <pattern><![CDATA[*.php]]></pattern>
+      </php>
+      <twig>
+        <pattern><![CDATA[*.twig]]></pattern>
+      </twig>
+    </patterns>
+    <rules/>
+    <parameters>
+      <parameter name="project_type">6</parameter>
+    </parameters>
+    <env/>
+  </configuration>
+  <previous-analyses-references>
+    <analysis-reference number="2">af0d62ff7295a2fd8660d8ec5a987e5dd873a5cc</analysis-reference>
+    <analysis-reference number="1">49119dc9fd73987dfc2e16ced9f42b7227887dec</analysis-reference>
+  </previous-analyses-references>
+  <nb-violations-new>2</nb-violations-new>
+  <nb-violations-existing>20</nb-violations-existing>
+  <nb-violations-fixed>0</nb-violations-fixed>
+  <nb-violations-ignored>0</nb-violations-ignored>
+</analysis>
