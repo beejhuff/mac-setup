@@ -358,6 +358,9 @@ brew cask install Caskroom/cask/xnconvert Caskroom/cask/xnviewmp Caskroom/cask/x
 
 # Cloud / Virtualization / Container Stacks & Provisioning System
 
+echo "Installing xhyve..."
+brew install xhyve
+
 echo "Installing VirtualBox..."
 brew cask install Caskroom/cask/virtualbox
 brew cask install Caskroom/cask/virtualbox-extension-pack
@@ -474,3 +477,7 @@ brew cask cleanup
 # Proxy by WebSecurify
 # WebReaver by WebSecurify
 # Voila by Global Delight Technologies
+
+
+# Install Mac App Store Command Line Interface to handle the above
+brew install argon/mas/mas
