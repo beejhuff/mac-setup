@@ -106,7 +106,7 @@ curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
 
 
 echo "Installing git & git utility apps..."
-brew install git git-lfs
+brew install git git-lfs git-standup
 brew install hub
 alias git=hub								# Recommended per https://hub.github.com/
 brew install git-flow
@@ -177,6 +177,7 @@ brew install automake autoconf curl pcre re2c mhash libtool icu4c \
 	gettext jpeg libxml2 mcrypt gmp libevent
 brew link icu4c
 brew install timedog
+brew install parallel
 
 
 # Install Alternative Shells
@@ -201,10 +202,11 @@ sudo -H pip install virtualenv --upgrade
 sudo -H pip install virtualenvwrapper --upgrade --ignore-installed six
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 
-# JavaScript...
+# JavaScript, v8m, etc...
 echo "Installing Node.js & npm..."
 brew install node npm
 export NODE_PATH="/usr/local/lib/node_modules"
+brew install v8 gjstest flow
 
 # Install npm packages
 npm install -g grunt
@@ -283,7 +285,7 @@ brew install phpbrew behat box brew-php-switcher codeception composer pdepend \
 
 # Encryption Utilities and Libraries
 echo "Installing SSH / SSL / Encryption Utilities..."
-brew install autossh ssh-copy-id openssl keybase 
+brew install autossh ssh-copy-id openssl keybase sshrc
 brew cask install Caskroom/cask/ssh-tunnel-manager
 
 echo "Installing GPG & associated libraries and utilities..."
@@ -295,66 +297,12 @@ brew cask install Caskroom/cask/gpgtools 					# Requires Password but also insta
 # TODO - Investigate Advanced SSH : https://github.com/moul/advanced-ssh-config
 # brew install assh
 
-
-# Install Test Automation Tools
-
+# Install DevOps Platform Components (CI / CD / Test Automation / Testing Plugins)
+echo "Installing Jenkins..."
+brew install jenkins
 echo "Installing Selenium and associated webdrivers..."
 brew install selenium-server-standalone
 brew install js-test-driver
-
-
-# Install Browsers, Communications Clients and DevOps Toolkits
-
-echo "Installing Chrome Browser & Related Apps / Extensions..."
-brew cask install Caskroom/cask/google-chrome Caskroom/cask/google-hangouts Caskroom/cask/google-adwords-editor
-
-
-brew install chromedriver					# Launcing requires either 
-	# Launch at Startup : ln -sfv /usr/local/opt/chromedriver/*.plist ~/Library/LaunchAgents
-	# Launch on demand : launchctl load ~/Library/LaunchAgents/homebrew.mxcl.chromedriver.plist
-brew cask install Caskroom/cask/chrome-devtools			# Run Chrome DevTools as a stand-alone app
-brew install chrome-cli						# Cool CLI Automation for Chrome, see https://github.com/prasmussen/chrome-cli
-
-echo "Installing Firefox Browser and Related Apps / Extensions..."
-brew cask install Caskroom/cask/firefox
-
-echo "Installing Remote Access Utilities..."
-brew cask install Caskroom/cask/teamviewer
-
-echo "Installing Security Utilities..."
-brew cask install Caskroom/cask/integrity
-brew cask install Caskroom/cask/scrutiny
-# brew cask install Caskroom/cask/reactivity			# Not currently available via Homebrew or eask
-brew install dependency-check					# OWASP Dependency Checker Utility
-brew cask install Caskroom/cask/1password
-brew cask install Caskroom/cask/malwarebytes-anti-malware Caskroom/cask/virustotaluploader Caskroom/cask/clamxav
-brew install exploitdb flawfinder letsencrypt nmap ncrack wirouter_keyrec wireshark wifi-password zzuf
-
-echo "Installing Mac OS X System Utilities..."
-brew cask install Caskroom/cask/onyx
-brew cask install Caskroom/cask/maintenance
-brew cask install Caskroom/cask/deeper
-brew cask install Caskroom/cask/the-unarchiver
-brew cask install Caskroom/cask/daisydisk
-brew cask install Caskroom/cask/divvy
-
-echo "Installing Messaging Apps"
-brew cask install Caskroom/cask/slack
-brew cask install Caskroom/cask/hipchat 
-brew cask install Caskroom/cask/skype
-
-echo "Installing Document Readers"
-brew cask install Caskroom/cask/kindle
-brew cask install Caskroom/cask/adobe-reader
-brew cask install Caskroom/cask/dash 
-brew cask install Caskroom/cask/calibre
-brew cask install Caskroom/cask/kindlepreviewer
-
-echo "Installing Image Processing Libraries & Utilies..."
-brew cask install Caskroom/cask/imageoptim 
-brew install djvulibre djvu2pdf djview4
-brew cask install Caskroom/cask/invisionsync
-brew cask install Caskroom/cask/xnconvert Caskroom/cask/xnviewmp Caskroom/cask/xnconvert
 
 # Cloud / Virtualization / Container Stacks & Provisioning System
 
@@ -372,7 +320,7 @@ echo "Installing Docker & Supporting Utilities..."
 # Docker + Kitematic + Boot2Docker ???
 echo "Installing Docker & Container Managment Utilities..."
 brew cask install Caskroom/cask/dockertoolbox
-brew install docker-cloud docker-gen docker-swarm dockviz 
+brew install docker-cloud docker-gen docker-swarm dockviz
 brew install docker-completion docker-compose-completion docker-machine-completion
 
 # Vagrant & HashiCorp Apps
@@ -397,13 +345,13 @@ echo "Installing all available Amazon Web Services CLI Utilities..."
 brew install awscli ec2-ami-tools  ec2-api-tools aws-as aws-cfn-tools \
         aws-elasticache aws-elasticbeanstalk aws-keychain aws-mon aws-shell \
         aws-sns-cli awsebcli rds-command-line-tools elb-tools s3cmd \
-	aws-cloudsearch aws-sns-cli amazon-ecs-cli aws-apigateway-importer \ 
+	aws-cloudsearch aws-sns-cli amazon-ecs-cli aws-apigateway-importer \
 	s3sync auto-scaling
 brew cask install Caskroom/cask/elasticwolf
 
 # Install Google Compute and Cloud SDK & Utilities
 echo "Installing all available Google Compute Engine / Google Cloud Utilities..."
-brew cask install Caskroom/cask/google-cloud-sdk Caskroom/cask/googleappengine 
+brew cask install Caskroom/cask/google-cloud-sdk Caskroom/cask/googleappengine
 brew install google-sql-tool
 
 
@@ -411,7 +359,7 @@ brew install google-sql-tool
 #
 # Don't plan on using them for development, per-se, but want to have clients
 # installed and have the local server setup to be startable since some of the
-# auto-discovery systems in Zend and other Clients run into issues when the 
+# auto-discovery systems in Zend and other Clients run into issues when the
 # client and server are on different hosts.
 #
 # Redis, Memcache, MySQL (or MariaDB, Percona)?
@@ -424,50 +372,89 @@ brew install memcache-top
 echo "Installing MySQL & PostgreSQL Clients..."
 brew cask install Caskroom/cask/sequel-pro Caskroom/cask/psequel Caskroom/cask/dbvisualizer
 
-# Install UI Enhancements and Client Apps
-echo "Installing Client Apps and configuring UI Enhancements..."
+# Install Browsers, Communications Clients
+
+echo "Installing Chrome Browser & Related Apps / Extensions..."
+brew cask install Caskroom/cask/google-chrome Caskroom/cask/google-hangouts Caskroom/cask/google-adwords-editor
+brew install chromedriver					            # Launcing requires either
+	# Launch at Startup : ln -sfv /usr/local/opt/chromedriver/*.plist ~/Library/LaunchAgents
+	# Launch on demand : launchctl load ~/Library/LaunchAgents/homebrew.mxcl.chromedriver.plist
+brew cask install Caskroom/cask/chrome-devtools			# Run Chrome DevTools as a stand-alone app
+brew install chrome-cli						            # Cool CLI Automation for Chrome, see https://github.com/prasmussen/chrome-cli
+
+echo "Installing Firefox Browser and Related Apps / Extensions..."
+brew cask install Caskroom/cask/firefox
+
+echo "Installing Remote Access Utilities..."
+brew cask install Caskroom/cask/teamviewer
+
+echo "Installing Security Utilities..."
+brew cask install Caskroom/cask/integrity
+brew cask install Caskroom/cask/scrutiny
+# brew cask install Caskroom/cask/reactivity			# Not currently available via Homebrew or cask
+brew install dependency-check					        # OWASP Dependency Checker Utility
+brew cask install Caskroom/cask/1password
+brew cask install Caskroom/cask/malwarebytes-anti-malware Caskroom/cask/virustotaluploader Caskroom/cask/clamxav
+brew install exploitdb flawfinder letsencrypt nmap ncrack wirouter_keyrec wireshark wifi-password zzuf
+
+echo "Installing Mac OS X System Utilities..."
+brew cask install Caskroom/cask/onyx
+brew cask install Caskroom/cask/maintenance
+brew cask install Caskroom/cask/deeper
+brew cask install Caskroom/cask/the-unarchiver
+brew cask install Caskroom/cask/daisydisk
+brew cask install Caskroom/cask/divvy
+brew install mas
+
+echo "Installing Messaging Apps"
+brew cask install Caskroom/cask/slack
+brew cask install Caskroom/cask/hipchat 
+brew cask install Caskroom/cask/skype
+
+echo "Installing Document Readers"
+brew cask install Caskroom/cask/kindle
+brew cask install Caskroom/cask/adobe-reader
+brew cask install Caskroom/cask/dash 
+brew cask install Caskroom/cask/calibre
+brew cask install Caskroom/cask/kindlepreviewer
+
+echo "Installing Image Processing Libraries & Utilies..."
+brew cask install Caskroom/cask/imageoptim 
+brew install djvulibre djvu2pdf djview4
+brew cask install Caskroom/cask/invisionsync
+brew cask install Caskroom/cask/xnconvert Caskroom/cask/xnviewmp Caskroom/cask/xnconvert
+
+echo "Installing Client Apps, IDE's and configuring UI Enhancements..."
 
 # Installing vim Enhancements
+brew install vim --override-system-vi
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.eim
 brew cask install Caskroom/cask/vimr
 
 # Installing Visual Studio for Mac OS X
 brew cask install Caskroom/cask/visual-studio-code
 
-
 # Install Zend Stack : Zend Server, Z-Ray, Zend Studio
 # http://justinhileman.info/article/reinstalling-php-on-mac-os-x/
 brew cask install Caskroom/cask/zend-studio
 
+# Install Mac-focused dev utilities
 brew install anvil
 brew cask install Caskroom/cask/rcenvironment
 
 # Install Video Clients
-
 echo "Installing Local and Online Video Clients..."
-brew cask install 4k-video-downloader					# YouTube video downloader
-brew cask install Caskroom/vlc/vlc					# Video Lan Client
+brew cask install 4k-video-downloader					            # YouTube video downloader
+brew cask install Caskroom/vlc/vlc					                # Video Lan Client
 
 
-echo "Install other stuff..."
+echo "Install other client applications..."
 brew cask install retro-virtual-machine virtual-ii virtualc64		# Emulate old platforms
 brew install pipe-viewer 
 brew cask install vimediamanager
 brew cask install Caskroom/cask/vienna
 brew cask install blueservice calcservice wordservice easyfind
 brew cask install activity-audit
-
-# Install mackup and restore Application Settings
-echo "Installing mackup Application Settings Backup Program..."
-brew install mackup
-
-echo "Restoring Application Settings from last mackup backup stored in Dropbox..."
-mackup restore
-
-# Cleanup files downloaded for installations....
-brew cleanup
-brew cask cleanup
-
 
 # Apps which cannot be installed via Homebrew - needs AppStore installation
 # Apple Apps
@@ -478,6 +465,13 @@ brew cask cleanup
 # WebReaver by WebSecurify
 # Voila by Global Delight Technologies
 
-
 # Install Mac App Store Command Line Interface to handle the above
 brew install argon/mas/mas
+
+# @TODO - Figure out how to use MAS to install all the apps we need from app store
+
+# @TODO - Add logic for handling .dotfiles sync here
+
+# Cleanup files downloaded for installations....
+brew cleanup
+brew cask cleanup
