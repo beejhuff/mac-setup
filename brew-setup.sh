@@ -106,7 +106,7 @@ curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
 
 
 echo "Installing git & git utility apps..."
-brew install git git-lfs git-standup
+brew install git git-lfs git-standup github-markdown-toc
 brew install hub
 alias git=hub								# Recommended per https://hub.github.com/
 brew install git-flow
@@ -320,7 +320,7 @@ echo "Installing Docker & Supporting Utilities..."
 # Docker + Kitematic + Boot2Docker ???
 echo "Installing Docker & Container Managment Utilities..."
 brew cask install Caskroom/cask/dockertoolbox
-brew install docker-cloud docker-gen docker-swarm dockviz
+brew install docker-cloud docker-gen docker-swarm dockviz docker-clean
 brew install docker-completion docker-compose-completion docker-machine-completion
 
 # Vagrant & HashiCorp Apps
@@ -420,7 +420,7 @@ brew cask install Caskroom/cask/kindlepreviewer
 
 echo "Installing Image Processing Libraries & Utilies..."
 brew cask install Caskroom/cask/imageoptim 
-brew install djvulibre djvu2pdf djview4
+brew install djvulibre djvu2pdf djview4 pngcrush
 brew cask install Caskroom/cask/invisionsync
 brew cask install Caskroom/cask/xnconvert Caskroom/cask/xnviewmp Caskroom/cask/xnconvert
 
