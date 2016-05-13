@@ -287,15 +287,9 @@ brew install phpbrew behat box brew-php-switcher codeception composer pdepend \
 echo "Installing SSH / SSL / Encryption Utilities..."
 brew install autossh ssh-copy-id openssl keybase sshrc
 brew cask install Caskroom/cask/ssh-tunnel-manager
-
 echo "Installing GPG & associated libraries and utilities..."
 brew cask install Caskroom/cask/gpgtools 					# Requires Password but also installs all gpg apps
 
-# Holding off on these until additional research can be completed.
-# TODO - Investigate Massively Parallel SSH : https://github.com/ndenev/mpssh
-# brew install mpssh
-# TODO - Investigate Advanced SSH : https://github.com/moul/advanced-ssh-config
-# brew install assh
 
 # Install DevOps Platform Components (CI / CD / Test Automation / Testing Plugins)
 echo "Installing Jenkins..."
@@ -304,24 +298,22 @@ echo "Installing Selenium and associated webdrivers..."
 brew install selenium-server-standalone
 brew install js-test-driver
 
-# Cloud / Virtualization / Container Stacks & Provisioning System
 
+# Cloud / Virtualization / Container Stacks & Provisioning System
 echo "Installing xhyve..."
 brew install xhyve
-
 echo "Installing VirtualBox..."
 brew cask install Caskroom/cask/virtualbox
 brew cask install Caskroom/cask/virtualbox-extension-pack
-
 echo "Installing VMWare Fusion 8..."
 brew cask install Caskroom/cask/vmware-fusion
-
 echo "Installing Docker & Supporting Utilities..."
 # Docker + Kitematic + Boot2Docker ???
 echo "Installing Docker & Container Managment Utilities..."
 brew cask install Caskroom/cask/dockertoolbox
 brew install docker-cloud docker-gen docker-swarm dockviz docker-clean
 brew install docker-completion docker-compose-completion docker-machine-completion
+
 
 # Vagrant & HashiCorp Apps
 echo "Installing Vagrant and other HashiCorp applications /  utilities..."
@@ -333,12 +325,13 @@ GOOGLE_DRIVE=~/Google\ Drive
 vagrant plugin install vagrant-vmware-fusion
 vagrant plugin license vagrant-vmware-fusion "$GOOGLE_DRIVE/Software/Vagrant/license.lic"
 
+
 # Ansible Utilities
 echo "Installing Ansible & Ansible CMDB Utilities..."
 brew install ansible ansible-cmdb
-
 echo "Installing the yaegashi.blockinfile Ansible role from Ansible galaxy..."
 sudo ansible-galaxy install yaegashi.blockinfile
+
 
 # Install all of the available AWS CLI Tools
 echo "Installing all available Amazon Web Services CLI Utilities..."
@@ -348,6 +341,7 @@ brew install awscli ec2-ami-tools  ec2-api-tools aws-as aws-cfn-tools \
 	aws-cloudsearch aws-sns-cli amazon-ecs-cli aws-apigateway-importer \
 	s3sync auto-scaling
 brew cask install Caskroom/cask/elasticwolf
+
 
 # Install Google Compute and Cloud SDK & Utilities
 echo "Installing all available Google Compute Engine / Google Cloud Utilities..."
