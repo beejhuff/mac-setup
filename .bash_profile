@@ -73,6 +73,9 @@ test -f ~/.api_keys && source ~/.api_keys
 test -f '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc' && source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
 test -f '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc' && source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
 
+# Configure RedHat OpenShift Client Settings (If they exist...)
+test -f ~/.openshift/bash_autocomplete && source ~/.openshift/bash_autocomplete
+
 # Configure PATH
 # Ensure user-installed binaries take precedence over anything else in the path
 export PATH="/usr/local/sbin:/usr/local/bin:$PATH"

@@ -348,6 +348,23 @@ echo "Installing all available Google Compute Engine / Google Cloud Utilities...
 brew cask install Caskroom/cask/google-cloud-sdk Caskroom/cask/googleappengine
 brew install google-sql-tool
 
+# Install Red Hat OpenShift Cloud & Container Utilities
+echo "Installing & Configuring RedHat Open Shift Utilities..."
+brew install openshift-cli
+sudo gem install rhc
+echo "Initializing OpenShift Client Utilities - you will be prompted for login and ssh key information..."
+# TODO: Write script that generates key, uploads to rhc, runs setup with --autocomplete and finally removes default id_rsa
+# NOTE: Rough script logic below....ssh/config already updated to use assumptions in following code for paths
+#
+# mkdir .ssh/rhcloud.com/
+# ssh-keygen -t rsa -b 4096 -f ~/.ssh/rhcloud.com/id_rsa
+# chmod 600 ~/.ssh/rhcloud.com/id_rsa
+# rhc sshkey remove default
+# rhc sshkey add default ~/.ssh/rhcloud.com/id_rsa.pub
+# cp .ssh/config ~/.ssh/config
+# rhc setup --autocomplete
+# rm -f .ssh/*id
+
 
 # Install Local DataStores
 #
@@ -444,8 +461,7 @@ brew cask install Caskroom/vlc/vlc					                # Video Lan Client
 
 echo "Install other client applications..."
 brew cask install retro-virtual-machine virtual-ii virtualc64		# Emulate old platforms
-brew install pipe-viewer 
-brew cask install vimediamanager
+brew install pipe-viewer
 brew cask install Caskroom/cask/vienna
 brew cask install blueservice calcservice wordservice easyfind
 brew cask install activity-audit
