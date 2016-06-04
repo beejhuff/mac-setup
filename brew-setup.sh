@@ -106,7 +106,7 @@ curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
 
 
 echo "Installing git & git utility apps..."
-brew install git git-lfs git-standup github-markdown-toc
+brew install git git-lfs git-standup github-markdown-toc git-secret
 brew install hub
 alias git=hub								# Recommended per https://hub.github.com/
 brew install git-flow
@@ -185,11 +185,15 @@ echo "Installing zsh (Z Shell) and supporting utilities..."
 brew install zsh zsh-autosuggestions zsh-completions zsh-history-substring-search \
 	zsh-lovers zsh-syntax-highlighting zshdb zssh zsync zurl
 
+# Install iproute and other required Mac OSX versions of OSS admin utilities
+brew install git-secrets
+
 # Install top-utilities
 brew install iftop dnstop 
 
-# Install DNS Utilities
+# Install DNS & other networking Utilities
 brew install djbdns dnsmap dnstracer launchdns dnstwist validns
+brew install iproute2mac
 
 # Development Languages, Environments, & Related Utilities
 
@@ -348,6 +352,8 @@ echo "Installing all available Google Compute Engine / Google Cloud Utilities...
 brew cask install Caskroom/cask/google-cloud-sdk Caskroom/cask/googleappengine
 brew install google-sql-tool
 
+
+
 # Install Red Hat OpenShift Cloud & Container Utilities
 echo "Installing & Configuring RedHat Open Shift Utilities..."
 brew install openshift-cli
@@ -474,6 +480,8 @@ brew cask install activity-audit
 # Proxy by WebSecurify
 # WebReaver by WebSecurify
 # Voila by Global Delight Technologies
+# AirMail
+# FullContact - note ver 1 is available via Homebrew - testing to see if I can upgrade
 
 # Install Mac App Store Command Line Interface to handle the above
 brew install argon/mas/mas
