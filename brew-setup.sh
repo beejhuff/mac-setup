@@ -92,6 +92,11 @@ brew install bash
 brew install bash-completion
 brew cask install Caskroom/cask/go2shell
 
+echo "Install latest Logitech Utilities, Drivers, and Options Configurators..."
+brew cask install logitech-unifying
+brew cask install logitech-control-center
+brew cask install logitech-options
+
 echo "Installing iTerm2 v3 (beta) & tmux..."
 brew cask install Caskroom/versions/iterm2-beta
 brew install tmux							# tmux requires openssl & libevent which will be installed also
@@ -284,7 +289,7 @@ brew install phpbrew behat box brew-php-switcher codeception composer pdepend \
 	php-code-sniffer php-cs-fixer php-version phpcpd phpbrew phpdocumentor \
 	phpdox phpenv phplint phpmd phpmetrics phpsh phpunit phpunit-skeleton-generator \
 	pickle puli sqlformat virtphp phpab mondrian pharcc phan \
-        php-plantumlwriter php-session-nginx-module climb envoy igbinary
+    php-plantumlwriter php-session-nginx-module climb envoy igbinary
 
 
 # Encryption Utilities and Libraries
@@ -421,6 +426,7 @@ brew cask install Caskroom/cask/deeper
 brew cask install Caskroom/cask/the-unarchiver
 brew cask install Caskroom/cask/daisydisk
 brew cask install Caskroom/cask/divvy
+brew cask install switchresx                            # Custom Resolution Manager (14 Day Trial) : http://www.madrau.com/srx_download/
 brew install mas
 
 echo "Installing Messaging Apps"
