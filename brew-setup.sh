@@ -105,20 +105,22 @@ brew install tmux							# tmux requires openssl & libevent which will be install
 curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
 
 
-# Install git & clone the config repo - note will need to enter credentials for the initial clone
-# ASSUMING we want to use this method of managing config vs. mackup method
-# OR we come up with a way to merge the two methods to make everything managed cleanly
-
+# Install git & supporting utilities\
 
 echo "Installing git & git utility apps..."
-brew install git git-lfs git-standup github-markdown-toc git-secret
-brew install hub
-alias git=hub								# Recommended per https://hub.github.com/
-brew install git-flow
+brew install git 									# git
+brew install git-lfs 								# Git extension for versioning large files
+brew install git-standup 							# Git extension to generate reports for standup meetings
+brew install github-markdown-toc 					# Easy TOC creation for GitHub README.md
+brew install git-secret 							# Bash-tool to store the private data inside a git repo.
+brew install git-secrets							# Prevents you from committing sensitive information to a git repo
+brew install hub 									# Add GitHub support to git on the command-line
+alias git=hub										# Recommended per https://hub.github.com/
+brew install git-flow								# Extensions to follow Vincent Driessen's branching model "gitflow"
 # brew install bash-git-prompt 						# Disabling until configuration can be customized
-brew cask install Caskroom/cask/github-desktop
-brew cask install Caskroom/cask/sourcetree
-brew cask install gitup
+brew cask install Caskroom/cask/github-desktop		# Github Desktop Client for Mac OS X
+brew cask install Caskroom/cask/sourcetree			# Atlassian Git / Mercurial Client for Mac OS X
+brew cask install gitup 							# GitUp Visual Git Branching and Repo Management Utility - http://gitup.io
 
 # Configure Git's Global Settings in my Home Directory
 echo "Copying global git ignore& config files to home directory..."
@@ -189,9 +191,6 @@ brew install parallel
 echo "Installing zsh (Z Shell) and supporting utilities..."
 brew install zsh zsh-autosuggestions zsh-completions zsh-history-substring-search \
 	zsh-lovers zsh-syntax-highlighting zshdb zssh zsync zurl
-
-# Install iproute and other required Mac OSX versions of OSS admin utilities
-brew install git-secrets
 
 # Install top-utilities
 brew install iftop dnstop 
