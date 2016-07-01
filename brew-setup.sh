@@ -123,7 +123,7 @@ brew cask install Caskroom/cask/sourcetree			# Atlassian Git / Mercurial Client 
 brew cask install gitup 							# GitUp Visual Git Branching and Repo Management Utility - http://gitup.io
 
 # Configure Git's Global Settings in my Home Directory
-echo "Copying global git ignore& config files to home directory..."
+	echo "Copying global git ignore & config files to home directory..."
 cp mac-setup/global.gitignore ~/.gitignore
 cp mac-setup/global.gitconfig ~/.gitconfig
 
@@ -260,8 +260,9 @@ brew install slackcat
 #  can be relatively light. I'm currently focusing on essential development tools, utilities,
 #  and core language runtimes needed for my IDE & Editors to function properly
 #  I am SPECIFICALLY not installing NGINX or Apache via homebrew but rather just the PHP 
-#  languages and if needed the php modules.  Will test to verify if I can remove any of 
-#  stuff I'm installing once I have Docker and VM's up and running.
+#  languages and if needed the php modules.  
+#  
+#  TODO: Will test to verify if I can remove any of stuff I'm installing once I have Docker and VM's up and running.
 # 
 
 echo "Installing PHP Development Language and Supporting Tools & Utilities..."
@@ -273,7 +274,9 @@ cp work/mac-setup/idea.properties  ~/Library/Preferences/PhpStorm2016.1/
 # Install local versions of PHP needed for development & testing
 # Some of the following cause issues with my customized .bash_profile - need to troubleshoot
 
+echo "Installing & Configuring PHP Brew to allow for multiple versions of php to be running on the local system..."
 brew install phpbrew --ignore-dependencies
+
 phpbrew init
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 
@@ -284,11 +287,40 @@ phpbrew update
 phpbrew -d install -j --test 5.5.0 +all
 phpbrew -d ext install -j +all
 
-brew install phpbrew behat box brew-php-switcher codeception composer pdepend \
-	php-code-sniffer php-cs-fixer php-version phpcpd phpbrew phpdocumentor \
-	phpdox phpenv phplint phpmd phpmetrics phpsh phpunit phpunit-skeleton-generator \
-	pickle puli sqlformat virtphp phpab mondrian pharcc phan \
-    php-plantumlwriter php-session-nginx-module climb envoy igbinary
+
+# Install PHP Development Utilities
+echo "Installing PHP Development Tools & Utilities..."
+brew install behat 										# behavior-driven development framework - http://behat.org/
+brew install box 										# application for building and managing Phars - https://box-project.github.io/box2/
+brew install brew-php-switcher 							# Switch Apache & CLI configs between PHP versions - https://github.com/philcook/php-switcher
+brew install codeception 								# Testing Framework designed to work just out of the box - http://codeception.com/quickstart
+brew install composer 									# Dependency Manager for PHP - http://getcomposer.org
+brew install pdepend									# performs static code analysis - http://pdepend.org/
+brew install php-code-sniffer 							# Check coding standards in PHP, JavaScript and CSS - http://pear.php.net/package/PHP_CodeSniffer
+brew install php-cs-fixer  								# Tries to fix coding standards issues - http://cs.sensiolabs.org
+brew install php-version  								# stupid simple PHP version management - https://github.com/wilmoore/php-version#simple-php-version-switching
+brew install phpcpd  									# Copy/Paste Detector (CPD) for PHP code - https://github.com/sebastianbergmann/phpcpd
+brew install phpdocumentor 								# Documentation Generator for PHP - http://www.phpdoc.org
+brew install phpdox  									# Documentation generator for PHP - https://github.com/theseer/phpdox
+brew install phpenv  									# Thin Wrapper around rbenv for PHP version managment - https://github.com/CHH/phpenv
+brew install phplint  									# Validator and documentator for PHP 5 and 7 programs - http://www.icosaedro.it/phplint/
+brew install phpmd  									# PHP Mess Detector - http://phpmd.org
+brew install phpmetrics 								# Static analysis tool for PHP - http://www.phpmetrics.org
+brew install phpsh 										# REPL (read-eval-print-loop) for php - http://www.phpsh.org/
+brew install phpunit 									# Programmer-oriented testing framework for PHP - http://phpunit.de
+brew install phpunit-skeleton-generator					# Generate skeleton test classes - http://phpunit.de/manual/current/en/
+brew install pickle 									# Installs PHP extensions easily on all platforms. - https://github.com/FriendsOfPHP/pickle
+brew install puli 										# Universal package system for PHP - http://puli.io
+brew install sqlformat 									# CLI adaptation of the SqlFormatter library - https://github.com/MattKetmo/sqlformat
+brew install virtphp 									# 1 Box, Multiple Elephpants - http://virtphp.org
+brew install phpab 										# Lightweight php namespace aware autoload generator - https://github.com/theseer/Autoload
+brew install mondrian 									# Analyse and refactor highly coupled classes - https://trismegiste.github.io/Mondrian/
+brew install pharcc 									# PHARCC - tool that converts your php project into a .phar file - https://github.com/cbednarski/pharcc
+brew install phan										# Static analyzer for PHP - https://github.com/etsy/phan
+brew install php-plantumlwriter 						# Create UML diagrams from your PHP source - https://github.com/davidfuhr/php-plantumlwriter
+brew install php-session-nginx-module 					# parse php sessions for nginx - https://github.com/replay/ngx_http_php_session
+brew install envoy 										# Elegant SSH tasks for PHP - https://github.com/laravel/envoy
+brew install igbinary									# Drop in replacement for the standard php serializer. https://pecl.php.net/package/igbinary
 
 
 # Encryption Utilities and Libraries
@@ -425,13 +457,12 @@ brew cask install Caskroom/cask/deeper
 brew cask install Caskroom/cask/the-unarchiver
 brew cask install Caskroom/cask/daisydisk
 brew cask install Caskroom/cask/divvy
-brew cask install switchresx                            # Custom Resolution Manager (14 Day Trial) : http://www.madrau.com/srx_download/
-brew install mas
 
 echo "Installing Messaging Apps"
 brew cask install Caskroom/cask/slack
 brew cask install Caskroom/cask/hipchat 
 brew cask install Caskroom/cask/skype
+brew cask install Caskroom/cask/zoomus
 
 echo "Installing Document Readers"
 brew cask install Caskroom/cask/kindle
@@ -477,21 +508,24 @@ brew cask install Caskroom/cask/vienna
 brew cask install blueservice calcservice wordservice easyfind
 brew cask install activity-audit
 
+echo "Install Paw API Development Utility..."
+brew install paw 													# Install Lucky Marmots Paw (HTTP & REST Client) https://luckymarmot.com/paw
+																	# NOTE: Licensing must occur manually
+
+echo "Install Mac App Store CLI..."
+brew install mas 													# Install the Mac App Store Command Line Interface for scripting App Store installations
+																	# TODO: Write automation scripts for installing App Store Apps & upgrading apps
+
 # Apps which cannot be installed via Homebrew - needs AppStore installation
 # Apple Apps
 # - Final Cut Pro 
-# - Garage
+# - Garage Band
 # Buffer by Buffer
 # Proxy by WebSecurify
 # WebReaver by WebSecurify
 # Voila by Global Delight Technologies
 # AirMail
 # FullContact - note ver 1 is available via Homebrew - testing to see if I can upgrade
-
-# Install Mac App Store Command Line Interface to handle the above
-brew install argon/mas/mas
-
-# @TODO - Figure out how to use MAS to install all the apps we need from app store
 
 # @TODO - Add logic for handling .dotfiles sync here
 
