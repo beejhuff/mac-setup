@@ -28,15 +28,17 @@
 #  - Eight Terminal Utilities Every OS X Command Line User Should Know
 #       http://www.mitchchn.me/2014/os-x-terminal/
 #  - My basic setup for OS X Lion
-#	http://www.darkoperator.com/blog/2011/7/24/my-basic-setup-on-osx-lion.html
+#		http://www.darkoperator.com/blog/2011/7/24/my-basic-setup-on-osx-lion.html
 #  - Installing Metasploit Framework on OS X El Capitan
-#	http://hackerforhire.com.au/installing-metasploit-framework-on-os-x-el-capitan/
+#		http://hackerforhire.com.au/installing-metasploit-framework-on-os-x-el-capitan/
 #  - How to fix permission issues on Homebrew in OS X El Capitan?
-#	http://digitizor.com/fix-homebrew-permissions-osx-el-capitan/
+#		http://digitizor.com/fix-homebrew-permissions-osx-el-capitan/
 #  - Use Homebrew zsh Instead of the OSX Default
-#	http://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/
+#		http://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/
 #  - Immutable Infrastructure with AWS and Ansible – Part 1 – Setup
-#	http://vcdxpert.com/?p=105
+#		http://vcdxpert.com/?p=105
+#  - Using the latest SSH from Homebrew on OSX
+#   	https://coderwall.com/p/qdwcpg/using-the-latest-ssh-from-homebrew-on-osx
 
 echo "******************************************************"
 
@@ -55,7 +57,7 @@ if xcode-select --install 2>&1 | grep installed; then
   echo "Xcode Command Line Tools already installed, proceeding with setup...";
 else
   echo "Xcode Command Line Tools is not currently installed."
-  echo "Please accept the confirmation when prompted to complete the install to continue...";
+  echo "Please accept the confirmation when prompted to continue...";
 fi
 
 # TODO - NEED TO REVIEW IF THIS IS BEST ROUTE FOR KEY MANAGEMENT
@@ -87,15 +89,76 @@ brew update
 brew cask update
 brew upgrade -all
 
+# Update bash & install all of the utilities for it to work nicely
+# TODO: Refactor this into a seperate script that runs first and then calls the main setup script only AFTER bash has been updated
 echo "Updating bash to latest version & installing related utilities..."
-brew install bash
-brew install bash-completion
-brew cask install Caskroom/cask/go2shell
+brew install bash 											# TODO: Update this command to force override of Mac OS X default bash
+															# TODO: Add follow up commands to update /etc/shells to use new version
+															# TODO: Add support for git cloning and installing bash-it - https://github.com/Bash-it/bash-it
+brew install bash-completion 								# Shouldn't be necessary when bash-it is installed (included in bash-it)
+brew cask install Caskroom/cask/go2shell			 		# Go2Shell - http://zipzapmac.com/go2shell
 
+# Install git & supporting utilities
+echo "Installing git & git utility apps..."
+brew install git 											# git
+brew install git-lfs 										# Git extension for versioning large files
+brew install git-standup 									# Git extension to generate reports for standup meetings
+brew install github-markdown-toc 							# Easy TOC creation for GitHub README.md
+brew install git-secret 									# Bash-tool to store the private data inside a git repo.
+brew install git-secrets									# Prevents you from committing sensitive information to a git repo
+brew install hub 											# Add GitHub support to git on the command-line
+alias git=hub												# Recommended per https://hub.github.com/
+brew install git-flow										# Extensions to follow Vincent Driessen's branching model "gitflow"
+# brew install bash-git-prompt 								# Disabling until configuration can be customized
+brew cask install Caskroom/cask/github-desktop				# Github Desktop Client for Mac OS X
+brew cask install Caskroom/cask/sourcetree					# Atlassian Git / Mercurial Client for Mac OS X
+brew cask install gitup 									# GitUp Visual Git Branching and Repo Management Utility - http://gitup.io
+
+# Configure Git's Global Settings in my Home Directory
+	echo "Copying global git ignore & config files to home directory..."
+cp mac-setup/global.gitignore ~/.gitignore
+cp mac-setup/global.gitconfig ~/.gitconfig
+
+# Install & Configure Logitech Drivers and Utilities for associated peripherals in use
 echo "Install latest Logitech Utilities, Drivers, and Options Configurators..."
 brew cask install logitech-unifying
 brew cask install logitech-control-center
 brew cask install logitech-options
+
+# Install and configure Encryption Utilities and Libraries
+echo "Installing SSH / SSL / Ecdncryption Utilities..."
+# brew install openssh --force 								# Commented out because in order to leave OS X functional a lot of additional configuration needs to be completed
+# 															# TODO: https://coderwall.com/p/qdwcpg/using-the-latest-ssh-from-homebrew-on-osx
+brew install autossh 										# Automatically restart SSH sessions and tunnels - http://www.harding.motd.ca/autossh/
+brew install ssh-copy-id 									# Add a public key to a remote machine's authorized_keys file - http://www.openssh.com/
+brew install sshrc											# Bring your .bashrc, .vimrc, etc. with you when you SSH - https://github.com/Russell91/sshrc
+brew install sshguard										# Protect from brute force attacks against SSH (annd other services) - http://www.sshguard.net/
+brew install openssl 
+brew install keybase
+brew cask install keybase 									# Now that the Cask is avaialble do we need the CLI installed seperately via brew?
+brew cask install Caskroom/cask/ssh-tunnel-manager
+
+echo "Installing GPG & associated libraries and utilities..."
+brew cask install Caskroom/cask/gpgtools 					# Requires Password but also installs all gpg apps
+
+# Install Security Utilities and Applications
+echo "Installing Security Utilities..."
+brew install dependency-check					        	# OWASP Dependency Checker Utility
+brew install exploitdb 										# The official Exploit Database - https://www.exploit-db.com/
+brew install flawfinder 									# Examines code and reports possible security weaknesses - http://www.dwheeler.com/flawfinder/
+brew install letsencrypt 									# Tool to obtain certs from Let's Encrypt and autoenable HTTPS - https://certbot.eff.org/
+brew install nmap 											# Port scanning utility for large networks - https://nmap.org/
+brew install ncrack 										# Network authentication cracking tool - https://nmap.org/ncrack/
+brew install wirouter_keyrec 								# Recover the default WPA passphrases from supported routers - http://www.salvatorefresta.net/tools/
+brew install wireshark 										# Graphical network analyzer and capture tool - https://www.wireshark.org
+brew install wifi-password 									# Show the current WiFi network password - https://github.com/rauchg/wifi-password
+brew install zzuf											#Transparent application input fuzzer - http://caca.zoy.org/wiki/zzuf
+brew cask install Caskroom/cask/integrity					# Integrity - http://peacockmedia.co.uk/integrity/
+brew cask install Caskroom/cask/1password					# 1Password - https://agilebits.com/onepassword
+brew cask install Caskroom/cask/lastpass 					# LastPass - https://lastpass.com/
+brew cask install Caskroom/cask/malwarebytes-anti-malware	# Malwarebytes Anti-Malware for Mac, AdwareMedic - https://www.malwarebytes.org/antimalware/mac/
+brew cask install Caskroom/cask/virustotaluploader 			# VirusTotalUploader - https://www.virustotal.com/
+brew cask install Caskroom/cask/clamxav						# ClamXav - https://www.clamxav.com/
 
 echo "Installing iTerm2 v3 (beta) & tmux..."
 brew cask install Caskroom/versions/iterm2-beta
@@ -105,27 +168,6 @@ brew install tmux							# tmux requires openssl & libevent which will be install
 curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
 
 
-# Install git & supporting utilities\
-
-echo "Installing git & git utility apps..."
-brew install git 									# git
-brew install git-lfs 								# Git extension for versioning large files
-brew install git-standup 							# Git extension to generate reports for standup meetings
-brew install github-markdown-toc 					# Easy TOC creation for GitHub README.md
-brew install git-secret 							# Bash-tool to store the private data inside a git repo.
-brew install git-secrets							# Prevents you from committing sensitive information to a git repo
-brew install hub 									# Add GitHub support to git on the command-line
-alias git=hub										# Recommended per https://hub.github.com/
-brew install git-flow								# Extensions to follow Vincent Driessen's branching model "gitflow"
-# brew install bash-git-prompt 						# Disabling until configuration can be customized
-brew cask install Caskroom/cask/github-desktop		# Github Desktop Client for Mac OS X
-brew cask install Caskroom/cask/sourcetree			# Atlassian Git / Mercurial Client for Mac OS X
-brew cask install gitup 							# GitUp Visual Git Branching and Repo Management Utility - http://gitup.io
-
-# Configure Git's Global Settings in my Home Directory
-	echo "Copying global git ignore & config files to home directory..."
-cp mac-setup/global.gitignore ~/.gitignore
-cp mac-setup/global.gitconfig ~/.gitconfig
 
 # Install Cloud Storage Clients to grab shared configurations before proceeding
 
@@ -322,15 +364,6 @@ brew install php-session-nginx-module 					# parse php sessions for nginx - http
 brew install envoy 										# Elegant SSH tasks for PHP - https://github.com/laravel/envoy
 brew install igbinary									# Drop in replacement for the standard php serializer. https://pecl.php.net/package/igbinary
 
-
-# Encryption Utilities and Libraries
-echo "Installing SSH / SSL / Encryption Utilities..."
-brew install autossh ssh-copy-id openssl keybase sshrc
-brew cask install Caskroom/cask/ssh-tunnel-manager
-echo "Installing GPG & associated libraries and utilities..."
-brew cask install Caskroom/cask/gpgtools 					# Requires Password but also installs all gpg apps
-
-
 # Install DevOps Platform Components (CI / CD / Test Automation / Testing Plugins)
 echo "Installing Jenkins..."
 brew install jenkins
@@ -439,16 +472,7 @@ echo "Installing Firefox Browser and Related Apps / Extensions..."
 brew cask install Caskroom/cask/firefox
 
 echo "Installing Remote Access Utilities..."
-brew cask install Caskroom/cask/teamviewer
-
-echo "Installing Security Utilities..."
-brew cask install Caskroom/cask/integrity
-brew cask install Caskroom/cask/scrutiny
-# brew cask install Caskroom/cask/reactivity			# Not currently available via Homebrew or cask
-brew install dependency-check					        # OWASP Dependency Checker Utility
-brew cask install Caskroom/cask/1password
-brew cask install Caskroom/cask/malwarebytes-anti-malware Caskroom/cask/virustotaluploader Caskroom/cask/clamxav
-brew install exploitdb flawfinder letsencrypt nmap ncrack wirouter_keyrec wireshark wifi-password zzuf
+brew cask install Caskroom/cask/teamviewer				# TeamViewer - https://www.teamviewer.com/
 
 echo "Installing Mac OS X System Utilities..."
 brew cask install Caskroom/cask/onyx
@@ -456,7 +480,7 @@ brew cask install Caskroom/cask/maintenance
 brew cask install Caskroom/cask/deeper
 brew cask install Caskroom/cask/the-unarchiver
 brew cask install Caskroom/cask/daisydisk
-brew cask install Caskroom/cask/divvy
+brew cask install Caskroom/cask/divvy					# Divvy - Window Size & Placement Management Utility - https://mizage.com/divvy/
 
 echo "Installing Messaging Apps"
 brew cask install Caskroom/cask/slack
@@ -508,7 +532,7 @@ brew cask install Caskroom/cask/vienna
 brew cask install blueservice calcservice wordservice easyfind
 brew cask install activity-audit
 
-echo "Install Paw API Development Utility..."
+echo "Install Paw HTTP REST / JSON API Development Utility..."
 brew install paw 													# Install Lucky Marmots Paw (HTTP & REST Client) https://luckymarmot.com/paw
 																	# NOTE: Licensing must occur manually
 
@@ -526,6 +550,7 @@ brew install mas 													# Install the Mac App Store Command Line Interface
 # Voila by Global Delight Technologies
 # AirMail
 # FullContact - note ver 1 is available via Homebrew - testing to see if I can upgrade
+# Magnet
 
 # @TODO - Add logic for handling .dotfiles sync here
 
