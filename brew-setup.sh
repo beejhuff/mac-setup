@@ -93,10 +93,25 @@ brew upgrade -all
 # TODO: Refactor this into a seperate script that runs first and then calls the main setup script only AFTER bash has been updated
 echo "Updating bash to latest version & installing related utilities..."
 brew install bash 											# TODO: Update this command to force override of Mac OS X default bash
-															# TODO: Add follow up commands to update /etc/shells to use new version
-															# TODO: Add support for git cloning and installing bash-it - https://github.com/Bash-it/bash-it
+
+# TODO: Add follow up commands to update /etc/shells to use new version
+# TODO: Add support for git cloning and installing bash-it - https://github.com/Bash-it/bash-it
+# 
+# TODO: bash-powerline: https://github.com/riobard/bash-powerline
+# TODO: bashful: https://github.com/jmcantrell/bashful
+
 brew install bash-completion 								# Shouldn't be necessary when bash-it is installed (included in bash-it)
 brew cask install Caskroom/cask/go2shell			 		# Go2Shell - http://zipzapmac.com/go2shell
+
+# Install and configure bashub client for archiving all bash commands in the cloud - https://bashhub.com/install
+# See Also: https://github.com/rcaloras/bashhub-client
+# See Also: https://github.com/rcaloras/bashhub-client/wiki/Security-and-Privacy
+# TODO: Review configuration to determine if / which commands to exclude from logging
+# TODO: Refactor using https://github.com/niieani/bash-oo-framework
+# TODO: Refactor using https://github.com/bpkg/bpkg
+# 
+# TODO: add logic to close and restart terminal session for this to take affect
+# curl -OL https://bashhub.com/setup && bash setup
 
 # Install git & supporting utilities
 echo "Installing git & git utility apps..."
@@ -159,6 +174,8 @@ brew cask install Caskroom/cask/lastpass 					# LastPass - https://lastpass.com/
 brew cask install Caskroom/cask/malwarebytes-anti-malware	# Malwarebytes Anti-Malware for Mac, AdwareMedic - https://www.malwarebytes.org/antimalware/mac/
 brew cask install Caskroom/cask/virustotaluploader 			# VirusTotalUploader - https://www.virustotal.com/
 brew cask install Caskroom/cask/clamxav						# ClamXav - https://www.clamxav.com/
+
+# TODO: discover: https://github.com/leebaird/discover
 
 echo "Installing iTerm2 v3 (beta) & tmux..."
 brew cask install Caskroom/versions/iterm2-beta
@@ -523,6 +540,7 @@ brew cask install Caskroom/cask/rcenvironment
 echo "Installing Local and Online Video Clients..."
 brew cask install 4k-video-downloader					            # YouTube video downloader
 brew cask install Caskroom/vlc/vlc					                # Video Lan Client
+brew cask install Caskroom/cask/airserver							# AirServer - https://www.airserver.com
 
 
 echo "Install other client applications..."
