@@ -115,22 +115,22 @@ brew cask install Caskroom/cask/go2shell			 		# Go2Shell - http://zipzapmac.com/
 
 # Install git & supporting utilities
 echo "Installing git & git utility apps..."
-brew install git 											# git
-brew install git-lfs 										# Git extension for versioning large files
-brew install git-standup 									# Git extension to generate reports for standup meetings
-brew install github-markdown-toc 							# Easy TOC creation for GitHub README.md
-brew install git-secret 									# Bash-tool to store the private data inside a git repo.
-brew install git-secrets									# Prevents you from committing sensitive information to a git repo
-brew install hub 											# Add GitHub support to git on the command-line
-alias git=hub												# Recommended per https://hub.github.com/
-brew install git-flow										# Extensions to follow Vincent Driessen's branching model "gitflow"
-# brew install bash-git-prompt 								# Disabling until configuration can be customized
-brew cask install Caskroom/cask/github-desktop				# Github Desktop Client for Mac OS X
+brew install git 								# git
+brew install git-lfs 								# Git extension for versioning large files
+brew install git-standup 							# Git extension to generate reports for standup meetings
+brew install github-markdown-toc 						# Easy TOC creation for GitHub README.md
+brew install git-secret 							# Bash-tool to store the private data inside a git repo.
+brew install git-secrets							# Prevents you from committing sensitive information to a git repo
+brew install hub								# Add GitHub support to git on the command-line
+alias git=hub									# Recommended per https://hub.github.com/
+brew install git-flow								# Extensions to follow Vincent Driessen's branching model "gitflow"
+# brew install bash-git-prompt 							# Disabling until configuration can be customized
+brew cask install Caskroom/cask/github-desktop					# Github Desktop Client for Mac OS X
 brew cask install Caskroom/cask/sourcetree					# Atlassian Git / Mercurial Client for Mac OS X
-brew cask install gitup 									# GitUp Visual Git Branching and Repo Management Utility - http://gitup.io
+brew cask install gitup 							# GitUp Visual Git Branching and Repo Management Utility - http://gitup.io
 
 # Configure Git's Global Settings in my Home Directory
-	echo "Copying global git ignore & config files to home directory..."
+echo "Copying global git ignore & config files to home directory..."
 cp mac-setup/global.gitignore ~/.gitignore
 cp mac-setup/global.gitconfig ~/.gitconfig
 
@@ -142,15 +142,15 @@ brew cask install logitech-options
 
 # Install and configure Encryption Utilities and Libraries
 echo "Installing SSH / SSL / Ecdncryption Utilities..."
-# brew install openssh --force 								# Commented out because in order to leave OS X functional a lot of additional configuration needs to be completed
-# 															# TODO: https://coderwall.com/p/qdwcpg/using-the-latest-ssh-from-homebrew-on-osx
-brew install autossh 										# Automatically restart SSH sessions and tunnels - http://www.harding.motd.ca/autossh/
-brew install ssh-copy-id 									# Add a public key to a remote machine's authorized_keys file - http://www.openssh.com/
-brew install sshrc											# Bring your .bashrc, .vimrc, etc. with you when you SSH - https://github.com/Russell91/sshrc
-brew install sshguard										# Protect from brute force attacks against SSH (annd other services) - http://www.sshguard.net/
+# brew install openssh --force 							# Commented out because in order to leave OS X functional a lot of additional configuration needs to be completed
+# 										# TODO: https://coderwall.com/p/qdwcpg/using-the-latest-ssh-from-homebrew-on-osx
+brew install autossh 								# Automatically restart SSH sessions and tunnels - http://www.harding.motd.ca/autossh/
+brew install ssh-copy-id 							# Add a public key to a remote machine's authorized_keys file - http://www.openssh.com/
+brew install sshrc								# Bring your .bashrc, .vimrc, etc. with you when you SSH - https://github.com/Russell91/sshrc
+brew install sshguard								# Protect from brute force attacks against SSH (annd other services) - http://www.sshguard.net/
 brew install openssl 
 brew install keybase
-brew cask install keybase 									# Now that the Cask is avaialble do we need the CLI installed seperately via brew?
+brew cask install keybase 							# Now that the Cask is avaialble do we need the CLI installed seperately via brew?
 brew cask install Caskroom/cask/ssh-tunnel-manager
 
 echo "Installing GPG & associated libraries and utilities..."
@@ -159,27 +159,27 @@ brew cask install Caskroom/cask/gpgtools 					# Requires Password but also insta
 # Install Security Utilities and Applications
 echo "Installing Security Utilities..."
 brew install dependency-check					        	# OWASP Dependency Checker Utility
-brew install exploitdb 										# The official Exploit Database - https://www.exploit-db.com/
-brew install flawfinder 									# Examines code and reports possible security weaknesses - http://www.dwheeler.com/flawfinder/
-brew install letsencrypt 									# Tool to obtain certs from Let's Encrypt and autoenable HTTPS - https://certbot.eff.org/
-brew install nmap 											# Port scanning utility for large networks - https://nmap.org/
-brew install ncrack 										# Network authentication cracking tool - https://nmap.org/ncrack/
-brew install wirouter_keyrec 								# Recover the default WPA passphrases from supported routers - http://www.salvatorefresta.net/tools/
-brew install wireshark 										# Graphical network analyzer and capture tool - https://www.wireshark.org
-brew install wifi-password 									# Show the current WiFi network password - https://github.com/rauchg/wifi-password
-brew install zzuf											#Transparent application input fuzzer - http://caca.zoy.org/wiki/zzuf
+brew install exploitdb 								# The official Exploit Database - https://www.exploit-db.com/
+brew install flawfinder 							# Examines code and reports possible security weaknesses - http://www.dwheeler.com/flawfinder/
+brew install letsencrypt 							# Tool to obtain certs from Let's Encrypt and autoenable HTTPS - https://certbot.eff.org/
+brew install nmap 								# Port scanning utility for large networks - https://nmap.org/
+brew install ncrack 								# Network authentication cracking tool - https://nmap.org/ncrack/
+brew install wirouter_keyrec 							# Recover the default WPA passphrases from supported routers - http://www.salvatorefresta.net/tools/
+brew install wireshark 								# Graphical network analyzer and capture tool - https://www.wireshark.org
+brew install wifi-password 							# Show the current WiFi network password - https://github.com/rauchg/wifi-password
+brew install zzuf								# Transparent application input fuzzer - http://caca.zoy.org/wiki/zzuf
 brew cask install Caskroom/cask/integrity					# Integrity - http://peacockmedia.co.uk/integrity/
 brew cask install Caskroom/cask/1password					# 1Password - https://agilebits.com/onepassword
 brew cask install Caskroom/cask/lastpass 					# LastPass - https://lastpass.com/
-brew cask install Caskroom/cask/malwarebytes-anti-malware	# Malwarebytes Anti-Malware for Mac, AdwareMedic - https://www.malwarebytes.org/antimalware/mac/
-brew cask install Caskroom/cask/virustotaluploader 			# VirusTotalUploader - https://www.virustotal.com/
+brew cask install Caskroom/cask/malwarebytes-anti-malware			# Malwarebytes Anti-Malware for Mac, AdwareMedic - https://www.malwarebytes.org/antimalware/mac/
+brew cask install Caskroom/cask/virustotaluploader 				# VirusTotalUploader - https://www.virustotal.com/
 brew cask install Caskroom/cask/clamxav						# ClamXav - https://www.clamxav.com/
 
 # TODO: discover: https://github.com/leebaird/discover
 
 echo "Installing iTerm2 v3 (beta) & tmux..."
 brew cask install Caskroom/versions/iterm2-beta
-brew install tmux							# tmux requires openssl & libevent which will be installed also
+brew install tmux								# tmux requires openssl & libevent which will be installed also
 
 # Configure Shell Integration for iTerm2
 curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
@@ -238,21 +238,43 @@ brew install archey
 brew install autoconf
 brew install pkg-config
 brew install colordiff
-brew cask install etrecheck
-brew install automake autoconf curl pcre re2c mhash libtool icu4c \
-	gettext jpeg libxml2 mcrypt gmp libevent
+brew install automake 
+brew install autoconf 
+brew install curl 
+brew install pcre 
+brew install re2c 
+brew install mhash 
+brew install libtool 
+brew install icu4c 
 brew link icu4c
+brew install gettext 
+brew install jpeg 
+brew install libxml2 
+brew install mcrypt 
+brew install gmp 
+brew install libevent
 brew install timedog
 brew install parallel
-
+brew cask install etrecheck
 
 # Install Alternative Shells
-echo "Installing zsh (Z Shell) and supporting utilities..."
-brew install zsh zsh-autosuggestions zsh-completions zsh-history-substring-search \
-	zsh-lovers zsh-syntax-highlighting zshdb zssh zsync zurl
+echo "Installing zsh (Z Shell) and supporting utilities..."	
+brew install zsh 						# UNIX shell (command interpreter) - http://www.zsh.org/
+brew install zsh-autosuggestions 				# Fish-like fast/unobtrusive autosuggestions for zsh - https://github.com/zsh-users/zsh-autosuggestions
+brew install zsh-completions 					# Additional completion definitions for zsh - https://github.com/zsh-users/zsh-completions
+brew install zsh-history-substring-search			# Zsh port of Fish shell's history search - https://github.com/zsh-users/zsh-history-substring-search
+brew install zsh-lovers 					# Tips, tricks, and examples for zsh - https://grml.org/zsh/#zshlovers
+brew install zsh-syntax-highlighting 				# Fish shell like syntax highlighting for zsh - https://github.com/zsh-users/zsh-syntax-highlighting
+brew install zshdb 						# Debugger for zsh - https://github.com/rocky/zshdb
+brew install zssh 						# Interactive file transfers over SSH - http://zssh.sourceforge.net/
+brew install zsync 						# File transfer program - http://zsync.moria.org.uk/
 
 # Install top-utilities
-brew install iftop dnstop 
+echo "Installing top-based system utilities..."
+brew install iftop						# Display an interface's bandwidth usage - http://www.ex-parrot.com/~pdw/iftop/
+brew install htop 						# Improved top (interactive process viewer) - https://hisham.hm/htop/
+brew install dnstop						# Console tool to analyze DNS traffic - http://dns.measurement-factory.com/tools/dnstop/index.html
+brew install jnettop 						# View hosts/ports taking up the most network traffic - http://jnettop.kubs.info/ 
 
 # Install DNS & other networking Utilities
 brew install djbdns dnsmap dnstracer launchdns dnstwist validns
@@ -306,6 +328,8 @@ brew install jvmtop
 # TODO - re-work path logic using jenv
 export PATH=$JAVA_HOME/bin:$PATH
 
+# Message Queue Systems
+brew install zurl                                               # HTTP and WebSocket client worker with ZeroMQ interface - https://github.com/fanout/zurl
 
 # Slack Development Utilities, Toolkits, Bot SDKs
 brew install slackcat
