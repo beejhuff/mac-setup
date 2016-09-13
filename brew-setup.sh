@@ -553,7 +553,11 @@ brew cask install Caskroom/cask/vimr
 brew cask install Caskroom/cask/visual-studio-code
 
 # Install Zend Stack : Zend Server, Z-Ray, Zend Studio
-# http://justinhileman.info/article/reinstalling-php-on-mac-os-x/
+# TODO: http://justinhileman.info/article/reinstalling-php-on-mac-os-x/
+# TODO: Add Zend Server via Docker
+# TODO: Add Zend Server via Vagrant
+# TODO: Add Zend Server via homebrew
+# brew cask install Caskroom/cask/zendserver
 brew cask install Caskroom/cask/zend-studio
 
 # Install Mac-focused dev utilities
