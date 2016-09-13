@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <analysis>
-  <link href="https://insight.sensiolabs.com/api/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2" rel="self" type="application/vnd.com.sensiolabs.insight+xml"/>
-  <link href="https://insight.sensiolabs.com/api/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2/status" rel="status" type="application/vnd.com.sensiolabs.insight+xml"/>
+  <link href="https://insight.sensiolabs.com/api/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15" rel="self" type="application/vnd.com.sensiolabs.insight+xml"/>
+  <link href="https://insight.sensiolabs.com/api/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15/status" rel="status" type="application/vnd.com.sensiolabs.insight+xml"/>
   <link href="https://insight.sensiolabs.com/api/projects/330bb3c9-4d56-4917-bd01-b515aab17715" rel="project" type="application/vnd.com.sensiolabs.insight+xml"/>
-  <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2" rel="self" type="text/html"/>
+  <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15" rel="self" type="text/html"/>
   <status><![CDATA[finished]]></status>
   <violations>
-    <violation severity="minor" category="codestyle">
+    <violation severity="minor" category="codestyle" ignored="false">
       <line>2</line>
       <resource><![CDATA[.gitignore]]></resource>
       <title>User specific files should not appear in .gitignore</title>
@@ -18,9 +18,9 @@
 .Spotlight-V100
 .Trashes
 ehthumbs.db]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289170" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525576" rel="self" type="text/html"/>
     </violation>
-    <violation severity="minor" category="codestyle">
+    <violation severity="minor" category="codestyle" ignored="false">
       <line>7</line>
       <resource><![CDATA[.gitignore]]></resource>
       <title>User specific files should not appear in .gitignore</title>
@@ -36,9 +36,9 @@ Thumbs.db
 # Ignore file containing API Keys
 .api_keys
 **/license.lic]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289161" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525558" rel="self" type="text/html"/>
     </violation>
-    <violation severity="minor" category="codestyle">
+    <violation severity="minor" category="codestyle" ignored="false">
       <line>8</line>
       <resource><![CDATA[.gitignore]]></resource>
       <title>User specific files should not appear in .gitignore</title>
@@ -54,9 +54,9 @@ Thumbs.db
 .api_keys
 **/license.lic
 ]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289176" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525584" rel="self" type="text/html"/>
     </violation>
-    <violation severity="info" category="codestyle">
+    <violation severity="info" category="codestyle" ignored="false">
       <line>9</line>
       <resource><![CDATA[.idea/composerJson.xml]]></resource>
       <title>Text files should end with a newline character</title>
@@ -67,9 +67,9 @@ Thumbs.db
     <customRepositories />
   </component>
 </project>]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289174" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525582" rel="self" type="text/html"/>
     </violation>
-    <violation severity="info" category="codestyle">
+    <violation severity="info" category="codestyle" ignored="false">
       <line>3</line>
       <resource><![CDATA[.idea/copyright/profiles_settings.xml]]></resource>
       <title>Text files should end with a newline character</title>
@@ -77,9 +77,9 @@ Thumbs.db
       <context start-line="1" end-line="3"><![CDATA[<component name="CopyrightManager">
   <settings default="" />
 </component>]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289164" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525564" rel="self" type="text/html"/>
     </violation>
-    <violation severity="info" category="codestyle">
+    <violation severity="info" category="codestyle" ignored="false">
       <line>8</line>
       <resource><![CDATA[.idea/cssxfire.xml]]></resource>
       <title>Text files should end with a newline character</title>
@@ -90,9 +90,9 @@ Thumbs.db
     <routes />
   </component>
 </project>]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289155" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525536" rel="self" type="text/html"/>
     </violation>
-    <violation severity="info" category="codestyle">
+    <violation severity="info" category="codestyle" ignored="false">
       <line>450</line>
       <resource><![CDATA[.idea/dbnavigator.xml]]></resource>
       <title>Text files should end with a newline character</title>
@@ -103,22 +103,22 @@ Thumbs.db
     <execution-variables />
   </component>
 </project>]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289156" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525542" rel="self" type="text/html"/>
     </violation>
-    <violation severity="info" category="codestyle">
-      <line>8</line>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>15</line>
       <resource><![CDATA[.idea/magicento.xml]]></resource>
       <title>Text files should end with a newline character</title>
       <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
-      <context start-line="3" end-line="8"><![CDATA[  <component name="MagicentoSettings">
-    <option name="pathToMage" value="$PROJECT_DIR$/app/Mage.php" />
-    <option name="enabled" value="false" />
-    <option name="projectClosedCorrectly" value="false" />
+      <context start-line="10" end-line="15"><![CDATA[    <option name="projectClosedCorrectly" value="false" />
+    <option name="basicAuthUsername" value="" />
+    <option name="basicAuthPassword" value="" />
+    <option name="pathsToMagentoSerialized" value="" />
   </component>
 </project>]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289168" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525569" rel="self" type="text/html"/>
     </violation>
-    <violation severity="info" category="codestyle">
+    <violation severity="info" category="codestyle" ignored="false">
       <line>8</line>
       <resource><![CDATA[.idea/modules.xml]]></resource>
       <title>Text files should end with a newline character</title>
@@ -129,22 +129,35 @@ Thumbs.db
     </modules>
   </component>
 </project>]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289173" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525580" rel="self" type="text/html"/>
     </violation>
-    <violation severity="info" category="codestyle">
-      <line>10</line>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>6</line>
+      <resource><![CDATA[.idea/sasslintPlugin.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="1" end-line="6"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SassLintProjectComponent">
+    <option name="nodeInterpreter" value="" />
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525551" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>11</line>
       <resource><![CDATA[.idea/sensiolabsinsight-analysis-storage.xml]]></resource>
       <title>Text files should end with a newline character</title>
       <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
-      <context start-line="5" end-line="10"><![CDATA[      <list>
-        <InsightAnalysis duration="-1" href="https://insight.sensiolabs.com/api/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/1" number="1" reference="49119dc9fd73987dfc2e16ced9f42b7227887dec" remediationCostForNextGrade="-1" status="running" />
+      <context start-line="6" end-line="11"><![CDATA[        <InsightAnalysis duration="4" href="https://insight.sensiolabs.com/api/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2" nbViolations="22" nextGrade="GOLD" number="2" reference="af0d62ff7295a2fd8660d8ec5a987e5dd873a5cc" remediationCostForNextGrade="-1" status="finished" />
+        <InsightAnalysis duration="17" href="https://insight.sensiolabs.com/api/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/1" nbViolations="20" nextGrade="GOLD" number="1" reference="49119dc9fd73987dfc2e16ced9f42b7227887dec" remediationCostForNextGrade="-1" status="finished" />
       </list>
     </option>
   </component>
 </project>]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=new#397289159" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525548" rel="self" type="text/html"/>
     </violation>
-    <violation severity="info" category="codestyle">
+    <violation severity="info" category="codestyle" ignored="false">
       <line>7</line>
       <resource><![CDATA[.idea/sensiolabsinsight-settings.xml]]></resource>
       <title>Text files should end with a newline character</title>
@@ -155,9 +168,22 @@ Thumbs.db
     <option name="projectName" value="mac-setup" />
   </component>
 </project>]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=new#397289167" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525568" rel="self" type="text/html"/>
     </violation>
-    <violation severity="info" category="codestyle">
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>7</line>
+      <resource><![CDATA[.idea/vagrant.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="2" end-line="7"><![CDATA[<project version="4">
+  <component name="VagrantProjectSettings">
+    <option name="instanceFolder" value="" />
+    <option name="provider" value="" />
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525541" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
       <line>6</line>
       <resource><![CDATA[.idea/vcs.xml]]></resource>
       <title>Text files should end with a newline character</title>
@@ -168,34 +194,34 @@ Thumbs.db
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
 </project>]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289175" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525583" rel="self" type="text/html"/>
     </violation>
-    <violation severity="minor" category="architecture">
+    <violation severity="minor" category="architecture" ignored="false">
       <line>7</line>
       <resource><![CDATA[.bash_profile]]></resource>
       <title>Source code should not contain TODO comments</title>
       <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
       <context start-line="2" end-line="12"><![CDATA[#
 # Mac OS X Standard Bash Profile Configuration
-# 
+#
 # Copyright 2016 - Bryan R. Hoffpauir, Jr.
 #
-# TODO - Review all commands setting a PATH and make sure there's no conflicts and that 
+# TODO - Review all commands setting a PATH and make sure there's no conflicts and that
 #	the implementation is idempotent.
 #
 # TODO - Review Go configuration per messages from homebrew install:
 #	As of go 1.2, a valid GOPATH is required to use the `go get` command:
 #	  https://golang.org/doc/code.html#GOPATH]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289172" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525540" rel="self" type="text/html"/>
     </violation>
-    <violation severity="minor" category="architecture">
+    <violation severity="minor" category="architecture" ignored="false">
       <line>10</line>
       <resource><![CDATA[.bash_profile]]></resource>
       <title>Source code should not contain TODO comments</title>
       <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
       <context start-line="5" end-line="15"><![CDATA[# Copyright 2016 - Bryan R. Hoffpauir, Jr.
 #
-# TODO - Review all commands setting a PATH and make sure there's no conflicts and that 
+# TODO - Review all commands setting a PATH and make sure there's no conflicts and that
 #	the implementation is idempotent.
 #
 # TODO - Review Go configuration per messages from homebrew install:
@@ -204,16 +230,16 @@ Thumbs.db
 #
 #	You may wish to add the GOROOT-based install location to your PATH:
 #	  export PATH=$PATH:/usr/local/opt/go/libexec/bin]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289169" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525571" rel="self" type="text/html"/>
     </violation>
-    <violation severity="minor" category="architecture">
-      <line>61</line>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>63</line>
       <resource><![CDATA[brew-setup.sh]]></resource>
       <title>Source code should not contain TODO comments</title>
       <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
-      <context start-line="56" end-line="66"><![CDATA[else
+      <context start-line="58" end-line="68"><![CDATA[else
   echo "Xcode Command Line Tools is not currently installed."
-  echo "Please accept the confirmation when prompted to complete the install to continue...";
+  echo "Please accept the confirmation when prompted to continue...";
 fi
 
 # TODO - NEED TO REVIEW IF THIS IS BEST ROUTE FOR KEY MANAGEMENT
@@ -222,14 +248,230 @@ cp .api_keys ~/.api_keys
 chmod 600 ~/.api_keys
 
 echo "******************************************************"]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289157" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525544" rel="self" type="text/html"/>
     </violation>
-    <violation severity="minor" category="architecture">
-      <line>230</line>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>93</line>
       <resource><![CDATA[brew-setup.sh]]></resource>
       <title>Source code should not contain TODO comments</title>
       <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
-      <context start-line="225" end-line="235"><![CDATA[mkdir $HOME/work
+      <context start-line="88" end-line="98"><![CDATA[brew update
+brew cask update
+brew upgrade -all
+
+# Update bash & install all of the utilities for it to work nicely
+# TODO: Refactor this into a seperate script that runs first and then calls the main setup script only AFTER bash has been updated
+echo "Updating bash to latest version & installing related utilities..."
+brew install bash 											# TODO: Update this command to force override of Mac OS X default bash
+
+# TODO: Add follow up commands to update /etc/shells to use new version
+# TODO: Add support for git cloning and installing bash-it - https://github.com/Bash-it/bash-it]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525534" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>95</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="90" end-line="100"><![CDATA[brew upgrade -all
+
+# Update bash & install all of the utilities for it to work nicely
+# TODO: Refactor this into a seperate script that runs first and then calls the main setup script only AFTER bash has been updated
+echo "Updating bash to latest version & installing related utilities..."
+brew install bash 											# TODO: Update this command to force override of Mac OS X default bash
+
+# TODO: Add follow up commands to update /etc/shells to use new version
+# TODO: Add support for git cloning and installing bash-it - https://github.com/Bash-it/bash-it
+# 
+# TODO: bash-powerline: https://github.com/riobard/bash-powerline]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525532" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>97</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="92" end-line="102"><![CDATA[# Update bash & install all of the utilities for it to work nicely
+# TODO: Refactor this into a seperate script that runs first and then calls the main setup script only AFTER bash has been updated
+echo "Updating bash to latest version & installing related utilities..."
+brew install bash 											# TODO: Update this command to force override of Mac OS X default bash
+
+# TODO: Add follow up commands to update /etc/shells to use new version
+# TODO: Add support for git cloning and installing bash-it - https://github.com/Bash-it/bash-it
+# 
+# TODO: bash-powerline: https://github.com/riobard/bash-powerline
+# TODO: bashful: https://github.com/jmcantrell/bashful
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525531" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>98</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="93" end-line="103"><![CDATA[# TODO: Refactor this into a seperate script that runs first and then calls the main setup script only AFTER bash has been updated
+echo "Updating bash to latest version & installing related utilities..."
+brew install bash 											# TODO: Update this command to force override of Mac OS X default bash
+
+# TODO: Add follow up commands to update /etc/shells to use new version
+# TODO: Add support for git cloning and installing bash-it - https://github.com/Bash-it/bash-it
+# 
+# TODO: bash-powerline: https://github.com/riobard/bash-powerline
+# TODO: bashful: https://github.com/jmcantrell/bashful
+
+brew install bash-completion 								# Shouldn't be necessary when bash-it is installed (included in bash-it)]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525557" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>100</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="95" end-line="105"><![CDATA[brew install bash 											# TODO: Update this command to force override of Mac OS X default bash
+
+# TODO: Add follow up commands to update /etc/shells to use new version
+# TODO: Add support for git cloning and installing bash-it - https://github.com/Bash-it/bash-it
+# 
+# TODO: bash-powerline: https://github.com/riobard/bash-powerline
+# TODO: bashful: https://github.com/jmcantrell/bashful
+
+brew install bash-completion 								# Shouldn't be necessary when bash-it is installed (included in bash-it)
+brew cask install Caskroom/cask/go2shell			 		# Go2Shell - http://zipzapmac.com/go2shell
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525533" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>101</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="96" end-line="106"><![CDATA[
+# TODO: Add follow up commands to update /etc/shells to use new version
+# TODO: Add support for git cloning and installing bash-it - https://github.com/Bash-it/bash-it
+# 
+# TODO: bash-powerline: https://github.com/riobard/bash-powerline
+# TODO: bashful: https://github.com/jmcantrell/bashful
+
+brew install bash-completion 								# Shouldn't be necessary when bash-it is installed (included in bash-it)
+brew cask install Caskroom/cask/go2shell			 		# Go2Shell - http://zipzapmac.com/go2shell
+
+# Install and configure bashub client for archiving all bash commands in the cloud - https://bashhub.com/install]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525579" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>109</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="104" end-line="114"><![CDATA[brew cask install Caskroom/cask/go2shell			 		# Go2Shell - http://zipzapmac.com/go2shell
+
+# Install and configure bashub client for archiving all bash commands in the cloud - https://bashhub.com/install
+# See Also: https://github.com/rcaloras/bashhub-client
+# See Also: https://github.com/rcaloras/bashhub-client/wiki/Security-and-Privacy
+# TODO: Review configuration to determine if / which commands to exclude from logging
+# TODO: Refactor using https://github.com/niieani/bash-oo-framework
+# TODO: Refactor using https://github.com/bpkg/bpkg
+# 
+# TODO: add logic to close and restart terminal session for this to take affect
+# curl -OL https://bashhub.com/setup && bash setup]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525562" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>110</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="105" end-line="115"><![CDATA[
+# Install and configure bashub client for archiving all bash commands in the cloud - https://bashhub.com/install
+# See Also: https://github.com/rcaloras/bashhub-client
+# See Also: https://github.com/rcaloras/bashhub-client/wiki/Security-and-Privacy
+# TODO: Review configuration to determine if / which commands to exclude from logging
+# TODO: Refactor using https://github.com/niieani/bash-oo-framework
+# TODO: Refactor using https://github.com/bpkg/bpkg
+# 
+# TODO: add logic to close and restart terminal session for this to take affect
+# curl -OL https://bashhub.com/setup && bash setup
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525561" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>111</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="106" end-line="116"><![CDATA[# Install and configure bashub client for archiving all bash commands in the cloud - https://bashhub.com/install
+# See Also: https://github.com/rcaloras/bashhub-client
+# See Also: https://github.com/rcaloras/bashhub-client/wiki/Security-and-Privacy
+# TODO: Review configuration to determine if / which commands to exclude from logging
+# TODO: Refactor using https://github.com/niieani/bash-oo-framework
+# TODO: Refactor using https://github.com/bpkg/bpkg
+# 
+# TODO: add logic to close and restart terminal session for this to take affect
+# curl -OL https://bashhub.com/setup && bash setup
+
+# Install git & supporting utilities]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525546" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>113</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="108" end-line="118"><![CDATA[# See Also: https://github.com/rcaloras/bashhub-client/wiki/Security-and-Privacy
+# TODO: Review configuration to determine if / which commands to exclude from logging
+# TODO: Refactor using https://github.com/niieani/bash-oo-framework
+# TODO: Refactor using https://github.com/bpkg/bpkg
+# 
+# TODO: add logic to close and restart terminal session for this to take affect
+# curl -OL https://bashhub.com/setup && bash setup
+
+# Install git & supporting utilities
+echo "Installing git & git utility apps..."
+brew install git 											# git]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525573" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>146</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="141" end-line="151"><![CDATA[brew cask install logitech-options
+
+# Install and configure Encryption Utilities and Libraries
+echo "Installing SSH / SSL / Ecdncryption Utilities..."
+# brew install openssh --force 								# Commented out because in order to leave OS X functional a lot of additional configuration needs to be completed
+# 															# TODO: https://coderwall.com/p/qdwcpg/using-the-latest-ssh-from-homebrew-on-osx
+brew install autossh 										# Automatically restart SSH sessions and tunnels - http://www.harding.motd.ca/autossh/
+brew install ssh-copy-id 									# Add a public key to a remote machine's authorized_keys file - http://www.openssh.com/
+brew install sshrc											# Bring your .bashrc, .vimrc, etc. with you when you SSH - https://github.com/Russell91/sshrc
+brew install sshguard										# Protect from brute force attacks against SSH (annd other services) - http://www.sshguard.net/
+brew install openssl ]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525550" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>178</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="173" end-line="183"><![CDATA[brew cask install Caskroom/cask/lastpass 					# LastPass - https://lastpass.com/
+brew cask install Caskroom/cask/malwarebytes-anti-malware	# Malwarebytes Anti-Malware for Mac, AdwareMedic - https://www.malwarebytes.org/antimalware/mac/
+brew cask install Caskroom/cask/virustotaluploader 			# VirusTotalUploader - https://www.virustotal.com/
+brew cask install Caskroom/cask/clamxav						# ClamXav - https://www.clamxav.com/
+
+# TODO: discover: https://github.com/leebaird/discover
+
+echo "Installing iTerm2 v3 (beta) & tmux..."
+brew cask install Caskroom/versions/iterm2-beta
+brew install tmux							# tmux requires openssl & libevent which will be installed also
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525560" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>299</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="294" end-line="304"><![CDATA[mkdir $HOME/work
 export GOPATH=$HOME/work
 export PATH=$LOCALBIN:$PATH:$GOPATH/bin
 
@@ -240,14 +482,14 @@ echo "Installing and configuring all Java versions & jenv..."
 brew install jenv
 brew cask install Caskroom/cask/java
 brew install jvmtop]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289158" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525547" rel="self" type="text/html"/>
     </violation>
-    <violation severity="minor" category="architecture">
-      <line>231</line>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>300</line>
       <resource><![CDATA[brew-setup.sh]]></resource>
       <title>Source code should not contain TODO comments</title>
       <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
-      <context start-line="226" end-line="236"><![CDATA[export GOPATH=$HOME/work
+      <context start-line="295" end-line="305"><![CDATA[export GOPATH=$HOME/work
 export PATH=$LOCALBIN:$PATH:$GOPATH/bin
 
 # Java
@@ -258,14 +500,14 @@ brew install jenv
 brew cask install Caskroom/cask/java
 brew install jvmtop
 ]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289165" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525565" rel="self" type="text/html"/>
     </violation>
-    <violation severity="minor" category="architecture">
-      <line>237</line>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>306</line>
       <resource><![CDATA[brew-setup.sh]]></resource>
       <title>Source code should not contain TODO comments</title>
       <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
-      <context start-line="232" end-line="242"><![CDATA[echo "Installing and configuring all Java versions & jenv..."
+      <context start-line="301" end-line="311"><![CDATA[echo "Installing and configuring all Java versions & jenv..."
 brew install jenv
 brew cask install Caskroom/cask/java
 brew install jvmtop
@@ -276,14 +518,265 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 # Slack Development Utilities, Toolkits, Bot SDKs
 brew install slackcat]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289166" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525566" rel="self" type="text/html"/>
     </violation>
-    <violation severity="minor" category="architecture">
-      <line>293</line>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>324</line>
       <resource><![CDATA[brew-setup.sh]]></resource>
       <title>Source code should not contain TODO comments</title>
       <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
-      <context start-line="288" end-line="298"><![CDATA[
+      <context start-line="319" end-line="329"><![CDATA[#  can be relatively light. I'm currently focusing on essential development tools, utilities,
+#  and core language runtimes needed for my IDE & Editors to function properly
+#  I am SPECIFICALLY not installing NGINX or Apache via homebrew but rather just the PHP 
+#  languages and if needed the php modules.  
+#  
+#  TODO: Will test to verify if I can remove any of stuff I'm installing once I have Docker and VM's up and running.
+# 
+
+echo "Installing PHP Development Language and Supporting Tools & Utilities..."
+brew cask install Caskroom/cask/phpstorm
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525570" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>448</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="443" end-line="453"><![CDATA[# Install Red Hat OpenShift Cloud & Container Utilities
+echo "Installing & Configuring RedHat Open Shift Utilities..."
+brew install openshift-cli
+sudo gem install rhc
+echo "Initializing OpenShift Client Utilities - you will be prompted for login and ssh key information..."
+# TODO: Write script that generates key, uploads to rhc, runs setup with --autocomplete and finally removes default id_rsa
+# NOTE: Rough script logic below....ssh/config already updated to use assumptions in following code for paths
+#
+# mkdir .ssh/rhcloud.com/
+# ssh-keygen -t rsa -b 4096 -f ~/.ssh/rhcloud.com/id_rsa
+# chmod 600 ~/.ssh/rhcloud.com/id_rsa]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525577" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>559</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="554" end-line="564"><![CDATA[brew install paw 													# Install Lucky Marmots Paw (HTTP & REST Client) https://luckymarmot.com/paw
+																	# NOTE: Licensing must occur manually
+
+echo "Install Mac App Store CLI..."
+brew install mas 													# Install the Mac App Store Command Line Interface for scripting App Store installations
+																	# TODO: Write automation scripts for installing App Store Apps & upgrading apps
+
+# Apps which cannot be installed via Homebrew - needs AppStore installation
+# Apple Apps
+# - Final Cut Pro 
+# - Garage Band]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525535" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>573</line>
+      <resource><![CDATA[brew-setup.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="568" end-line="577"><![CDATA[# Voila by Global Delight Technologies
+# AirMail
+# FullContact - note ver 1 is available via Homebrew - testing to see if I can upgrade
+# Magnet
+
+# @TODO - Add logic for handling .dotfiles sync here
+
+# Cleanup files downloaded for installations....
+brew cleanup
+brew cask cleanup]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525574" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>183</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="178" end-line="188"><![CDATA[      <context start-line="2" end-line="12"><![CDATA[#
+# Mac OS X Standard Bash Profile Configuration
+# 
+# Copyright 2016 - Bryan R. Hoffpauir, Jr.
+#
+# TODO - Review all commands setting a PATH and make sure there's no conflicts and that 
+#	the implementation is idempotent.
+#
+# TODO - Review Go configuration per messages from homebrew install:
+#	As of go 1.2, a valid GOPATH is required to use the `go get` command:
+#	  https://golang.org/doc/code.html#GOPATH]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525567" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>186</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="181" end-line="191"><![CDATA[# Copyright 2016 - Bryan R. Hoffpauir, Jr.
+#
+# TODO - Review all commands setting a PATH and make sure there's no conflicts and that 
+#	the implementation is idempotent.
+#
+# TODO - Review Go configuration per messages from homebrew install:
+#	As of go 1.2, a valid GOPATH is required to use the `go get` command:
+#	  https://golang.org/doc/code.html#GOPATH]]]]><![CDATA[></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289172" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525572" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>198</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="193" end-line="203"><![CDATA[      <resource><![CDATA[.bash_profile]]]]><![CDATA[></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]]]><![CDATA[></message>
+      <context start-line="5" end-line="15"><![CDATA[# Copyright 2016 - Bryan R. Hoffpauir, Jr.
+#
+# TODO - Review all commands setting a PATH and make sure there's no conflicts and that 
+#	the implementation is idempotent.
+#
+# TODO - Review Go configuration per messages from homebrew install:
+#	As of go 1.2, a valid GOPATH is required to use the `go get` command:
+#	  https://golang.org/doc/code.html#GOPATH]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525556" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>201</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="196" end-line="206"><![CDATA[      <context start-line="5" end-line="15"><![CDATA[# Copyright 2016 - Bryan R. Hoffpauir, Jr.
+#
+# TODO - Review all commands setting a PATH and make sure there's no conflicts and that 
+#	the implementation is idempotent.
+#
+# TODO - Review Go configuration per messages from homebrew install:
+#	As of go 1.2, a valid GOPATH is required to use the `go get` command:
+#	  https://golang.org/doc/code.html#GOPATH
+#
+#	You may wish to add the GOROOT-based install location to your PATH:
+#	  export PATH=$PATH:/usr/local/opt/go/libexec/bin]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525552" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>219</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="214" end-line="224"><![CDATA[      <context start-line="56" end-line="66"><![CDATA[else
+  echo "Xcode Command Line Tools is not currently installed."
+  echo "Please accept the confirmation when prompted to complete the install to continue...";
+fi
+
+# TODO - NEED TO REVIEW IF THIS IS BEST ROUTE FOR KEY MANAGEMENT
+echo "Copying Secrets File & setting permissions...."
+cp .api_keys ~/.api_keys
+chmod 600 ~/.api_keys
+
+echo "******************************************************"]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525537" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>237</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="232" end-line="242"><![CDATA[      <context start-line="225" end-line="235"><![CDATA[mkdir $HOME/work
+export GOPATH=$HOME/work
+export PATH=$LOCALBIN:$PATH:$GOPATH/bin
+
+# Java
+# TODO - Verify if JENV can be installed before the latest java cask
+# TODO - Verify installation proceedures for alternate versions of Java (if needed)
+echo "Installing and configuring all Java versions & jenv..."
+brew install jenv
+brew cask install Caskroom/cask/java
+brew install jvmtop]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525581" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>238</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="233" end-line="243"><![CDATA[export GOPATH=$HOME/work
+export PATH=$LOCALBIN:$PATH:$GOPATH/bin
+
+# Java
+# TODO - Verify if JENV can be installed before the latest java cask
+# TODO - Verify installation proceedures for alternate versions of Java (if needed)
+echo "Installing and configuring all Java versions & jenv..."
+brew install jenv
+brew cask install Caskroom/cask/java
+brew install jvmtop]]]]><![CDATA[></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289158" rel="self" type="text/html"/>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525559" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>254</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="249" end-line="259"><![CDATA[      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]]]><![CDATA[></message>
+      <context start-line="226" end-line="236"><![CDATA[export GOPATH=$HOME/work
+export PATH=$LOCALBIN:$PATH:$GOPATH/bin
+
+# Java
+# TODO - Verify if JENV can be installed before the latest java cask
+# TODO - Verify installation proceedures for alternate versions of Java (if needed)
+echo "Installing and configuring all Java versions & jenv..."
+brew install jenv
+brew cask install Caskroom/cask/java
+brew install jvmtop]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525539" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>255</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="250" end-line="260"><![CDATA[      <context start-line="226" end-line="236"><![CDATA[export GOPATH=$HOME/work
+export PATH=$LOCALBIN:$PATH:$GOPATH/bin
+
+# Java
+# TODO - Verify if JENV can be installed before the latest java cask
+# TODO - Verify installation proceedures for alternate versions of Java (if needed)
+echo "Installing and configuring all Java versions & jenv..."
+brew install jenv
+brew cask install Caskroom/cask/java
+brew install jvmtop
+]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525553" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>273</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="268" end-line="278"><![CDATA[      <context start-line="232" end-line="242"><![CDATA[echo "Installing and configuring all Java versions & jenv..."
+brew install jenv
+brew cask install Caskroom/cask/java
+brew install jvmtop
+
+# TODO - re-work path logic using jenv
+export PATH=$JAVA_HOME/bin:$PATH
+
+
+# Slack Development Utilities, Toolkits, Bot SDKs
+brew install slackcat]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525543" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>291</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="286" end-line="296"><![CDATA[      <context start-line="288" end-line="298"><![CDATA[
 echo "Installing GPG & associated libraries and utilities..."
 brew cask install Caskroom/cask/gpgtools 					# Requires Password but also installs all gpg apps
 
@@ -293,15 +786,51 @@ brew cask install Caskroom/cask/gpgtools 					# Requires Password but also insta
 # TODO - Investigate Advanced SSH : https://github.com/moul/advanced-ssh-config
 # brew install assh
 
-]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289160" rel="self" type="text/html"/>
+]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525545" rel="self" type="text/html"/>
     </violation>
-    <violation severity="minor" category="architecture">
-      <line>295</line>
-      <resource><![CDATA[brew-setup.sh]]></resource>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>293</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
       <title>Source code should not contain TODO comments</title>
       <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="288" end-line="298"><![CDATA[brew cask install Caskroom/cask/gpgtools 					# Requires Password but also installs all gpg apps
+
+# Holding off on these until additional research can be completed.
+# TODO - Investigate Massively Parallel SSH : https://github.com/ndenev/mpssh
+# brew install mpssh
+# TODO - Investigate Advanced SSH : https://github.com/moul/advanced-ssh-config
+# brew install assh
+
+]]]]><![CDATA[></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289160" rel="self" type="text/html"/>
+    </violation>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525538" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>307</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="302" end-line="312"><![CDATA[      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]]]><![CDATA[></message>
       <context start-line="290" end-line="300"><![CDATA[brew cask install Caskroom/cask/gpgtools 					# Requires Password but also installs all gpg apps
+
+# Holding off on these until additional research can be completed.
+# TODO - Investigate Massively Parallel SSH : https://github.com/ndenev/mpssh
+# brew install mpssh
+# TODO - Investigate Advanced SSH : https://github.com/moul/advanced-ssh-config
+# brew install assh
+
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525575" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>309</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="304" end-line="314"><![CDATA[      <context start-line="290" end-line="300"><![CDATA[brew cask install Caskroom/cask/gpgtools 					# Requires Password but also installs all gpg apps
 
 # Holding off on these until additional research can be completed.
 # TODO - Investigate Massively Parallel SSH : https://github.com/ndenev/mpssh
@@ -311,10 +840,46 @@ brew cask install Caskroom/cask/gpgtools 					# Requires Password but also insta
 
 
 # Install Test Automation Tools
-]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289162" rel="self" type="text/html"/>
+]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525554" rel="self" type="text/html"/>
     </violation>
-    <violation severity="minor" category="architecture">
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>327</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="322" end-line="332"><![CDATA[      <context start-line="49" end-line="59"><![CDATA[DISPLAY_SLEEP_TIMEOUT=60	# Default time before Display auto-sleeps (in minutes)
+WAKE_ON_LAN=true		# Default to enabling Wake On Lan
+DESTROY_FV_KEYS=true		# Default to destroying File Vault Keys if entering Standby Mode
+DISABLE_METADATA_CREATE=true	# Default to disabling creation of Metadata files where possible
+				# NOTE: The reference article only provided examples for disabling creation on USB & Network volumes
+				# TODO : Determine if it can be disabled on local volumes and what command is required...
+DEFAULT_SEND_DIAGS=false	# Default to disabling the sending of diagnostic information to Apple
+DEFAULT_EXT_ACCOUNTS=false	# Default to disabling accounts stored on drives other than the boot drive
+DEFAULT_ICLOUD_SAVE=false	# Default to forcing applications to save to disk instead of iCloud by default
+DEFAULT_SAVE_STATE=false	# Default to NOT saving window state on user logout
+]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525549" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
+      <line>345</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="340" end-line="350"><![CDATA[      <context start-line="101" end-line="111"><![CDATA[if $SHOW_ALL_FILES ; then defaults write com.apple.finder AppleShowAllFiles YES ; else defaults write com.apple.finder AppleShowAllFiles NO ; fi
+
+echo "Configuring Enable / Disable Cut in Finder"
+if $ENABLE_CUT ; then defaults write com.apple.finder AllowCutForItems YES ; else defaults write com.apple.finder AllowCutForItems NO ; fi
+
+# TODO : These are failing, need to research reason and update to correct failures
+
+# Set Shutdown and Logoff timers to 1 second (No Delay)
+#echo "Configuring Shutdown and Logoff Timers to 1 second (No Delay)..."
+#defaults write /System/Library/LaunchDaemons/com.apple.coreservices.appleevents ExitTimeOut -int 1
+#defaults write /System/Library/LaunchDaemons/com.apple.securityd ExitTimeOut -int 1]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525555" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture" ignored="false">
       <line>54</line>
       <resource><![CDATA[macbook-settings.sh]]></resource>
       <title>Source code should not contain TODO comments</title>
@@ -330,9 +895,9 @@ DEFAULT_EXT_ACCOUNTS=false	# Default to disabling accounts stored on drives othe
 DEFAULT_ICLOUD_SAVE=false	# Default to forcing applications to save to disk instead of iCloud by default
 DEFAULT_SAVE_STATE=false	# Default to NOT saving window state on user logout
 ]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289163" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525563" rel="self" type="text/html"/>
     </violation>
-    <violation severity="minor" category="architecture">
+    <violation severity="minor" category="architecture" ignored="false">
       <line>106</line>
       <resource><![CDATA[macbook-settings.sh]]></resource>
       <title>Source code should not contain TODO comments</title>
@@ -348,7 +913,7 @@ if $ENABLE_CUT ; then defaults write com.apple.finder AllowCutForItems YES ; els
 #echo "Configuring Shutdown and Logoff Timers to 1 second (No Delay)..."
 #defaults write /System/Library/LaunchDaemons/com.apple.coreservices.appleevents ExitTimeOut -int 1
 #defaults write /System/Library/LaunchDaemons/com.apple.securityd ExitTimeOut -int 1]]></context>
-      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/2?status=existing#397289171" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/330bb3c9-4d56-4917-bd01-b515aab17715/analyses/15?status=existing#442525578" rel="self" type="text/html"/>
     </violation>
   </violations>
   <grades>
@@ -361,14 +926,14 @@ if $ENABLE_CUT ; then defaults write com.apple.finder AllowCutForItems YES ; els
   <failed>false</failed>
   <grade><![CDATA[silver]]></grade>
   <next-grade><![CDATA[gold]]></next-grade>
-  <begin-at><![CDATA[2016-04-15T02:24:55+0200]]></begin-at>
-  <end-at><![CDATA[2016-04-15T02:25:16+0200]]></end-at>
-  <duration>4</duration>
-  <number>2</number>
+  <begin-at><![CDATA[2016-08-22T05:00:05+0200]]></begin-at>
+  <end-at><![CDATA[2016-08-22T05:02:27+0200]]></end-at>
+  <duration>16</duration>
+  <number>15</number>
   <altered>false</altered>
-  <remediation-cost>43</remediation-cost>
-  <nb-violations>22</nb-violations>
-  <reference><![CDATA[af0d62ff7295a2fd8660d8ec5a987e5dd873a5cc]]></reference>
+  <remediation-cost>163.5</remediation-cost>
+  <nb-violations>54</nb-violations>
+  <reference><![CDATA[df4611a0a460f2144a5db8910338ca9af4604373]]></reference>
   <configuration>
     <ignored-branches>
       <branch><![CDATA[gh-pages]]></branch>
@@ -430,11 +995,24 @@ if $ENABLE_CUT ; then defaults write com.apple.finder AllowCutForItems YES ; els
     <env/>
   </configuration>
   <previous-analyses-references>
+    <analysis-reference number="15">df4611a0a460f2144a5db8910338ca9af4604373</analysis-reference>
+    <analysis-reference number="14">df4611a0a460f2144a5db8910338ca9af4604373</analysis-reference>
+    <analysis-reference number="13">df4611a0a460f2144a5db8910338ca9af4604373</analysis-reference>
+    <analysis-reference number="12">79b922e33f551f15b224fbd007cbeffac19f2706</analysis-reference>
+    <analysis-reference number="11">79c7c6a6451bb2e30d1ff41413bfb797b0d39b2c</analysis-reference>
+    <analysis-reference number="10">ecddd32d0b229238556c2c1e857faef61d51e83a</analysis-reference>
+    <analysis-reference number="9">ecddd32d0b229238556c2c1e857faef61d51e83a</analysis-reference>
+    <analysis-reference number="8">46fa61d7314ca6be5a0a1bb0a718fe7b9effe6d4</analysis-reference>
+    <analysis-reference number="7">1b853d50a1cda52e1d46a17d2bb60d03a8488fd5</analysis-reference>
+    <analysis-reference number="6">1b853d50a1cda52e1d46a17d2bb60d03a8488fd5</analysis-reference>
+    <analysis-reference number="5">dde240b6d7a6df938c30178871e620303a948ae7</analysis-reference>
+    <analysis-reference number="4">c3b539001dc4b73faa33cfed8f7e88f63773c81c</analysis-reference>
+    <analysis-reference number="3">af0d62ff7295a2fd8660d8ec5a987e5dd873a5cc</analysis-reference>
     <analysis-reference number="2">af0d62ff7295a2fd8660d8ec5a987e5dd873a5cc</analysis-reference>
     <analysis-reference number="1">49119dc9fd73987dfc2e16ced9f42b7227887dec</analysis-reference>
   </previous-analyses-references>
-  <nb-violations-new>2</nb-violations-new>
-  <nb-violations-existing>20</nb-violations-existing>
+  <nb-violations-new>0</nb-violations-new>
+  <nb-violations-existing>54</nb-violations-existing>
   <nb-violations-fixed>0</nb-violations-fixed>
   <nb-violations-ignored>0</nb-violations-ignored>
 </analysis>
