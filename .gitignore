@@ -11,3 +11,6 @@ Thumbs.db
 .api_keys
 **/license.lic
 
+/browse.VC.db
+.idea/magicento/
+browse.VC.db
