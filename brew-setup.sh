@@ -78,9 +78,6 @@ brew install Caskroom/cask/brew-cask
 echo "Tapping versions Caskroom for installing alternate versions of Casks..."
 brew tap caskroom/versions
 
-echo "Tapping php Caskroom for developer tools..."
-brew tap homebrew/php
-
 echo "Running brew doctor - halt the script & investigate if you see any errors."
 brew doctor
 
@@ -92,11 +89,14 @@ brew upgrade -all
 # Update bash & install all of the utilities for it to work nicely
 # TODO: Refactor this into a seperate script that runs first and then calls the main setup script only AFTER bash has been updated
 echo "Updating bash to latest version & installing related utilities..."
-brew install bash 											# TODO: Update this command to force override of Mac OS X default bash
+brew install bash
+ß
+# Update /etc/shells to comment out the system default bash and add an entry to enable the latest version we just installed via homebrew
+ed -s shells <<< $',s?/bin/bash?#/bin/bash?g\n,w'
+sudo echo "#Add homebrew bash override as shell option" | sudo tee -a shells
+sudo echo "/usr/local/bin/bash" | sudo tee -a shells
 
-# TODO: Add follow up commands to update /etc/shells to use new version
 # TODO: Add support for git cloning and installing bash-it - https://github.com/Bash-it/bash-it
-# 
 # TODO: bash-powerline: https://github.com/riobard/bash-powerline
 # TODO: bashful: https://github.com/jmcantrell/bashful
 
@@ -346,7 +346,10 @@ brew install slackcat
 #  languages and if needed the php modules.  
 #  
 #  TODO: Will test to verify if I can remove any of stuff I'm installing once I have Docker and VM's up and running.
-# 
+#
+
+echo "Tapping php Caskroom for developer tools..."
+brew tap homebrew/php
 
 echo "Installing PHP Development Language and Supporting Tools & Utilities..."
 brew cask install Caskroom/cask/phpstorm
