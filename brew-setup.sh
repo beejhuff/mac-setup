@@ -87,14 +87,14 @@ brew cask update
 brew upgrade -all
 
 # Update bash & install all of the utilities for it to work nicely
-# TODO: Refactor this into a seperate script that runs first and then calls the main setup script only AFTER bash has been updated
+# TODO: Refactor this into an initialization script that runs first and then calls the main setup script only AFTER bash has been updated
 echo "Updating bash to latest version & installing related utilities..."
 brew install bash
-ß
+
 # Update /etc/shells to comment out the system default bash and add an entry to enable the latest version we just installed via homebrew
-ed -s shells <<< $',s?/bin/bash?#/bin/bash?g\n,w'
-sudo echo "#Add homebrew bash override as shell option" | sudo tee -a shells
-sudo echo "/usr/local/bin/bash" | sudo tee -a shells
+ed -s /etc/shells <<< $',s?/bin/bash?#/bin/bash?g\n,w'
+sudo echo "#Add homebrew bash override as shell option" | sudo tee -a /etc/shells
+sudo echo "/usr/local/bin/bash" | sudo tee -a /etc/shells
 
 # TODO: Add support for git cloning and installing bash-it - https://github.com/Bash-it/bash-it
 # TODO: bash-powerline: https://github.com/riobard/bash-powerline
@@ -318,8 +318,9 @@ rbenv init
 echo "Installing and configuring Go language..."
 brew install go
 mkdir $HOME/work
-export GOPATH=$HOME/work
-export PATH=$LOCALBIN:$PATH:$GOPATH/bin
+export GOPATH="$HOME/work"
+export PATH="$LOCALBIN:$PATH:$GOPATH/bin"
+export JAVA_HOME="/usr/bin"
 
 # Java
 # TODO - Verify if JENV can be installed before the latest java cask
@@ -330,7 +331,7 @@ brew cask install Caskroom/cask/java
 brew install jvmtop
 
 # TODO - re-work path logic using jenv
-export PATH=$JAVA_HOME/bin:$PATH
+export PATH="$JAVA_HOME/bin:$PATH"
 
 # Message Queue Systems
 brew install zurl                                               # HTTP and WebSocket client worker with ZeroMQ interface - https://github.com/fanout/zurl
@@ -368,7 +369,7 @@ echo "Installing & Configuring PHP Brew to allow for multiple versions of php to
 brew install phpbrew --ignore-dependencies
 
 phpbrew init
-[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+[[ -e ~/.phpbrew/bashrc ]] && source ß~/.phpbrew/bashrc
 
 phpbrew lookup-prefix homebrew
 

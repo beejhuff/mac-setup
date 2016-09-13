@@ -60,6 +60,7 @@ desktop.ini
 .metadata
 *.iml
 *.ipr
+~/.phpbrew/bashrc
 
 # Ignore file containing API Keys
 .api_keys
