@@ -256,6 +256,10 @@ brew install libevent
 brew install timedog
 brew install parallel
 brew cask install etrecheck
+brew cask install superduper					# Fantastic disk cloner & supplement to TimeMachine backups. Worth the paid upgrade to get scheduling, scripting and a whole lo more but
+								# free version is plenty good to just take bootable image snapshots of your Mac.  http://www.shirt-pocket.com/SuperDuper/
+brew cask install dupeguru					# Neat little file duplicate fincder utility for Mac (and other platforms.  Can target specific file types with custom search 
+								# logic. From Hardcoded Software: https://www.hardcoded.net/dupeguru/
 
 # Install Alternative Shells
 echo "Installing zsh (Z Shell) and supporting utilities..."	
