@@ -305,6 +305,7 @@ echo "Installing Node.js & npm..."
 brew install node npm
 export NODE_PATH="/usr/local/lib/node_modules"
 brew install v8 gjstest flow
+brew install jq 						# Lightweight and flexible command-line JSON processor - https://stedolan.github.io/jq/
 
 # Install npm packages
 npm install -g grunt
