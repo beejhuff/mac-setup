@@ -263,6 +263,8 @@ brew cask install superduper					# Fantastic disk cloner & supplement to TimeMac
 								# free version is plenty good to just take bootable image snapshots of your Mac.  http://www.shirt-pocket.com/SuperDuper/
 brew cask install dupeguru					# Neat little file duplicate fincder utility for Mac (and other platforms.  Can target specific file types with custom search 
 								# logic. From Hardcoded Software: https://www.hardcoded.net/dupeguru/
+brew cask install spectacle					# Move and resize windows with ease - https://www.spectacleapp.com/
+								# Window control with simple and customizable keyboard shortcuts
 
 # Install Alternative Shells
 echo "Installing zsh (Z Shell) and supporting utilities..."	
