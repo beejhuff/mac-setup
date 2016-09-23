@@ -141,27 +141,29 @@ brew cask install logitech-control-center
 brew cask install logitech-options
 
 # Install and configure Encryption Utilities and Libraries
-echo "Installing SSH / SSL / Ecdncryption Utilities..."
+echo "Installing SSH / SSL / VPN Encryption Utilities..."
 # brew install openssh --force 							# Commented out because in order to leave OS X functional a lot of additional configuration needs to be completed
 # 										# TODO: https://coderwall.com/p/qdwcpg/using-the-latest-ssh-from-homebrew-on-osx
 brew install autossh 								# Automatically restart SSH sessions and tunnels - http://www.harding.motd.ca/autossh/
 brew install ssh-copy-id 							# Add a public key to a remote machine's authorized_keys file - http://www.openssh.com/
 brew install sshrc								# Bring your .bashrc, .vimrc, etc. with you when you SSH - https://github.com/Russell91/sshrc
 brew install sshguard								# Protect from brute force attacks against SSH (annd other services) - http://www.sshguard.net/
-brew install openssl 
-brew install keybase
-brew cask install keybase 							# Now that the Cask is avaialble do we need the CLI installed seperately via brew?
-brew cask install Caskroom/cask/ssh-tunnel-manager
+brew install openssl								# Standard OpenSSL Libraries - https://openssl.org - see comments from brew info openssl if building related utilities
+brew install letsencrypt                                                        # Tool to obtain certs from Let's Encrypt and autoenable HTTPS - https://certbot.eff.org/
+brew cask install keybase 							# Install keybase full app for managing trusted and verified identities - https://keybase.io 
+brew cask install ssh-tunnel-manager						# Native macOS app to manage ssh tunnels - https://www.tynsoe.org/v2/stm/
+brew cask install viscosity							# A first class OpenVPN client. 3 day trial. Worth the $9 license - https://www.sparklabs.com/viscosity/
+brew cask install tunnelblick							# Tunnelblick is a free, open source graphic user interface for OpenVPN on OS X and macOS - https://www.tunnelblick.net/
 
 echo "Installing GPG & associated libraries and utilities..."
 brew cask install Caskroom/cask/gpgtools 					# Requires Password but also installs all gpg apps
 
 # Install Security Utilities and Applications
 echo "Installing Security Utilities..."
+brew install dnscrypt-proxy --with-plugins                                      # Secure communications between a client and a DNS resolver - https://dnscrypt.org
 brew install dependency-check					        	# OWASP Dependency Checker Utility
 brew install exploitdb 								# The official Exploit Database - https://www.exploit-db.com/
 brew install flawfinder 							# Examines code and reports possible security weaknesses - http://www.dwheeler.com/flawfinder/
-brew install letsencrypt 							# Tool to obtain certs from Let's Encrypt and autoenable HTTPS - https://certbot.eff.org/
 brew install nmap 								# Port scanning utility for large networks - https://nmap.org/
 brew install ncrack 								# Network authentication cracking tool - https://nmap.org/ncrack/
 brew install wirouter_keyrec 							# Recover the default WPA passphrases from supported routers - http://www.salvatorefresta.net/tools/
@@ -169,13 +171,14 @@ brew install wireshark 								# Graphical network analyzer and capture tool - h
 brew install wifi-password 							# Show the current WiFi network password - https://github.com/rauchg/wifi-password
 brew install zzuf								# Transparent application input fuzzer - http://caca.zoy.org/wiki/zzuf
 brew cask install Caskroom/cask/integrity					# Integrity - http://peacockmedia.co.uk/integrity/
-brew cask install Caskroom/cask/1password					# 1Password - https://agilebits.com/onepassword
-brew cask install Caskroom/cask/lastpass 					# LastPass - https://lastpass.com/
 brew cask install Caskroom/cask/malwarebytes-anti-malware			# Malwarebytes Anti-Malware for Mac, AdwareMedic - https://www.malwarebytes.org/antimalware/mac/
 brew cask install Caskroom/cask/virustotaluploader 				# VirusTotalUploader - https://www.virustotal.com/
 brew cask install Caskroom/cask/clamxav						# ClamXav - https://www.clamxav.com/
 
-# TODO: discover: https://github.com/leebaird/discover
+echo "Installing Password Managers..."		
+brew cask install Caskroom/cask/1password                                       # 1Password - https://agilebits.com/onepassword
+brew cask install Caskroom/cask/lastpass                                        # LastPass - https://lastpass.com/
+brew cask install Caskroom/cask/keepassx					# KeePassX - Cross Platform Password Manager - https://www.keepassx.org/ 
 
 echo "Installing iTerm2 v3 (beta) & tmux..."
 brew cask install Caskroom/versions/iterm2-beta
