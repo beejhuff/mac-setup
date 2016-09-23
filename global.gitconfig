@@ -4,7 +4,7 @@
 	email = bjh438-git@yahoo.com
 	signingkey = 2659F331
 [core]
-	excludesfile = /Users/beejhuff/.gitignore
+	excludesfile = ~/.gitignore
 [commit]
 	gpgsign = true
 [filter "lfs"]
