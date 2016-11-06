@@ -85,6 +85,10 @@ desktop.ini
 .idea/dynamic.xml
 .idea/uiDesigner.xml
 
+#SensioLabs
+.idea/sensiolabsinsight-analysis-storage.xml
+.idea/sensiolabsinsight-violations.xml
+
 # Gradle:
 .idea/gradle.xml
 .idea/libraries
@@ -112,9 +116,7 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-#SensioLabs
-sensiolabsinsight-analysis-storage.xml
-sensiolabsinsight-violations.xml
+
 
 ### PhpStorm Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
