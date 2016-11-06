@@ -121,8 +121,10 @@ brew install git-standup 							# Git extension to generate reports for standup 
 brew install github-markdown-toc 						# Easy TOC creation for GitHub README.md
 brew install git-secret 							# Bash-tool to store the private data inside a git repo.
 brew install git-secrets							# Prevents you from committing sensitive information to a git repo
+brew install git-extras								# Install git-extras commands: https://github.com/tj/git-extras
 brew install hub								# Add GitHub support to git on the command-line
 alias git=hub									# Recommended per https://hub.github.com/
+
 brew install git-flow								# Extensions to follow Vincent Driessen's branching model "gitflow"
 # brew install bash-git-prompt 							# Disabling until configuration can be customized
 brew cask install Caskroom/cask/github-desktop					# Github Desktop Client for Mac OS X
@@ -422,6 +424,7 @@ brew install igbinary									# Drop in replacement for the standard php seriali
 # Install DevOps Platform Components (CI / CD / Test Automation / Testing Plugins)
 echo "Installing Jenkins..."
 brew install jenkins
+brew install jenkins-job-builder
 echo "Installing Selenium and associated webdrivers..."
 brew install selenium-server-standalone
 brew install js-test-driver
