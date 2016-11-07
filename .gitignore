@@ -128,5 +128,6 @@ fabric.properties
 # *.ipr
 
 # Misc Developer stuff to ignore
+.idea/magicento.xml
 .idea/magicento/
 browse.VC.db
