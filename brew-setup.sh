@@ -655,6 +655,10 @@ echo "Install Paw HTTP REST / JSON API Development Utility..."
 brew install paw 									# Install Lucky Marmots Paw (HTTP & REST Client) https://luckymarmot.com/paw
 											# NOTE: Licensing must occur manually
 
+
+echo "Install Blogging / Writing Apps..."
+brew cask install wordpresscom								# Install WP Client - https://apps.wordpress.com/desktop/
+
 echo "Install Mac App Store CLI..."
 brew install mas 									# Install the Mac App Store Command Line Interface for scripting App Store installations
 											# TODO: Write automation scripts for installing App Store Apps & upgrading apps
