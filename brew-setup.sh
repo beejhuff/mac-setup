@@ -28,15 +28,15 @@
 #  - Eight Terminal Utilities Every OS X Command Line User Should Know
 #       http://www.mitchchn.me/2014/os-x-terminal/
 #  - My basic setup for OS X Lion
-#		http://www.darkoperator.com/blog/2011/7/24/my-basic-setup-on-osx-lion.html
+#	http://www.darkoperator.com/blog/2011/7/24/my-basic-setup-on-osx-lion.html
 #  - Installing Metasploit Framework on OS X El Capitan
-#		http://hackerforhire.com.au/installing-metasploit-framework-on-os-x-el-capitan/
+#	http://hackerforhire.com.au/installing-metasploit-framework-on-os-x-el-capitan/
 #  - How to fix permission issues on Homebrew in OS X El Capitan?
-#		http://digitizor.com/fix-homebrew-permissions-osx-el-capitan/
+#	http://digitizor.com/fix-homebrew-permissions-osx-el-capitan/
 #  - Use Homebrew zsh Instead of the OSX Default
-#		http://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/
+#	http://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/
 #  - Immutable Infrastructure with AWS and Ansible – Part 1 – Setup
-#		http://vcdxpert.com/?p=105
+#	http://vcdxpert.com/?p=105
 #  - Using the latest SSH from Homebrew on OSX
 #   	https://coderwall.com/p/qdwcpg/using-the-latest-ssh-from-homebrew-on-osx
 
@@ -100,7 +100,7 @@ sudo echo "/usr/local/bin/bash" | sudo tee -a /etc/shells
 # TODO: bash-powerline: https://github.com/riobard/bash-powerline
 # TODO: bashful: https://github.com/jmcantrell/bashful
 
-brew install bash-completion 								# Shouldn't be necessary when bash-it is installed (included in bash-it)
+brew install bash-completion 							# TODO: Remove - Shouldn't be necessary when bash-it is installed (included in bash-it)
 brew cask install Caskroom/cask/go2shell			 		# Go2Shell - http://zipzapmac.com/go2shell
 
 # Install and configure bashub client for archiving all bash commands in the cloud - https://bashhub.com/install
@@ -152,6 +152,7 @@ brew install sshrc								# Bring your .bashrc, .vimrc, etc. with you when you S
 brew install sshguard								# Protect from brute force attacks against SSH (annd other services) - http://www.sshguard.net/
 brew install openssl								# Standard OpenSSL Libraries - https://openssl.org - see comments from brew info openssl if building related utilities
 brew install letsencrypt                                                        # Tool to obtain certs from Let's Encrypt and autoenable HTTPS - https://certbot.eff.org/
+brew install sslscan								# Test SSL/TLS enabled services to discover supported cipher suites - https://github.com/rbsec/sslscan
 brew cask install keybase 							# Install keybase full app for managing trusted and verified identities - https://keybase.io 
 brew cask install ssh-tunnel-manager						# Native macOS app to manage ssh tunnels - https://www.tynsoe.org/v2/stm/
 brew cask install viscosity							# A first class OpenVPN client. 3 day trial. Worth the $9 license - https://www.sparklabs.com/viscosity/
@@ -261,34 +262,42 @@ brew install libevent
 brew install timedog
 brew install parallel
 brew cask install etrecheck
-brew cask install superduper					# Fantastic disk cloner & supplement to TimeMachine backups. Worth the paid upgrade to get scheduling, scripting and a whole lo more but
-								# free version is plenty good to just take bootable image snapshots of your Mac.  http://www.shirt-pocket.com/SuperDuper/
-brew cask install dupeguru					# Neat little file duplicate fincder utility for Mac (and other platforms.  Can target specific file types with custom search 
-								# logic. From Hardcoded Software: https://www.hardcoded.net/dupeguru/
-brew cask install spectacle					# Move and resize windows with ease - https://www.spectacleapp.com/
-								# Window control with simple and customizable keyboard shortcuts
+brew cask install superduper								# Fantastic disk cloner & supplement to TimeMachine backups. 
+											#   	Worth the paid upgrade to get scheduling, scripting and a whole lo more but
+											#   	free version is plenty good to just take bootable image snapshots of your Mac.  
+											#   	http://www.shirt-pocket.com/SuperDuper/
+brew cask install dupeguru								# Neat little file duplicate fincder utility for Mac (and other platforms.  
+											#	Can target specific file types with custom search 
+											#   	logic. From Hardcoded Software: https://www.hardcoded.net/dupeguru/
+brew cask install spectacle								# Move and resize windows with ease - https://www.spectacleapp.com/
+											# Window control with simple and customizable keyboard shortcuts
 
 # Install Alternative Shells
 echo "Installing zsh (Z Shell) and supporting utilities..."	
-brew install zsh 						# UNIX shell (command interpreter) - http://www.zsh.org/
-brew install zsh-autosuggestions 				# Fish-like fast/unobtrusive autosuggestions for zsh - https://github.com/zsh-users/zsh-autosuggestions
-brew install zsh-completions 					# Additional completion definitions for zsh - https://github.com/zsh-users/zsh-completions
-brew install zsh-history-substring-search			# Zsh port of Fish shell's history search - https://github.com/zsh-users/zsh-history-substring-search
-brew install zsh-lovers 					# Tips, tricks, and examples for zsh - https://grml.org/zsh/#zshlovers
-brew install zsh-syntax-highlighting 				# Fish shell like syntax highlighting for zsh - https://github.com/zsh-users/zsh-syntax-highlighting
-brew install zshdb 						# Debugger for zsh - https://github.com/rocky/zshdb
-brew install zssh 						# Interactive file transfers over SSH - http://zssh.sourceforge.net/
-brew install zsync 						# File transfer program - http://zsync.moria.org.uk/
+brew install zsh 									# UNIX shell (command interpreter) - http://www.zsh.org/
+brew install zsh-autosuggestions 							# Fish-like fast/unobtrusive autosuggestions for zsh - https://github.com/zsh-users/zsh-autosuggestions
+brew install zsh-completions 								# Additional completion definitions for zsh - https://github.com/zsh-users/zsh-completions
+brew install zsh-history-substring-search						# Zsh port of Fish shell's history search - https://github.com/zsh-users/zsh-history-substring-search
+brew install zsh-lovers 								# Tips, tricks, and examples for zsh - https://grml.org/zsh/#zshlovers
+brew install zsh-syntax-highlighting 							# Fish shell like syntax highlighting for zsh - https://github.com/zsh-users/zsh-syntax-highlighting
+brew install zshdb 									# Debugger for zsh - https://github.com/rocky/zshdb
+brew install zssh 									# Interactive file transfers over SSH - http://zssh.sourceforge.net/
+brew install zsync 									# File transfer program - http://zsync.moria.org.uk/
 
 # Install top-utilities
 echo "Installing top-based system utilities..."
-brew install iftop						# Display an interface's bandwidth usage - http://www.ex-parrot.com/~pdw/iftop/
-brew install htop 						# Improved top (interactive process viewer) - https://hisham.hm/htop/
-brew install dnstop						# Console tool to analyze DNS traffic - http://dns.measurement-factory.com/tools/dnstop/index.html
-brew install jnettop 						# View hosts/ports taking up the most network traffic - http://jnettop.kubs.info/ 
+brew install iftop									# Display an interface's bandwidth usage - http://www.ex-parrot.com/~pdw/iftop/
+brew install htop 									# Improved top (interactive process viewer) - https://hisham.hm/htop/
+brew install dnstop									# Console tool to analyze DNS traffic - http://dns.measurement-factory.com/tools/dnstop/index.html
+brew install jnettop 									# View hosts/ports taking up the most network traffic - http://jnettop.kubs.info/ 
 
 # Install DNS & other networking Utilities
-brew install djbdns dnsmap dnstracer launchdns dnstwist validns
+brew install djbdns 
+brew install dnsmap 
+brew install dnstracer 
+brew install launchdns 
+brew install dnstwist 
+brew install validns
 brew install iproute2mac
 
 # Development Languages, Environments, & Related Utilities
@@ -306,8 +315,10 @@ source /usr/local/bin/virtualenvwrapper_lazy.sh
 echo "Installing Node.js & npm..."
 brew install node npm
 export NODE_PATH="/usr/local/lib/node_modules"
-brew install v8 gjstest flow
-brew install jq 						# Lightweight and flexible command-line JSON processor - https://stedolan.github.io/jq/
+brew install v8 
+brew install gjstest 
+brew install flow
+brew install jq 									# Lightweight and flexible command-line JSON processor - https://stedolan.github.io/jq/
 
 # Install npm packages
 npm install -g grunt
@@ -342,7 +353,7 @@ brew install jvmtop
 export PATH="$JAVA_HOME/bin:$PATH"
 
 # Message Queue Systems
-brew install zurl                                               # HTTP and WebSocket client worker with ZeroMQ interface - https://github.com/fanout/zurl
+brew install zurl                                               			# HTTP and WebSocket client worker with ZeroMQ interface - https://github.com/fanout/zurl
 
 # Slack Development Utilities, Toolkits, Bot SDKs
 brew install slackcat
@@ -389,13 +400,13 @@ phpbrew -d ext install -j +all
 
 # Install PHP Development Utilities
 echo "Installing PHP Development Tools & Utilities..."
-brew install behat 										# behavior-driven development framework - http://behat.org/
-brew install box 										# application for building and managing Phars - https://box-project.github.io/box2/
-brew install brew-php-switcher 							# Switch Apache & CLI configs between PHP versions - https://github.com/philcook/php-switcher
+brew install behat 									# behavior-driven development framework - http://behat.org/
+brew install box 									# application for building and managing Phars - https://box-project.github.io/box2/
+brew install brew-php-switcher 								# Switch Apache & CLI configs between PHP versions - https://github.com/philcook/php-switcher
 brew install codeception 								# Testing Framework designed to work just out of the box - http://codeception.com/quickstart
 brew install composer 									# Dependency Manager for PHP - http://getcomposer.org
 brew install pdepend									# performs static code analysis - http://pdepend.org/
-brew install php-code-sniffer 							# Check coding standards in PHP, JavaScript and CSS - http://pear.php.net/package/PHP_CodeSniffer
+brew install php-code-sniffer 								# Check coding standards in PHP, JavaScript and CSS - http://pear.php.net/package/PHP_CodeSniffer
 brew install php-cs-fixer  								# Tries to fix coding standards issues - http://cs.sensiolabs.org
 brew install php-version  								# stupid simple PHP version management - https://github.com/wilmoore/php-version#simple-php-version-switching
 brew install phpcpd  									# Copy/Paste Detector (CPD) for PHP code - https://github.com/sebastianbergmann/phpcpd
@@ -405,20 +416,20 @@ brew install phpenv  									# Thin Wrapper around rbenv for PHP version managm
 brew install phplint  									# Validator and documentator for PHP 5 and 7 programs - http://www.icosaedro.it/phplint/
 brew install phpmd  									# PHP Mess Detector - http://phpmd.org
 brew install phpmetrics 								# Static analysis tool for PHP - http://www.phpmetrics.org
-brew install phpsh 										# REPL (read-eval-print-loop) for php - http://www.phpsh.org/
+brew install phpsh 									# REPL (read-eval-print-loop) for php - http://www.phpsh.org/
 brew install phpunit 									# Programmer-oriented testing framework for PHP - http://phpunit.de
-brew install phpunit-skeleton-generator					# Generate skeleton test classes - http://phpunit.de/manual/current/en/
+brew install phpunit-skeleton-generator							# Generate skeleton test classes - http://phpunit.de/manual/current/en/
 brew install pickle 									# Installs PHP extensions easily on all platforms. - https://github.com/FriendsOfPHP/pickle
-brew install puli 										# Universal package system for PHP - http://puli.io
+brew install puli 									# Universal package system for PHP - http://puli.io
 brew install sqlformat 									# CLI adaptation of the SqlFormatter library - https://github.com/MattKetmo/sqlformat
 brew install virtphp 									# 1 Box, Multiple Elephpants - http://virtphp.org
-brew install phpab 										# Lightweight php namespace aware autoload generator - https://github.com/theseer/Autoload
+brew install phpab 									# Lightweight php namespace aware autoload generator - https://github.com/theseer/Autoload
 brew install mondrian 									# Analyse and refactor highly coupled classes - https://trismegiste.github.io/Mondrian/
 brew install pharcc 									# PHARCC - tool that converts your php project into a .phar file - https://github.com/cbednarski/pharcc
-brew install phan										# Static analyzer for PHP - https://github.com/etsy/phan
-brew install php-plantumlwriter 						# Create UML diagrams from your PHP source - https://github.com/davidfuhr/php-plantumlwriter
-brew install php-session-nginx-module 					# parse php sessions for nginx - https://github.com/replay/ngx_http_php_session
-brew install envoy 										# Elegant SSH tasks for PHP - https://github.com/laravel/envoy
+brew install phan									# Static analyzer for PHP - https://github.com/etsy/phan
+brew install php-plantumlwriter 							# Create UML diagrams from your PHP source - https://github.com/davidfuhr/php-plantumlwriter
+brew install php-session-nginx-module 							# parse php sessions for nginx - https://github.com/replay/ngx_http_php_session
+brew install envoy 									# Elegant SSH tasks for PHP - https://github.com/laravel/envoy
 brew install igbinary									# Drop in replacement for the standard php serializer. https://pecl.php.net/package/igbinary
 
 # Install DevOps Platform Components (CI / CD / Test Automation / Testing Plugins)
@@ -442,15 +453,31 @@ echo "Installing Docker & Supporting Utilities..."
 # Docker + Kitematic + Boot2Docker ???
 echo "Installing Docker & Container Managment Utilities..."
 brew cask install Caskroom/cask/dockertoolbox
-brew install docker-cloud docker-gen docker-swarm dockviz docker-clean
-brew install docker-completion docker-compose-completion docker-machine-completion
+brew install docker-cloud 
+brew install docker-gen 
+brew install docker-swarm 
+brew install dockviz 
+brew install docker-clean
+brew install docker-completion 
+brew install docker-compose-completion 
+brew install docker-machine-completion
 
 
 # Vagrant & HashiCorp Apps
 echo "Installing Vagrant and other HashiCorp applications /  utilities..."
-brew install vagrant packer serf consul consul-template vault terraform terraform-inventory vault nomad otto
-brew install vassh						# Vagrant Host-Guest SSH Command Wrapper/Proxy/Forwarder
-								#   https://github.com/x-team/vassh
+brew install vagrant 
+brew install packer
+brew install serf 
+brew install consul
+brew install consul-template 
+brew install vault 
+brew install terraform 
+brew install terraform-inventory 
+brew install vault 
+brew install nomad 
+brew install otto
+brew install vassh									# Vagrant Host-Guest SSH Command Wrapper/Proxy/Forwarder
+											# https://github.com/x-team/vassh
 # Install Vagrant VMWare Fusion Provider & Activate  License key from Google Drive Archive
 GOOGLE_DRIVE=~/Google\ Drive
 vagrant plugin install vagrant-vmware-fusion
@@ -459,24 +486,42 @@ vagrant plugin license vagrant-vmware-fusion "$GOOGLE_DRIVE/Software/Vagrant/lic
 
 # Ansible Utilities
 echo "Installing Ansible & Ansible CMDB Utilities..."
-brew install ansible ansible-cmdb
+brew install ansible 
+brew install ansible-cmdb
+
+# TODO: Review Ansible Role to ensure still needed
 echo "Installing the yaegashi.blockinfile Ansible role from Ansible galaxy..."
 sudo ansible-galaxy install yaegashi.blockinfile
 
 
 # Install all of the available AWS CLI Tools
 echo "Installing all available Amazon Web Services CLI Utilities..."
-brew install awscli ec2-ami-tools  ec2-api-tools aws-as aws-cfn-tools \
-        aws-elasticache aws-elasticbeanstalk aws-keychain aws-mon aws-shell \
-        aws-sns-cli awsebcli rds-command-line-tools elb-tools s3cmd \
-	aws-cloudsearch aws-sns-cli amazon-ecs-cli aws-apigateway-importer \
-	s3sync auto-scaling
+brew install awscli 
+brew install ec2-ami-tools
+brew install ec2-api-tools 
+brew install aws-as aws-cfn-tools
+brew install aws-elasticache 
+brew install aws-elasticbeanstalk 
+brew install aws-keychain 
+brew install aws-mon 
+brew install aws-shell 
+brew install aws-sns-cli 
+brew install awsebcli 
+brew install rds-command-line-tools 
+brew install elb-tools s3cmd 
+brew install aws-cloudsearch 
+brew install aws-sns-cli 
+brew install amazon-ecs-cli 
+brew install aws-apigateway-importer 
+brew install s3sync 
+brew install auto-scaling
 brew cask install Caskroom/cask/elasticwolf
 
 
 # Install Google Compute and Cloud SDK & Utilities
 echo "Installing all available Google Compute Engine / Google Cloud Utilities..."
-brew cask install Caskroom/cask/google-cloud-sdk Caskroom/cask/googleappengine
+brew cask install Caskroom/cask/google-cloud-sdk 
+brew cask install Caskroom/cask/googleappengine
 brew install google-sql-tool
 
 
@@ -486,7 +531,8 @@ echo "Installing & Configuring RedHat Open Shift Utilities..."
 brew install openshift-cli
 sudo gem install rhc
 echo "Initializing OpenShift Client Utilities - you will be prompted for login and ssh key information..."
-# TODO: Write script that generates key, uploads to rhc, runs setup with --autocomplete and finally removes default id_rsa
+# TODO: Write script that generates key, uploads to rhc, runs setup with 
+#	--autocomplete and finally removes default id_rsa
 # NOTE: Rough script logic below....ssh/config already updated to use assumptions in following code for paths
 #
 # mkdir .ssh/rhcloud.com/
@@ -507,38 +553,49 @@ echo "Initializing OpenShift Client Utilities - you will be prompted for login a
 # client and server are on different hosts.
 #
 # Redis, Memcache, MySQL (or MariaDB, Percona)?
-brew install redis memcached mariadb postgresql percona-toolkit
+brew install redis 
+brew install memcached 
+brew install mariadb 
+brew install postgresql 
+brew install percona-toolkit
+
 
 # Make sure to add the various top-utils that don't conflict
-# brew install pg_top innotop		# These were generating errors
-brew install memcache-top
+# brew install pg_top innotop								# These were generating errors
+brew install memcache-top								# Grabs real-time stats from memcache &  outputs it like top 
+											# 	https://code.google.com/archive/p/memcache-top/
 
 echo "Installing MySQL & PostgreSQL Clients..."
-brew cask install Caskroom/cask/sequel-pro Caskroom/cask/psequel Caskroom/cask/dbvisualizer
+brew cask install Caskroom/cask/sequel-pro 						# Mac database management application for working with MySQL databases.
+											#	https://sequelpro.com/
+brew cask install Caskroom/cask/psequel							# Clean and simple interface for you to perform common PostgreSQL tasks quickly.
+											#	http://www.psequel.com
+brew cask install Caskroom/cask/dbvisualizer						# Universal database tool for developers, DBAs and analysts for graphing schemas
+											#	https://www.dbvis.com/
 
 # Install Browsers, Communications Clients
 
 echo "Installing Chrome Browser & Related Apps / Extensions..."
 brew cask install Caskroom/cask/google-chrome Caskroom/cask/google-hangouts Caskroom/cask/google-adwords-editor
-brew install chromedriver					            # Launcing requires either
+brew install chromedriver					            		# Launcing requires either
+
 	# Launch at Startup : ln -sfv /usr/local/opt/chromedriver/*.plist ~/Library/LaunchAgents
 	# Launch on demand : launchctl load ~/Library/LaunchAgents/homebrew.mxcl.chromedriver.plist
-brew cask install Caskroom/cask/chrome-devtools			# Run Chrome DevTools as a stand-alone app
-brew install chrome-cli						            # Cool CLI Automation for Chrome, see https://github.com/prasmussen/chrome-cli
+
+brew cask install Caskroom/cask/chrome-devtools						# Run Chrome DevTools as a stand-alone app
+brew install chrome-cli						           		# Cool CLI Automation for Chrome, see https://github.com/prasmussen/chrome-cli
 
 echo "Installing Firefox Browser and Related Apps / Extensions..."
 brew cask install Caskroom/cask/firefox
 
 echo "Installing Remote Access Utilities..."
-brew cask install Caskroom/cask/teamviewer				# TeamViewer - https://www.teamviewer.com/
+brew cask install Caskroom/cask/teamviewer						# TeamViewer - https://www.teamviewer.com/
 
 echo "Installing Mac OS X System Utilities..."
 brew cask install Caskroom/cask/onyx
 brew cask install Caskroom/cask/maintenance
 brew cask install Caskroom/cask/deeper
 brew cask install Caskroom/cask/the-unarchiver
-brew cask install Caskroom/cask/daisydisk
-brew cask install Caskroom/cask/divvy					# Divvy - Window Size & Placement Management Utility - https://mizage.com/divvy/
 
 echo "Installing Messaging Apps"
 brew cask install Caskroom/cask/slack
@@ -557,7 +614,8 @@ echo "Installing Image Processing Libraries & Utilies..."
 brew cask install Caskroom/cask/imageoptim 
 brew install djvulibre djvu2pdf djview4 pngcrush
 brew cask install Caskroom/cask/invisionsync
-brew cask install Caskroom/cask/xnconvert Caskroom/cask/xnviewmp Caskroom/cask/xnconvert
+brew cask install Caskroom/cask/xnconvert 
+brew cask install Caskroom/cask/xnviewmp
 
 echo "Installing Client Apps, IDE's and configuring UI Enhancements..."
 
@@ -583,25 +641,23 @@ brew cask install Caskroom/cask/rcenvironment
 
 # Install Video Clients
 echo "Installing Local and Online Video Clients..."
-brew cask install 4k-video-downloader					            # YouTube video downloader
-brew cask install Caskroom/vlc/vlc					                # Video Lan Client
-brew cask install Caskroom/cask/airserver							# AirServer - https://www.airserver.com
+brew cask install 4k-video-downloader					        	# YouTube video downloader
+brew cask install Caskroom/vlc/vlc					        	# Video Lan Client
+brew cask install Caskroom/cask/airserver						# AirServer - https://www.airserver.com
 
 
 echo "Install other client applications..."
-brew cask install retro-virtual-machine virtual-ii virtualc64		# Emulate old platforms
 brew install pipe-viewer
-brew cask install Caskroom/cask/vienna
 brew cask install blueservice calcservice wordservice easyfind
 brew cask install activity-audit
 
 echo "Install Paw HTTP REST / JSON API Development Utility..."
-brew install paw 													# Install Lucky Marmots Paw (HTTP & REST Client) https://luckymarmot.com/paw
-																	# NOTE: Licensing must occur manually
+brew install paw 									# Install Lucky Marmots Paw (HTTP & REST Client) https://luckymarmot.com/paw
+											# NOTE: Licensing must occur manually
 
 echo "Install Mac App Store CLI..."
-brew install mas 													# Install the Mac App Store Command Line Interface for scripting App Store installations
-																	# TODO: Write automation scripts for installing App Store Apps & upgrading apps
+brew install mas 									# Install the Mac App Store Command Line Interface for scripting App Store installations
+											# TODO: Write automation scripts for installing App Store Apps & upgrading apps
 
 # Apps which cannot be installed via Homebrew - needs AppStore installation
 # Apple Apps
