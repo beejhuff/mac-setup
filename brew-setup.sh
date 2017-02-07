@@ -71,8 +71,10 @@ echo
 echo "Installing Homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo "Installing Homebrew Cask"
+echo "Installing Homebrew Cask & Services to allow installing pre-built packages and configuring macOS launchctl services...""
 brew install Caskroom/cask/brew-cask
+brew services
+
 
 # currently only really using it for the beta of iTerm2 v3
 echo "Tapping versions Caskroom for installing alternate versions of Casks..."
