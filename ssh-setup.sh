@@ -1,0 +1,83 @@
+#!/bin/bash
+#
+# Filename: /ssh-config
+# Summary: macOS Automated ssh key generation Script
+# Author: Bryan "BJ" Hoffpauir, Jr. < bjh438-git@yahoo.com >
+# Purpose: if needed, run this script to safely generate a new set of ssh keys for accessing 
+# sensitive services (like github) via ssh using keys + passphrases
+# Style Guide Reference: https://google.github.io/styleguide/shell.xml#File_Header
+# 
+# General Approach: 
+#
+# 1. Propmpt user for $EMAIL to be used as principal identifier & $SERVICE_NAME this key is to 
+#    to be used for, then generate strongest byte-size $BITES supported by the 
+#    service (4096 recommended) using ssh-keygen cli command.  For Example:
+#
+#   $ ssh-keygen -t rsa -b $BITES -C "$EMAIL for $SERVICE"
+#
+#  ... or ... 
+#
+#   $ ssh-keygen -t rsa -b 4096 -C "bjh438-git@yahoo.com for github.com"
+#
+# 2. Prompt user for passphrase with a "strength" based on the following standard
+#  - 22 Alphabetical Characters
+#  - 4 Special Characters
+#  - 4 Numerical Characters
+#  -TODO: Automate this generation of a password using standard macOS utility
+#  -TODO: Automate this using 1Password, if it's installed and available (and has API)
+#
+# 3. Save Public / Private Key Pair (and Passphrase) as a Secure Note 
+#   - Save Public Key in 
+#   - If 1Password is NOT installed, save in the macOS keychain
+#   - If 1Password IS installed, save it in the macOS keychain and then in 1Password
+#
+# 4. Notify user that keys have been generated and saved as $KEYFILEKEYNAME(S) w/ 
+#    $PASSPHRASE in all repositories used in Step 3 (above) then open those apps
+#    in background to allow user to verify.
+#
+# 5. Create folder structure in $HOME/.ssh to support auto-login with saved passphrase
+#    across multiple services using alias shortcuts in abbreviated ssh commands...
+#
+#    Given that some ssh clients can only auto-login using a key named id_rsa & id_rsa.pub
+#    we need to create a subfolder under ~/.ssh directory and update the ssh config file 
+#    to add a Host entry for this particular $SERVICE_NAME
+#    info needed to use the newly generated keys without prompting user over and over on 
+#    every login.
+#
+#    For Example:
+#
+#    $ mkdir ~/.ssh/$SERVICE_NAME/
+# 
+# ... or ...
+#
+#    $ mkdir ~/.ssh/github.com/
+#
+# ... then ...
+#
+#    $ echo "# $SERVICE_NAME ssh Configuration Defaults"
+#    $ echo " "
+#    $ echo "Host $SERVICE_FQDN""
+#    $ echo "  PreferredAuthentications publickey"
+#    $ echo "  HostName github.com"
+#    $ echo "  IdentityFile ~/.ssh/github.com/id_rsa"
+#    $ echo " "
+#    $ echo "# End GitHub ssh Configuration."
+#
+# ... or ...
+#
+#    $ echo "# GitHub ssh Configuration Defaults"
+#    $ echo " "
+#    $ echo "Host github.com"
+#    $ echo "  PreferredAuthentications publickey"
+#    $ echo "  HostName github.com"
+#    $ echo "  IdentityFile ~/.ssh/github.com/id_rsa"
+#    $ echo " "
+#    $ echo "# End GitHub ssh Configuration."
+#
+# 6. Load the new key into the keychain
+     $ ssh-add -K ~/.ssh/github.com/id_rsa
+#
+# 7. Finally, set the correct permissions on the newly created keys
+#
+#  $ chmod 600 ~/.ssh/github.com/id_rsa
+

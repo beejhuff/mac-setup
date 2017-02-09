@@ -18,6 +18,8 @@
 #  - How the NSA Snoop-Proofs its Macs : http://www.macworld.com/article/2048160/how-the-nsa-snoop-proofs-its-macs.html
 #  - Controlling the diagnostics usage report settings on Yosemite :
 #	https://derflounder.wordpress.com/2014/11/21/controlling-the-diagnostics-usage-report-settings-on-yosemite/
+#  - If you‘re asked to click Connect before reconnecting to a server
+#	https://support.apple.com/en-us/HT207112
 # Usage:
 # 
 # 1) Configure the few available script variables
@@ -87,6 +89,9 @@ if $NETWORK_TIME ; then
 else
   systemsetup -setusingnetworktime OFF ; 
 fi
+
+echo "Disabling new macOS Sierra mechanism to prompt for confirmation on connecting to any server ovr network..."
+defaults write /Library/Preferences/com.apple.NetworkAuthorization AllowUnknownServers -bool YES
 
 echo "Configuring external accounts (i.e. accounts stored on drives other than the boot drive)..."
 defaults write /Library/Preferences/com.apple.loginwindow EnableExternalAccounts -bool $DEFAULT_EXT_ACCOUNTS
