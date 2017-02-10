@@ -18,8 +18,10 @@
 #  - How the NSA Snoop-Proofs its Macs : http://www.macworld.com/article/2048160/how-the-nsa-snoop-proofs-its-macs.html
 #  - Controlling the diagnostics usage report settings on Yosemite :
 #	https://derflounder.wordpress.com/2014/11/21/controlling-the-diagnostics-usage-report-settings-on-yosemite/
-#  - If you‘re asked to click Connect before reconnecting to a server
-#	https://support.apple.com/en-us/HT207112
+#  - If you‘re asked to click Connect before reconnecting to a server : https://support.apple.com/en-us/HT207112
+#  - Enabling both trackpad Drag Lock and 3 Finger Drag at once? : 
+#	https://apple.stackexchange.com/questions/180620/enabling-both-trackpad-drag-lock-and-3-finger-drag-at-once
+#	https://github.com/boochtek/mac_config/blob/master/trackpad.sh
 # Usage:
 # 
 # 1) Configure the few available script variables
@@ -107,6 +109,20 @@ if $SHOW_ALL_FILES ; then defaults write com.apple.finder AppleShowAllFiles YES 
 
 echo "Configuring Enable / Disable Cut in Finder"
 if $ENABLE_CUT ; then defaults write com.apple.finder AllowCutForItems YES ; else defaults write com.apple.finder AllowCutForItems NO ; fi
+
+# Enable "tap-and-a-half" to drag.
+echo "Configuring Magic Trackpad, Magic Mouse and Built-In Trackpad to support BOTH 3 Finger Swip and Drag Lock gestures..""
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -int 1
+defaults write com.apple.AppleMultitouchTrackpad Dragging -int 1
+
+# Enable 3-finger drag. (Moving with 3 fingers in any window "chrome" moves the window.)
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+
+# Enable "tap to drag" gesture support for Magic Mouse "tap behavior"
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 2
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 2
+
 
 # TODO : These are failing, need to research reason and update to correct failures
 
