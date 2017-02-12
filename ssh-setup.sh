@@ -81,3 +81,4 @@
 #
 #  $ chmod 600 ~/.ssh/github.com/id_rsa
 
+# 8. For real, the last thing to do is to create the new sessions sub-directory referened uin thge ControlPath directive
