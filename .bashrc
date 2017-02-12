@@ -11,4 +11,8 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
+# Enable pip bash completion if installed and configured...
+if [ -f "$HOME/bash_completion.d/pip" ] ; then
+    . $HOME/bash_completion.d/pip
+fi
 
