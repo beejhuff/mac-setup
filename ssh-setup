@@ -1,11 +1,11 @@
 #!/bin/bash
 #
-# Filename: /ssh-config
+# Filename: ssh-config
 # Summary: macOS Automated ssh key generation Script
 # Author: Bryan "BJ" Hoffpauir, Jr. < bjh438-git@yahoo.com >
 # Purpose: if needed, run this script to safely generate a new set of ssh keys for accessing 
 # sensitive services (like github) via ssh using keys + passphrases
-# Style Guide Reference: https://google.github.io/styleguide/shell.xml#File_Header
+# Style Guide Reference: https://google.github.io/styleguide/shell.xml
 # 
 # General Approach: 
 #
