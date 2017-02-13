@@ -18,8 +18,7 @@
 export LOCALBIN="$HOME/bin"
 
 # Specify Homebrew defaults for installation directory and Caskroom diurectory in this environment variable
-export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom/"
-export HOMEBREW_GITHUB_API_TOKEN=***REMOVED***
+# export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom/"
 
 # Customize Prompt
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\] \$ "
@@ -88,3 +87,4 @@ test -f ~/.bashrc && source ~/.bashrc
     . /usr/local/share/liquidprompt
   fi
 
+export PATH="$HOME/.basher/bin:$PATH"
