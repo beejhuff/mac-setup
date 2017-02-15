@@ -1,7 +1,7 @@
 #!/bin/sh 
 #
-# My standard macOS X GENERIC user profile script that contains code I want executed on every terminal I open 
-# across all shells (currently tested & using bash and zsh.
+# My standard macOS user profile script that contains code I want executed on every login
+# across all shells (currently tested & using bash and zsh).  It should be sourced
 #
 # Copyright 2016 - Bryan R. Hoffpauir, Jr.
 #
@@ -20,16 +20,30 @@
 ##  - Choosing between .bashrc, .profile, .bash_profile, etc [duplicate] :
 ##	- http://superuser.com/questions/789448/choosing-between-bashrc-profile-bash-profile-etc
 
-# Set Global Enviroinment Variables needed across all shells trhen sour
+# Set Global Enviroinment Variables needed across all shells
 
+# Start with API_KEYS, if it exists
+[ -f "$HOME/.api_keys" ] && source "$HOME/.api_keys"
 
-# Load bash aliases fromn dedicated alias file
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
-fi
+# Load shell aliases fromn dedicated alias file
+[ -f ~/.sh_aliases ] && source  ~/.sh_aliases
 
-# Enable pip bash completion if installed and configured...
-if [ -f "$HOME/bash_completion.d/pip" ] ; then
-    . $HOME/bash_completion.d/pip
-fi
+# Load Environment Variables
+# Set USER's local bin directory path
+export LOCALBIN="$HOME/bin"
+
+# Enable Pretty Shell Color Output
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+# Set architecture flags
+export ARCHFLAGS="-arch x86_64"
+
+# Configure Default PATH
+# Ensure user-installed binaries take precedence over anything else in the path
+export PATH="$LOCALBIN:/usr/local/sbin:/usr/local/bin:$PATH"
+
+# Ensure git uses the newer version of ssh we've installed
+export GIT_SSH="$(which git)"
+
 

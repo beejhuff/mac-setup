@@ -39,7 +39,13 @@
 #	http://vcdxpert.com/?p=105
 #  - Using the latest SSH from Homebrew on OSX
 #   	https://coderwall.com/p/qdwcpg/using-the-latest-ssh-from-homebrew-on-osx
-
+#  - Install Multiple Java Versions on Mac
+#	http://davidcai.github.io/blog/posts/install-multiple-jdk-on-mac/
+#  - Managing multiple versions of Java on OS X
+#	https://andrew-jones.com/blog/managing-multiple-versions-of-java-on-os-x/
+#  - jEnv - Manage your Java environment
+#	http://www.jenv.be
+#
 echo "******************************************************"
 
 # Change to the current user's home directory, a few of the commands require it and nothing prohibits it...
@@ -336,15 +342,21 @@ brew install go
 mkdir $HOME/work
 export GOPATH="$HOME/work"
 export PATH="$LOCALBIN:$PATH:$GOPATH/bin"
-export JAVA_HOME="/usr/bin"
 
 # Java
 # TODO - Verify if JENV can be installed before the latest java cask
 # TODO - Verify installation proceedures for alternate versions of Java (if needed)
 echo "Installing and configuring all Java versions & jenv..."
 brew install jenv
-brew cask install Caskroom/cask/java
+brew cask install Caskroom/cask/java7 Caskroom/cask/java8
+
+# Should comment out below and rely on profile scripts to set env variables correctly - these may be leading to multiple settings... 
+export JAVA_HOME="/usr/bin"
+
+# Add logic to probe the versions of java just installed and register with jenv
+
 brew install jvmtop
+
 
 # TODO - re-work path logic using jenv
 export PATH="$JAVA_HOME/bin:$PATH"
