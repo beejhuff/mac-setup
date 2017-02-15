@@ -14,6 +14,8 @@
 #       You may wish to add the GOROOT-based install location to your PATH:
 #         export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
+export PS4='+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
+
 # Set USER's local bin directory path
 export LOCALBIN="$HOME/bin"
 
@@ -41,7 +43,7 @@ if [ -d "/usr/local/var/jenv" ]; then
 fi
 
 # Set Go path & add to PATH per : https://golang.org/doc/code.html#GOPATH
-if [ which go > /dev/null && -d "$HOME/gocode" ]; then
+if which go > /dev/null && [ -d "$HOME/gocode" ]; then
   export GOPATH="$HOME/gocode"
   export PATH="$PATH:$GOPATH/bin"
 fi
@@ -59,10 +61,10 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Customize Bash Options
 # If configured, activate bash auto-completion
-[ -f $(brew --prefix)/etc/bash_completion ] && source $(brew --prefix)/etc/bash_completion
+[ -f "$(brew --prefix)/etc/bash_completion" ] && source "$(brew --prefix)/etc/bash_completion"
 
-# If configured, activate iTerm2 Shell Integration
-[ -f ~/.iterm2_shell_integration.`basename $SHELL`] && source ~/.iterm2_shell_integration.`basename $SHELL`
+# If configured, ac	tivate iTerm2 Shell Integration
+[ -f "$HOME/.iterm2_shell_integration.$(basename $SHELL)" ] && source "$HOME/.iterm2_shell_integration.$(basename $SHELL)"
 
 # If configured, activate the bash-git-prompt add-in
 # Need to determine how to customize so we don't lose PS1 details set above
@@ -70,19 +72,18 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 
 # If they exist, load secret credentials files (GIT ACCESS TOKEN / AWS CREDS, etc...)
-[ -f ~/.api_keys ] && source ~/.api_keys
+[ -f "$HOME/.api_keys" ] && source "$HOME/.api_keys"
 
 # Configure Google Cloud SDK Path & Auto-Completion (if they exist...)
-[ -f '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc' ] && source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
-[ -f '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc' ] && source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
+[ -f "/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ] && source "/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+[ -f "/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc" ] && source "/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
 
 # Configure RedHat OpenShift Client Settings (If they exist...)
-[ -f ~/.openshift/bash_autocomplete ] && source ~/.openshift/bash_autocomplete
-
-# Load .bashrc if it exists
-[ -f ~/.bashrc ] && source ~/.bashrc
+[ -f "$HOME/.openshift/bash_autocomplete" ] && source "$HOME/.openshift/bash_autocomplete"
 
 # NOTE - This makes the PS1 customization above irrelvant...
 # Load & Configure LiquidPrompt if it's installed
-# [ -f /usr/local/share/liquidprompt ] && . /usr/local/share/liquidprompt
+# [ -f "/usr/local/share/liquidprompt" ] && source "/usr/local/share/liquidprompt"
 
+# Load .bashrc if it exists
+[ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
