@@ -118,8 +118,6 @@ brew cask install Caskroom/cask/go2shell			 		# Go2Shell - http://zipzapmac.com/
 # Install git & supporting utilities
 echo "Installing git & git utility apps..."
 brew install git 								# git
-brew install git-lfs 								# Git extension for versioning large files
-brew install git-standup 							# Git extension to generate reports for standup meetings
 brew install github-markdown-toc 						# Easy TOC creation for GitHub README.md
 brew install git-secret 							# Bash-tool to store the private data inside a git repo.
 brew install git-secrets							# Prevents you from committing sensitive information to a git repo
@@ -128,10 +126,7 @@ brew install hub								# Add GitHub support to git on the command-line
 alias git=hub									# Recommended per https://hub.github.com/
 
 brew install git-flow								# Extensions to follow Vincent Driessen's branching model "gitflow"
-# brew install bash-git-prompt 							# Disabling until configuration can be customized
 brew cask install Caskroom/cask/github-desktop					# Github Desktop Client for Mac OS X
-brew cask install Caskroom/cask/sourcetree					# Atlassian Git / Mercurial Client for Mac OS X
-brew cask install gitup 							# GitUp Visual Git Branching and Repo Management Utility - http://gitup.io
 
 # Configure Git's Global Settings in my Home Directory
 echo "Copying global git ignore & config files to home directory..."
@@ -628,6 +623,9 @@ brew cask install Caskroom/cask/vimr
 
 # Installing Visual Studio for Mac OS X
 brew cask install Caskroom/cask/visual-studio-code
+
+# TODO: Add logic to Install JetBrains IDE
+# TODO: Add installation of bash support for JetBrains IDE via https://github.com/jansorg/BashSupport
 
 # Install Zend Stack : Zend Server, Z-Ray, Zend Studio
 # TODO: http://justinhileman.info/article/reinstalling-php-on-mac-os-x/
