@@ -531,6 +531,21 @@ brew install s3sync
 brew install auto-scaling
 brew cask install Caskroom/cask/elasticwolf
 
+# Setup ~/.aws/config settings
+# TODO : write this logic
+
+# Install awless
+brew tap wallix/awless
+brew install awless
+
+# Configure bash autocompletion
+echo '[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion\n' >> ~/.bashrc
+awless completion bash > /usr/local/etc/bash_completion.d/awless
+
+# Configure zsh automcompletion
+echo 'source <(awless completion zsh)\n' >> ~/.zshrc
+
+
 
 # Install Google Compute and Cloud SDK & Utilities
 echo "Installing all available Google Compute Engine / Google Cloud Utilities..."
