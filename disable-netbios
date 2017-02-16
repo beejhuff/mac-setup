@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# Disable all netbios services on macOS system
+#
+# Copyright 2016 - Bryan R. Hoffpauir, Jr.
+# 
+# References:
+#
+# How To Disable NetBIOS on MacOS OS X : https://www.tecklyfe.com/disable-netbios-macos-os-x/#
+#
+# NOTE : Must be run with sudo!
+#
+
+# Create nsmb.conf and disable NETBIOS when accessing SMB shares
+printf "[default]\nport445=no_netbios\n" | sudo tee /etc/nsmb.conf >/dev/null
+
+# Disable NETBIOS daemons launched on startup
+launchctl disable system/netbiosd
+launchctl unload -w /System/Library/LaunchDaemons/com.apple.netbiosd.plist
+launchctl unload -w /System/Library/LaunchAgents/com.apple.netbiosd.plist
