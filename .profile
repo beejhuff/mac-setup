@@ -44,6 +44,6 @@ export ARCHFLAGS="-arch x86_64"
 export PATH="$LOCALBIN:/usr/local/sbin:/usr/local/bin:$PATH"
 
 # Ensure git uses the newer version of ssh we've installed
-export GIT_SSH="$(which git)"
+export GIT_SSH="$(which ssh)"
 
 
