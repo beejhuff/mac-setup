@@ -209,4 +209,5 @@ if $DISABLE_DISPLAY_SLEEP ; then systemsetup -setdisplaysleep Never ; else syste
 echo "Configuring Wake on Lan..."
 if $WAKE_ON_LAN ; then systemsetup -setwakeonnetworkaccess ON ; else systemsetup -setwakeonnetworkaccess OFF ; fi
 
-
+echo "Enabling locate service for finding files on system..."
+launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
