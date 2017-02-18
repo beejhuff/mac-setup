@@ -54,3 +54,6 @@ alias bi="brew info "
 # add alias for macOS version of ssh-add since that's the only one that supports adding passphrases to keychain
 alias ssh-add="/usr/bin/ssh-add"
 
+# Alias rm to rmtrash to add Trash support to manual cli rm commands
+alias rm="rmtrash"
+
