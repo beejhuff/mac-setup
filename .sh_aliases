@@ -47,6 +47,7 @@ alias bci="brew cask info"      # Get info on a cask
 alias bcs="brew cask search" 	# Search casks for a string
 alias bi="brew info"		# Get info on a brewed package
 alias bs="brew desc -s"		# Search all descriptions of brewed packages for a strin
+alias bbd="brew bundle dump -v --force --global" # Dump currently installed brew packages, casks, and mas applications into  ~/.Brewfile
 
 # Update ALL THE THINGS
 alias update="sh auto-update"
