@@ -75,7 +75,7 @@
 #    $ echo "# End GitHub ssh Configuration."
 #
 # 6. Load the new key into the keychain
-     $ ssh-add -K ~/.ssh/github.com/id_rsa
+#     $ ssh-add -K ~/.ssh/github.com/id_rsa
 #
 # 7. Finally, set the correct permissions on the newly created keys
 #

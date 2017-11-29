@@ -1,262 +1,338 @@
-tap 'caskroom/cask'
-tap 'caskroom/versions'
-tap 'homebrew/bundle'
-tap 'homebrew/completions'
-tap 'homebrew/core'
-tap 'homebrew/dupes'
-tap 'homebrew/php'
-tap 'homebrew/services'
-tap 'homebrew/versions'
-tap 'manifoldco/brew'
-tap 'ravenac95/sudolikeaboss'
-tap 'wallix/awless'
-cask 'java'
-brew 'openssl'
-brew 'amap'
-brew 'amazon-ecs-cli'
-brew 'libyaml'
-brew 'openssl@1.1'
-brew 'gdbm'
-brew 'readline'
-brew 'sqlite'
-brew 'python'
-brew 'ansible'
-brew 'ansible-cmdb'
-brew 'antigen'
-brew 'archey'
-brew 'asio'
-brew 'libxml2'
-brew 'augeas'
-brew 'auto-scaling'
-brew 'autoconf'
-brew 'aws-apigateway-importer'
-brew 'ec2-api-tools'
-brew 'aws-cfn-tools'
-brew 'aws-cloudsearch'
-brew 'aws-elasticache'
-brew 'aws-elasticbeanstalk'
-brew 'aws-keychain'
-brew 'aws-sdk-cpp'
-brew 'aws-shell'
-brew 'aws-sns-cli'
-brew 'awscli'
-brew 'bash'
-brew 'bash-completion'
-brew 'brew-cask-completion'
-brew 'cli53'
-brew 'cloud-watch'
-brew 'compose2kube'
-brew 'git', args: ['with-brewed-curl', 'with-gettext', 'with-pcre', 'with-persistent-https']
-brew 'consul'
-brew 'consul-template'
-brew 'coreutils'
-brew 'cscope'
-brew 'curl'
-brew 'daq'
-brew 'libgpg-error'
-brew 'libassuan'
-brew 'libgcrypt'
-brew 'libksba'
-brew 'pth'
-brew 'dirmngr'
-brew 'disktype'
-brew 'docker'
-brew 'docker-cloud'
-brew 'docker-machine'
-brew 'docker-compose'
-brew 'docker-gen'
-brew 'docker-swarm'
-brew 'dockviz'
-brew 'dockward'
-brew 'dvm'
-brew 'ec2-ami-tools'
-brew 'elb-tools'
-brew 'euca2ools'
-brew 'fasd'
-brew 'libpng'
-brew 'freetype'
-brew 'fzf'
-brew 'geoip'
-brew 'gettext'
-brew 'gflags'
-brew 'git-extras'
-brew 'git-flow'
-brew 'git-lfs'
-brew 'pinentry'
-brew 'gpg-agent'
-brew 'libusb'
-brew 'libusb-compat'
-brew 'gnupg2'
-brew 'git-secret'
-brew 'git-secrets'
-brew 'github-keygen'
-brew 'github-markdown-toc'
-brew 'github-release'
-brew 'glog'
-brew 'go'
-brew 'hadolint'
-brew 'htop'
-brew 'htop-osx'
-brew 'hub'
-brew 'icu4c'
-brew 'iftop'
-brew 'jenv'
-brew 'jpeg'
-brew 'jvmtop'
-brew 'kompose'
-brew 'kube-aws'
-brew 'kubernetes-cli'
-brew 'kubernetes-helm'
-brew 'libdnet'
-brew 'libevent'
-brew 'libmagic'
-brew 'luajit'
-brew 'lz4'
-brew 'm-cli'
-brew 'macvim'
-brew 'mas'
-brew 'nomad'
-brew 'tor'
-brew 'ooniprobe'
-brew 'snappy'
-brew 'rocksdb'
-brew 'sleuthkit'
-brew 'xz'
-brew 'yara'
-brew 'osquery'
-brew 'osxutils'
-brew 'otto'
-brew 'p0f'
-brew 'packer'
-brew 'packer-completion'
-brew 'pcre'
-brew 'perl'
-brew 'pkg-config'
-brew 'ruby-build'
-brew 'rbenv'
-brew 'rds-command-line-tools'
-brew 'rmtrash'
-brew 'ruby'
-brew 's3cmd'
-brew 'scw'
-brew 'snort'
-brew 'source-to-image'
-brew 'spoof-mac'
-brew 'ssh-audit'
-brew 'ssh-copy-id'
-brew 'stern'
-brew 'tccutil'
-brew 'terminal-notifier'
-brew 'terraform'
-brew 'terraform-inventory'
-brew 'terraform-provisioner-ansible'
-brew 'the_silver_searcher'
-brew 'timedog'
-brew 'unixodbc'
-brew 'vagrant-completion'
-brew 'vault'
-brew 'vaulted'
-brew 'xhyve'
-brew 'zplug'
-brew 'zsh'
-brew 'zsh-autosuggestions'
-brew 'zsh-completions'
-brew 'zsh-git-prompt'
-brew 'zsh-history-substring-search'
-brew 'zsh-lovers'
-brew 'zsh-navigation-tools'
-brew 'zsh-syntax-highlighting'
-brew 'homebrew/dupes/openssh'
-brew 'homebrew/php/php70'
-brew 'homebrew/php/composer'
-brew 'manifoldco/brew/torus'
-brew 'ravenac95/sudolikeaboss/sudolikeaboss'
-brew 'wallix/awless/awless'
-cask '1clipboard'
-cask '1password'
-cask 'appcleaner'
-cask 'aws-vault'
-cask 'cdock'
-cask 'data-rescue'
-cask 'deeper'
-cask 'docker-toolbox'
-cask 'dropbox'
-cask 'easysimbl'
-cask 'etrecheck'
-cask 'evernote'
-cask 'fantastical'
-cask 'firefoxdeveloperedition'
-cask 'fullcontact'
-cask 'github-desktop'
-cask 'githubpulse'
-cask 'go2shell'
-cask 'google-chrome'
-cask 'google-drive'
-cask 'gpgtools'
-cask 'iterm2'
-cask 'java7'
-cask 'keybase'
-cask 'kindle'
-cask 'kindlegen'
-cask 'maintenance'
-cask 'onyx'
-cask 'rcdefaultapp'
-cask 'skitch'
-cask 'slack'
-cask 'the-unarchiver'
-cask 'transmission'
-cask 'vagrant'
-cask 'vienna'
-cask 'virustotaluploader'
-cask 'vlc'
-cask 'vmware-fusion'
-cask 'xpra'
-mas 'Keynote', id: 409183694
-mas 'Filters for Photos', id: 1083965373
-mas 'Focus 2', id: 740472063
-mas 'FX Photo Studio PRO', id: 432888949
-mas 'Sitemap Plus', id: 827714935
-mas 'CoreMelt Motion Templates For Final Cut Pro 1', id: 948176059
-mas 'Airmail 3', id: 918858936
-mas 'Buffer', id: 891953906
-mas 'WebReaver', id: 853824330
-mas 'Scrutiny', id: 522419345
-mas 'Tonality', id: 892581529
-mas 'PopBoardz', id: 980127370
-mas 'Notability', id: 736189492
-mas 'Screen Replay', id: 892261355
-mas 'Screeny', id: 440991524
-mas 'AirBeam', id: 442963716
-mas 'Drive Clean', id: 952741486
-mas 'Final Cut Pro', id: 424389933
-mas 'Integrity', id: 513610341
-mas 'Duplicate File Cleaner', id: 964690635
-mas 'Magnet', id: 441258766
-mas 'SiteSucker', id: 442168834
-mas 'iBooks Author', id: 490152466
-mas 'Marko', id: 607997198
-mas 'Video Corrector', id: 1040846717
-mas 'Twitter', id: 409789998
-mas 'Microsoft Remote Desktop', id: 715768417
-mas 'OneDrive', id: 823766827
-mas 'IP Scanner Pro', id: 404167677
-mas 'Pages', id: 409201541
-mas 'Duplicate Photo Cleaner', id: 1024202949
-mas 'Voila', id: 407741870
-mas 'Intensify', id: 716854513
-mas 'Frame.io', id: 992958444
-mas 'Lynda.com', id: 985958984
-mas 'Microsoft OneNote', id: 784801555
-mas 'ScreenShot PSD', id: 489880259
-mas 'Analog', id: 418343177
-mas 'BrowseShot', id: 615916400
-mas 'DiskZilla', id: 1183281977
-mas 'Noiseless', id: 969978718
-mas 'Proxy', id: 874920950
-mas 'ColorStrokes', id: 459413843
-mas 'ReActivity', id: 567570887
-mas 'Duplicate File Finder & Remover', id: 1152611077
-mas 'Numbers', id: 409203825
-mas 'Logitech Camera Settings', id: 638332853
-mas 'Snapheal', id: 480623975
-mas 'SofaPlay Lite', id: 577241537
+tap "buo/cask-upgrade"
+tap "caskroom/cask"
+tap "caskroom/drivers"
+tap "caskroom/versions"
+tap "homebrew/bundle"
+tap "homebrew/completions"
+tap "homebrew/core"
+tap "homebrew/dupes"
+tap "homebrew/php"
+tap "homebrew/services"
+tap "homebrew/versions"
+tap "manifoldco/brew"
+tap "ravenac95/sudolikeaboss"
+tap "wallix/awless"
+cask "xquartz"
+brew "git", args: ["with-curl", "with-gettext", "with-pcre2", "with-persistent-https"]
+brew "libcroco"
+brew "xz"
+brew "afl-fuzz"
+brew "aircrack-ng"
+brew "airspy"
+brew "amap"
+brew "amazon-ecs-cli"
+brew "ansible"
+brew "ansible-cmdb"
+brew "ansible-lint"
+brew "antigen"
+brew "archey"
+brew "arp-scan"
+brew "clingo"
+brew "auto-scaling"
+brew "aws-apigateway-importer"
+brew "ec2-api-tools"
+brew "aws-cfn-tools"
+brew "aws-cloudsearch"
+brew "aws-elasticache"
+brew "aws-elasticbeanstalk"
+brew "aws-keychain"
+brew "aws-sdk-cpp"
+brew "aws-shell"
+brew "aws-sns-cli"
+brew "awscli"
+brew "azure-cli"
+brew "baobab"
+brew "bash"
+brew "bash-completion"
+brew "bfg"
+brew "brew-cask-completion"
+brew "bro"
+brew "bwm-ng"
+brew "ccat"
+brew "cdiff"
+brew "cless"
+brew "cli53"
+brew "cloud-watch"
+brew "colortail"
+brew "compose2kube"
+brew "consul"
+brew "consul-template"
+brew "convox"
+brew "coreutils"
+brew "ctop"
+brew "daq"
+brew "dcfldd"
+brew "dfc"
+brew "di"
+brew "diff-so-fancy"
+brew "dnsmap"
+brew "dnsmasq"
+brew "dnsperf"
+brew "dnsrend"
+brew "dnstop"
+brew "dnstracer"
+brew "dnsviz"
+brew "docker-clean"
+brew "dockviz"
+brew "dockward"
+brew "doxygen"
+brew "dropbox-uploader"
+brew "duff"
+brew "dupseek"
+brew "ec2-ami-tools"
+brew "elb-tools"
+brew "ettercap"
+brew "fail2ban"
+brew "fdupes"
+brew "flawfinder"
+brew "flint-checker"
+brew "git-extras"
+brew "git-flow"
+brew "git-lfs"
+brew "git-secrets"
+brew "github-keygen"
+brew "github-markdown-toc"
+brew "github-release"
+brew "gnutls"
+brew "gnupg", link: false
+brew "gron"
+brew "hadolint"
+brew "hashcat"
+brew "hidapi"
+brew "highlight"
+brew "hostdb"
+brew "htop"
+brew "hub"
+brew "hydra"
+brew "ifstat"
+brew "iftop"
+brew "innotop"
+brew "iperf3"
+brew "ipv6toolkit"
+brew "jenkins-job-builder"
+brew "jlog"
+brew "jnettop"
+brew "jo"
+brew "jq"
+brew "jshon"
+brew "jsonlint"
+brew "jvmtop"
+brew "kompose"
+brew "kube-aws"
+brew "kubernetes-cli"
+brew "kubernetes-helm"
+brew "popt"
+brew "ldapvi"
+brew "libxmlsec1"
+brew "linklint"
+brew "lynis"
+brew "m-cli"
+brew "macvim"
+brew "mas"
+brew "media-info"
+brew "mkclean"
+brew "mkdocs"
+brew "molecule"
+brew "mono"
+brew "mycli"
+brew "mysql-utilities"
+brew "mysqltuner"
+brew "mytop"
+brew "namebench"
+brew "nikto"
+brew "nomad"
+brew "nss"
+brew "ntopng"
+brew "opensaml"
+brew "openssh"
+brew "ophcrack"
+brew "osxutils"
+brew "otto"
+brew "p0f"
+brew "packer"
+brew "packer-completion"
+brew "pcap_dnsproxy"
+brew "pcre2"
+brew "pdfcrack"
+brew "pg_top"
+brew "pgtune"
+brew "phantomjs"
+brew "pre-commit"
+brew "pulledpork"
+brew "rats"
+brew "rbenv"
+brew "rdesktop"
+brew "rdfind"
+brew "rds-command-line-tools"
+brew "recutils"
+brew "rmlint"
+brew "s3cmd"
+brew "screenfetch"
+brew "sf-pwgen"
+brew "shellcheck"
+brew "skipfish"
+brew "snort"
+brew "sntop"
+brew "sonar-scanner"
+brew "sonarlint"
+brew "splint"
+brew "spoof-mac"
+brew "sqlmap"
+brew "ssh-audit"
+brew "ssh-copy-id"
+brew "sshrc"
+brew "sslscan"
+brew "sslyze"
+brew "suricata"
+brew "terminal-notifier"
+brew "termrec"
+brew "terraform"
+brew "terraform-docs"
+brew "terraform-inventory"
+brew "terraform-provisioner-ansible"
+brew "terraform_landscape"
+brew "testdisk"
+brew "the_silver_searcher"
+brew "timedog"
+brew "tmpreaper"
+brew "tmux-cssh"
+brew "tmux-mem-cpu-load"
+brew "vagrant-completion"
+brew "vault"
+brew "vim"
+brew "watson"
+brew "wifi-password"
+brew "wireshark"
+brew "wpscan"
+brew "xhyve"
+brew "yara"
+brew "youtube-dl"
+brew "zmap"
+brew "znapzend"
+brew "zplug"
+brew "zsh"
+brew "zsh-autosuggestions"
+brew "zsh-completions"
+brew "zsh-git-prompt"
+brew "zsh-history-substring-search"
+brew "zsh-lovers"
+brew "zsh-navigation-tools"
+brew "zsh-syntax-highlighting"
+brew "zurl"
+brew "homebrew/php/composer"
+brew "homebrew/php/n98-magerun"
+brew "homebrew/php/n98-magerun2"
+brew "homebrew/php/phplint"
+brew "ravenac95/sudolikeaboss/sudolikeaboss"
+brew "wallix/awless/awless"
+cask "1password"
+cask "airtool"
+cask "amorphousdiskmark"
+cask "angry-ip-scanner"
+cask "appcleaner"
+cask "aws-vault"
+cask "blockblock"
+cask "clean-me"
+cask "cleanapp"
+cask "data-rescue"
+cask "deeper"
+cask "detectx"
+cask "disablemonitor"
+cask "disk-arbitrator"
+cask "disk-inventory-x"
+cask "diskmaker-x"
+cask "diskwave"
+cask "dropbox"
+cask "duet"
+cask "dupin"
+cask "duplicati"
+cask "dupscanub"
+cask "evernote"
+cask "gdisk"
+cask "github-desktop"
+cask "go2shell"
+cask "google-backup-and-sync"
+cask "google-chrome"
+cask "google-featured-photos"
+cask "google-web-designer"
+cask "googleappengine"
+cask "gpgtools"
+cask "install-disk-creator"
+cask "iterm2"
+cask "java7"
+cask "jungle-disk-workgroup"
+cask "keybase"
+cask "kindle"
+cask "kindlegen"
+cask "little-snitch"
+cask "macclean"
+cask "mactracker"
+cask "macx-youtube-downloader"
+cask "maintenance"
+cask "micro-snitch"
+cask "omnidisksweeper"
+cask "onyx"
+cask "osxfuse"
+cask "phoneclean"
+cask "preferencecleaner"
+cask "presenter"
+cask "rcdefaultapp"
+cask "recovery-disk-assistant"
+cask "securesafe"
+cask "sketchpacks"
+cask "skitch"
+cask "skype"
+cask "slack"
+cask "teamviewer"
+cask "the-unarchiver"
+cask "timely"
+cask "transmission"
+cask "vagrant"
+cask "virustotaluploader"
+cask "vlc"
+cask "vmware-fusion"
+cask "vpnsecure"
+cask "wireshark"
+cask "xpra"
+cask "zoomus"
+cask "caskroom/drivers/netgear-switch-discovery-tool"
+cask "caskroom/versions/firefoxdeveloperedition"
+mas "Airmail 3", id: 918858936
+mas "Analog", id: 418343177
+mas "Bluetooth MIDI Connect", id: 1074606480
+mas "BrowseShot", id: 615916400
+mas "Cellar", id: 1071756314
+mas "ColorStrokes", id: 459413843
+mas "Duplicate Photo Cleaner", id: 1024202949
+mas "Filters for Photos", id: 1083965373
+mas "Final Cut Pro", id: 424389933
+mas "Focus 2", id: 740472063
+mas "Install OS X El Capitan", id: 1018109117
+mas "Integrity", id: 513610341
+mas "Intensify", id: 716854513
+mas "IP Scanner Pro", id: 404167677
+mas "Keynote", id: 409183694
+mas "Logitech Camera Settings", id: 638332853
+mas "Marko", id: 607997198
+mas "MIDI Loupe", id: 507075182
+mas "MIDI Thru", id: 873634211
+mas "MidiMock", id: 438240325
+mas "MidiNoteConverter", id: 725299537
+mas "MIDITimecodeX", id: 893585687
+mas "Noiseless", id: 969978718
+mas "PCM Footprint", id: 1077773834
+mas "Proxy", id: 874920950
+mas "ReActivity", id: 567570887
+mas "Screen Replay", id: 892261355
+mas "ScreenShot PSD", id: 489880259
+mas "Scrutiny", id: 522419345
+mas "Sitemap Plus", id: 827714935
+mas "SiteSucker", id: 442168834
+mas "Snapheal", id: 480623975
+mas "Soundbrenner DAW Tools", id: 1106441253
+mas "Tonality", id: 892581529
+mas "Twitter", id: 409789998
+mas "Video Corrector", id: 1040846717
+mas "WebReaver", id: 853824330
+mas "Xkey Plus", id: 833376641
+mas "XKeyPiano", id: 965123264

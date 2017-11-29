@@ -1,11 +1,11 @@
 # Global .gitignore file
 #
 # References:
-#
-#  - Some common .gitignore configurations : https://gist.github.com/octocat/9257657-
-#  - zpetr/.gitignore : https://gist.github.com/zpetr/e783d537f8a40bb6ec16
-#  - JetBrains Support > General > Version Control : https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
-#
+# 
+#  - Some common .gitignore configurations : https://gist.github.com/octocat/9257657- 
+#  - zpetr/.gitignore : https://gist.github.com/zpetr/e783d537f8a40bb6ec16 
+#  - JetBrains Support > General > Version Control : https://intellij-support.jetbrains.com/hc/en-us/articles/206544839 
+# 
 # Compiled source #
 ###################
 *.com
@@ -60,7 +60,6 @@ desktop.ini
 .metadata
 *.iml
 *.ipr
-~/.phpbrew/bashrc
 
 # Ignore file containing API Keys
 .api_keys
@@ -76,7 +75,6 @@ desktop.ini
 .idea/dictionaries
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
-.idea/
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
@@ -85,10 +83,6 @@ desktop.ini
 .idea/sqlDataSources.xml
 .idea/dynamic.xml
 .idea/uiDesigner.xml
-
-#SensioLabs
-.idea/sensiolabsinsight-analysis-storage.xml
-.idea/sensiolabsinsight-violations.xml
 
 # Gradle:
 .idea/gradle.xml
@@ -117,8 +111,6 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-
-
 ### PhpStorm Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
 
@@ -128,6 +120,5 @@ fabric.properties
 # *.ipr
 
 # Misc Developer stuff to ignore
-.idea/magicento.xml
 .idea/magicento/
 browse.VC.db

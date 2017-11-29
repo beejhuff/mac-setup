@@ -10,19 +10,17 @@
 ## Colorize the ls output, show normal & hidden files and folders and sort alphabetically by default ##
 alias ls="ls -GaFlh"
  
-## Use a long listing format for display ##
-alias ll="ls -la"
- 
-## Show ONLY hidden files & Directories ##
-alias l.="ls -d .*"
-
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 
-# Make mount command output pretty and human readable format
-alias mount="mount |column -t"
+# Make mount  and other disk related commands output pretty and human readable format
+alias mount="mount | column -t"
+alias dfc="dfc -adoisTwW"
+alias df="dfc"
+alias dfo="/bin/df -aHi"
+alias du="du -ch"
 
 # Time functions
 alias nowtime="date +'%T'"
@@ -39,21 +37,22 @@ alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/C
 # Resume wget by default
 alias wget="wget -c"
 
-# visual tree
-alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'" 
-
 # use hub instead of standard git and add shortcuts for quick git listings and status output
 alias git="hub"
 alias gl="git lg"
 alias gs="git status"
 
-# homebrew aliases to speed up researching packages
-alias bci="brew cask info "
-alias bi="brew info "
+# homebrew aliases to speed up various tasks 
+alias bci="brew cask info"      # Get info on a cask
+alias bcs="brew cask search" 	# Search casks for a string
+alias bi="brew info"		# Get info on a brewed package
+alias bs="brew desc -s"		# Search all descriptions of brewed packages for a strin
+
+# Update ALL THE THINGS
+alias update="sh auto-update"
 
 # add alias for macOS version of ssh-add since that's the only one that supports adding passphrases to keychain
 alias ssh-add="/usr/bin/ssh-add"
 
-# Alias rm to rmtrash to add Trash support to manual cli rm commands
-alias rm="rmtrash"
-
+# add alias for running OmniDiskKSweeper as Root User to view all files of all users
+alias omnidisksweeperroot="security execute-with-privileges /A*/OmniDiskSweeper.app/*/M*/* 2>&-"

@@ -22,6 +22,8 @@
 #  - Enabling both trackpad Drag Lock and 3 Finger Drag at once? : 
 #	https://apple.stackexchange.com/questions/180620/enabling-both-trackpad-drag-lock-and-3-finger-drag-at-once
 #	https://github.com/boochtek/mac_config/blob/master/trackpad.sh
+#  - Four ways to make the Dock more powerful : http://www.macworld.com/article/1160337/business/dock-access.html
+#  - Five tips for customizing the Dock : http://www.macworld.com/article/1146805/customdock.html
 # Usage:
 # 
 # 1) Configure the few available script variables
@@ -211,3 +213,20 @@ if $WAKE_ON_LAN ; then systemsetup -setwakeonnetworkaccess ON ; else systemsetup
 
 echo "Enabling locate service for finding files on system..."
 launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
+echo "Enabling Recent Items Dock Stack...(NOTE: Manually modify the second Stack to list relevant recent items...."
+defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'
+defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'
+
+echo "Setting hidden apps to appear translucent on Dock..."
+defaults write com.apple.dock showhidden -bool true
+
+echo "Adding two spacers to Document section of Dock for seperating Trash from Recents, Downloads, and Applications..."
+defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
+defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
+
+echo "Adding spacer to Application section of Dock..."
+defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+
+echo "Restarting Dock with new settings..."
+killall Dock
