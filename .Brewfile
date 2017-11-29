@@ -16,6 +16,7 @@ cask "xquartz"
 brew "git", args: ["with-curl", "with-gettext", "with-pcre2", "with-persistent-https"]
 brew "libcroco"
 brew "xz"
+brew "python3"
 brew "afl-fuzz"
 brew "aircrack-ng"
 brew "airspy"
@@ -94,7 +95,6 @@ brew "github-keygen"
 brew "github-markdown-toc"
 brew "github-release"
 brew "gnutls"
-brew "gnupg", link: false
 brew "gron"
 brew "hadolint"
 brew "hashcat"
@@ -132,6 +132,8 @@ brew "mas"
 brew "media-info"
 brew "mkclean"
 brew "mkdocs"
+brew "modgit"
+brew "modman"
 brew "molecule"
 brew "mono"
 brew "mycli"
@@ -300,7 +302,6 @@ cask "caskroom/versions/firefoxdeveloperedition"
 mas "Airmail 3", id: 918858936
 mas "Analog", id: 418343177
 mas "Bluetooth MIDI Connect", id: 1074606480
-mas "BrowseShot", id: 615916400
 mas "Cellar", id: 1071756314
 mas "ColorStrokes", id: 459413843
 mas "Duplicate Photo Cleaner", id: 1024202949
@@ -308,7 +309,6 @@ mas "Filters for Photos", id: 1083965373
 mas "Final Cut Pro", id: 424389933
 mas "Focus 2", id: 740472063
 mas "Install OS X El Capitan", id: 1018109117
-mas "Integrity", id: 513610341
 mas "Intensify", id: 716854513
 mas "IP Scanner Pro", id: 404167677
 mas "Keynote", id: 409183694
@@ -322,12 +322,8 @@ mas "MIDITimecodeX", id: 893585687
 mas "Noiseless", id: 969978718
 mas "PCM Footprint", id: 1077773834
 mas "Proxy", id: 874920950
-mas "ReActivity", id: 567570887
 mas "Screen Replay", id: 892261355
 mas "ScreenShot PSD", id: 489880259
-mas "Scrutiny", id: 522419345
-mas "Sitemap Plus", id: 827714935
-mas "SiteSucker", id: 442168834
 mas "Snapheal", id: 480623975
 mas "Soundbrenner DAW Tools", id: 1106441253
 mas "Tonality", id: 892581529
