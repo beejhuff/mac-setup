@@ -43,7 +43,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 
 # Customize Prompt
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\] \$ "
+export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]$(scutil --get HostName):\[\033[33;1m\]\w\[\033[m\] \$ "
 
 ## NOTE - I've disabled both of the following since they conflict with both each other and the previous PS1 assignment and would likely
 ##      be made irrelevant by powerline anyways.
