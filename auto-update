@@ -49,10 +49,11 @@ strict_update() {
 	brew upgrade && \
 	brew cleanup && \
 	mas upgrade && \
-	brew cu --yes --no-brew-update --cleanup && \
+	brew cu --yes --no-brew-update --cleanup  && \
 	sudo softwareupdate -i -a -v && \
 	sudo tmutil disablelocal \
-
+	#brew bundle dump --force --global
+	#git commit ~/.Brewfile -m "Updated brewfile after automatically running brew cask upgrade script."
 }
 
 strict_update
