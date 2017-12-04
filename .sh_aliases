@@ -8,7 +8,7 @@
 #
 
 ## Colorize the ls output, show normal & hidden files and folders and sort alphabetically by default ##
-alias ls="ls -GaFlh"
+alias ls="ls -GaFlht"
  
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep="grep --color=auto"
@@ -28,7 +28,7 @@ alias nowdate="date +'%d-%m-%Y'"
 alias now="nowtime && nowdate"
 
 # Vim stuff
-alias vi=vim
+alias vi="vim"
 alias svi="sudo vi"
 
 # Airport controls the wireless adapter
@@ -50,7 +50,7 @@ alias bs="brew desc -s"		# Search all descriptions of brewed packages for a stri
 alias bbd="brew bundle dump -v --force --global" # Dump currently installed brew packages, casks, and mas applications into  ~/.Brewfile
 
 # Update ALL THE THINGS
-alias update="sh auto-update"
+alias update="sh update"
 
 # add alias for macOS version of ssh-add since that's the only one that supports adding passphrases to keychain
 alias ssh-add="/usr/bin/ssh-add"
