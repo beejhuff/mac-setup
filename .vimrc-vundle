@@ -1,6 +1,18 @@
 " .vimrc
 " Resources: https://github.com/VundleVim/Vundle.vim
 
+" Fix weird copy and paste behavior in iTermn2
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
