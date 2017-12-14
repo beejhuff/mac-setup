@@ -8,7 +8,7 @@
 #
 
 ## Colorize the ls output, show normal & hidden files and folders and sort alphabetically by default ##
-alias ls="ls -GaFlht"
+alias ls="ls -GaFlh"
  
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep="grep --color=auto"
