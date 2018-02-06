@@ -1,0 +1,29 @@
+#!/bin/bash
+#
+# Mac OS X Standard Bash Dotfile Symlink Generator
+#
+# Copyright 2016 - Bryan R. Hoffpauir, Jr.
+#
+#
+#
+
+# Change to user's home directory
+cd ~
+
+# Generate all required symlinks to dotfiles stored in this repo in the user's home directory
+ln -v -s -f ~/Working/mac-setup/.Brewfile ~/.Brewfile 
+ln -v -s -f ~/Working/mac-setup/.bash_profile ~/.bash_profile
+ln -v -s -f ~/Working/mac-setup/.bashrc ~/.bashrc
+ln -v -s -f ~/Working/mac-setup/.gitconfig ~/.gitconfig
+ln -v -s -f ~/Working/mac-setup/.profile ~/.profile
+ln -v -s -f ~/Working/mac-setup/aliases-setup ~/aliases-setup
+ln -v -s -f ~/Working/mac-setup/.vimrc.vundle ~/.vimrc.vundle
+
+# Handle the special case of syminking the global.gitignore file to the user's .gitignore file
+ln -v -s -f ~/Working/mac-setup/global.gitignore ~/.gitignore
+
+# Handle the special case of syminking the global.gitconfig file to the system's /usr/local/etc/gitconfig file
+ln -v -s -f ~/Working/mac-setup/global.gitconfig /usr/local/etc/gitconfig 
+
+# Handle the special case of symlinking the update shortcut to the auto-update script
+ln -v -s -f ~/Working/mac-setup/auto-update ~/update
