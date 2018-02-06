@@ -26,7 +26,7 @@
 [ -f "$HOME/.api_keys" ] && source "$HOME/.api_keys"
 
 # Load shell aliases fromn dedicated alias file
-[ -f ~/.sh_aliases ] && source  ~/.sh_aliases
+[ -f ~/aliases-setup ] && source  ~/aliases-setup
 
 # Load Environment Variables
 # Set USER's local bin directory path
