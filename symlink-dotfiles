@@ -19,6 +19,8 @@ ln -v -s -f ~/Working/mac-setup/.profile ~/.profile
 ln -v -s -f ~/Working/mac-setup/aliases-setup ~/aliases-setup
 ln -v -s -f ~/Working/mac-setup/.vimrc.vundle ~/.vimrc.vundle
 
+# TODO - add logic for .iterm2 config directory
+
 # Handle the special case of syminking the global.gitignore file to the user's .gitignore file
 ln -v -s -f ~/Working/mac-setup/global.gitignore ~/.gitignore
 
