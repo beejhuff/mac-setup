@@ -17,7 +17,7 @@ ln -v -s -f ~/Working/mac-setup/.bashrc ~/.bashrc
 ln -v -s -f ~/Working/mac-setup/.gitconfig ~/.gitconfig
 ln -v -s -f ~/Working/mac-setup/.profile ~/.profile
 ln -v -s -f ~/Working/mac-setup/aliases-setup ~/aliases-setup
-ln -v -s -f ~/Working/mac-setup/.vimrc.vundle ~/.vimrc.vundle
+ln -v -s -f ~/Working/mac-setup/.vimrc.vundle ~/.vimrc
 
 # TODO - add logic for .iterm2 config directory
 
