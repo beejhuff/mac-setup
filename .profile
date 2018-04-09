@@ -41,7 +41,7 @@ export ARCHFLAGS="-arch x86_64"
 
 # Configure Default PATH
 # Ensure user-installed binaries take precedence over anything else in the path
-export PATH="$LOCALBIN:/usr/local/sbin:/usr/local/bin:$PATH"
+export PATH="$LOCALBIN:/usr/local/sbin:$PATH"
 
 # Ensure git uses the newer version of ssh we've installed
 export GIT_SSH="$(which ssh)"
